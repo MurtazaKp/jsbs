@@ -63,7 +63,7 @@ const HeaderStyleTwelve = () => {
                 </div>
               </div>
 
-              <div className="rbt-main-navigation d-none d-xl-block">
+              <div className="rbt-main-navigation d-none d-xxl-block">
                 <nav className="mainmenu-nav onepagenav">
                   <ul className="mainmenu">
                     {sections.map((sec, i) => (
