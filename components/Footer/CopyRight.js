@@ -11,7 +11,7 @@ const CopyRight = () => {
             <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12">
               <p className="rbt-link-hover text-center text-lg-start">
                 Copyright © 2025
-                <Link className="mx-2" href="https://rainbowthemes.net">
+                <Link className="mx-2" href="#">
                   JSBS
                 </Link>
                 All Rights Reserved
