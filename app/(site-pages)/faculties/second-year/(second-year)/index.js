@@ -48,7 +48,7 @@ const faculties = [
 
 const SecondYearBsc = () => {
   return (
-    <div className="container rbt-section-gap">
+    <div className="container rbt-section-gap px-4 px-sm-0">
       <div className="rbt-split-area overflow-hidden">
         <div className="wrapper">
           <div className="section-title text-center mb--60">
