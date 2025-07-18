@@ -25,7 +25,7 @@ export default function SingleCourseProp({ courseData, image }) {
                     About University of London
                   </span>
 
-                  <p className="description has-small-font-size text-white">
+                  <p className="description has-small-font-size text-white text-justify">
                     The University of London (UOL) is one of the most
                     prestigious and historically significant universities in the
                     United Kingdom and globally. Established in 1836, it was the
@@ -80,7 +80,7 @@ export default function SingleCourseProp({ courseData, image }) {
                     {" "}
                     Accreditation of Aljamea-Tus- Saifiyah Business School
                   </h2>
-                  <p className="description has-small-font-size text-white">
+                  <p className="description  text-white text-justify">
                     Aljamea-Tus-Saifiyah is an institution of higher education
                     that was founded in 1810 in Surat, India. It is primarily
                     affiliated with the Dawoodi Bohra community. The institution
@@ -100,11 +100,11 @@ export default function SingleCourseProp({ courseData, image }) {
             <div className="inner" key={index}>
               {data.certificateThree.map((innerData, innerIndex) => (
                 <div className="content" key={innerIndex}>
-                  <h2 className="title text-white">
+                  <h2 className="title text-white mt-2">
                     {" "}
                     Accreditation of Aljamea-Tus- Saifiyah Business School
                   </h2>
-                  <p className="description text-white">
+                  <p className="description pe-2 text-white text-justify">
                     The University of London (UoL) is a well-established
                     institution with a long history, dating back to its founding
                     in 1836. It comprises several constituent colleges and

@@ -1,0 +1,175 @@
+/* =======================================================
+   FINAL IMAGE-MATCHED MILESTONE COMPONENT STYLES
+======================================================= */
+
+.milestone-container {
+  padding: 80px 0;
+  /* Prevents horizontal scroll on small screens */
+}
+
+.milestone-main-title {
+  text-align: center;
+ padding-bottom: 150px;
+ 
+  font-weight: 700;
+}
+
+
+.timeline-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 150px; /* Space for top cards */
+  padding-bottom: 150px; /* Space for bottom cards */
+}
+
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-ancor);
+  transform: translateY(-50%);
+}
+
+.timeline-items-container {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 220px;
+
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 30px; /* Length of the connector */
+    background-color:var(--color-ancor);
+    z-index: 1;
+  }
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #ffc107;
+  border: 3px solid white;
+  z-index: 2;
+}
+
+.timeline-card-wrapper {
+  position: absolute;
+  width: 100%;
+}
+
+.timeline-card {
+  background-color: #fff;
+  border-radius: 8px;
+  font-size: 12px;
+  padding: 20px 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  h5 { font-weight: 600; }
+}
+
+.timeline-card p{
+    font-size: 14px !important;
+}
+
+/* Positioning for top items */
+.timeline-item.top {
+  .timeline-card-wrapper {
+    bottom: 30px; /* Space from connector */
+  }
+  &::before {
+    bottom: 0;
+  }
+}
+
+/* Positioning for bottom items */
+.timeline-item.bottom {
+  .timeline-card-wrapper {
+    top: 30px; /* Space from connector */
+  }
+  &::before {
+    top: 0;
+  }
+}
+
+
+/* --- MOBILE & TABLET VERTICAL LAYOUT --- */
+@media (max-width: 992px) {
+  .timeline-wrapper {
+    padding: 0 0 0 20px; /* Left padding for the line */
+    position: relative;
+  }
+
+  .timeline-line {
+    top: 0;
+    left: 8px; /* Position in the middle of the padding */
+    width: 2px;
+    height: 100%;
+    transform: none;
+  }
+  
+  .timeline-items-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 30px; /* Space from the line to the card */
+    margin-bottom: 30px;
+    align-items: flex-start;
+
+    /* Hide desktop connectors */
+    &::before { display: none; }
+  }
+
+  .timeline-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .timeline-dot {
+    top: 10px;
+    left: -22px; /* Position on the vertical line */
+    transform: none;
+  }
+
+  .timeline-card-wrapper {
+    position: static;
+  }
+
+  .timeline-card {
+    position: relative;
+    /* The arrow for mobile view */
+    &::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: -7px;
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-right: 8px solid #fff;
+    }
+  }
+
+  .timeline-card.bg-orange::before {
+    border-right-color: var(--color-ancor);
+  }
+}

@@ -34,7 +34,7 @@ const HomeTechnology = () => {
                 <div className="content">
                   <div className="inner">
                     <div className="content">
-                      <p className="description has-small-font-size mt--10">
+                      <p className="description has-small-font-size mt--10 text-justify">
                         His Holiness Dr. Syedna Mufaddal Saifuddin TUS bestowed
                         Raza Mubarak for Aljamea-Tus-Saifiyah Business School
                         (JSBS) in 1440/2018. JSBS integrates contemporary views
@@ -47,7 +47,7 @@ const HomeTechnology = () => {
                         principles and teachings of the Islamic ethos.
                       </p>
 
-                      <p className="description has-small-font-size mt--10">
+                      <p className="description has-small-font-size mt--10 text-justify">
                         As part of the larger Aljamea-Tus-Saifiyah educational
                         framework, which offers a range of programs aimed at
                         holistic development, this business school emphasizes
@@ -62,7 +62,7 @@ const HomeTechnology = () => {
                         society.
                       </p>
 
-                      <p className="description has-small-font-size mt--10">
+                      <p className="description has-small-font-size mt--10 text-justify">
                         In addition to traditional learning, the school
                         incorporates various hands-on experiences such as
                         internships, industry partnerships, and workshops led by
