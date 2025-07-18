@@ -85,7 +85,9 @@
     background: #f8f9fa;
     padding: 30px;
     border-radius: 8px;
-    height: 100%;
+    height: auto;
+    position: sticky;
+    top: 100px;
     border: 1px solid var(--color-border);
     
     .title {
