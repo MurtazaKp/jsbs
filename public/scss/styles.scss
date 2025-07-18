@@ -8,7 +8,7 @@
 **********************************************************************************/
 
 /**************************************************************
-	
+
 	STYLESHEET INDEXING
 	|
 	|
@@ -149,8 +149,10 @@
 @import 'header/mobilemenu';
 @import 'header/offcanvas';
 @import 'header/one-page-navigation';
-
-
+@import "template/lesson";
+@import "template/preview";
+@import "template/sidebar";
+@import "template/admission-process";
 
 /**************************************
 	Elements Styles
@@ -204,10 +206,6 @@
 // @import 'blog/blog-details';
 @import 'blog/unit-test';
 
-
-
-
-
 /**************************************
 	Template Styles
 ***************************************/
@@ -220,7 +218,6 @@
 // @import 'template/instructor-dashboard';
 // @import 'template/lesson';
 
-
 /**************************************
 	Footer Styles
 ***************************************/
@@ -230,6 +227,7 @@
 @import 'footer/dark';
 @import 'template/preview';
 @import 'template/preview';
+// @import "rtl/rtl-global";
 
 /**************************************
 	Dark Mode

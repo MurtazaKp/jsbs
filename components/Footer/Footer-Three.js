@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 import logo from "../../public/images/logo/logo.svg";
-import logoLight from "../../public/images/dark/logo/logo-light.png";
 
 import FooterData from "../../data/footer.json";
 import SingleFooter from "./FooterProps/SingleFooter";
@@ -33,7 +32,7 @@ const FooterThree = () => {
                             />
                           ) : (
                             <Image
-                              src={logoLight}
+                              src={logo}
                               width={152}
                               height={50}
                               priority={true}

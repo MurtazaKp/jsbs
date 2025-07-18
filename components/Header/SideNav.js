@@ -1,16 +1,15 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Link as ScrollLink } from "react-scroll";
 
 import logo from "../../public/images/logo/logo.svg";
 import { useAppContext } from "@/context/Context";
 
 const SideNav = () => {
   const { mobile, setMobile } = useAppContext();
-  const [currentSection, setCurrentSection] = useState("home");
+  const sideNavRef = useRef(null);
 
   const sections = [
     { id: "/about-us", label: "About Us" },
@@ -22,37 +21,43 @@ const SideNav = () => {
     { id: "/fees-structure", label: "Fee Structure" },
   ];
 
+  // Close sidebar when clicking outside
   useEffect(() => {
-    const sectionIds = [
-      "home",
-      "about",
-      "guideline",
-      "coursecontent",
-      "career",
-    ];
-
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + 200;
-
-      for (const sectionId of sectionIds) {
-        const element = document.getElementById(sectionId);
-
-        if (element && scrollPosition >= element.offsetTop) {
-          setCurrentSection(sectionId);
-        }
+    const handleClickOutside = (event) => {
+      if (
+        sideNavRef.current &&
+        !sideNavRef.current.contains(event.target) &&
+        !mobile
+      ) {
+        setMobile(true);
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [mobile]);
+
+  // Lock body scroll when sidebar is open
+  useEffect(() => {
+    if (!mobile) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      document.body.style.overflow = "";
     };
-  }, [currentSection]);
+  }, [mobile]);
 
   return (
     <>
-      <div className={`side-menu ${!mobile ? "side-menu-active" : ""}`}>
+      <div
+        ref={sideNavRef}
+        className={`side-menu ${!mobile ? "side-menu-active" : ""}`}
+      >
         <div className="inner-wrapper side-menu-wrapper">
           <div className="inner-top">
             <div className="content">
@@ -75,6 +80,7 @@ const SideNav = () => {
                 </button>
               </div>
             </div>
+
             <p className="description">
               Aljamea-Tus-Saifiyah Business School offers a unique blend of
               academic rigor and ethical values rooted in its cultural heritage,
@@ -95,13 +101,11 @@ const SideNav = () => {
               </li>
             </ul>
           </div>
+
           <nav className="side-nav w-100 mt--60 mb--80">
             <ul className="navbar-nav">
               {sections.map((sec, i) => (
-                <li
-                  className={currentSection === sec.id ? "current" : ""}
-                  key={i}
-                >
+                <li key={i}>
                   <Link onClick={() => setMobile(!mobile)} href={sec.id}>
                     {sec.label}
                   </Link>
@@ -109,6 +113,7 @@ const SideNav = () => {
               ))}
             </ul>
           </nav>
+
           <div className="social-share-wrapper">
             <span className="rbt-short-title d-block">Find With Us</span>
             <ul className="social-icon social-default transparent-with-border justify-content-start mt--20">
