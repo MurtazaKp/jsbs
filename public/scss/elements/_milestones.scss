@@ -1,175 +1,398 @@
 /* =======================================================
-   FINAL IMAGE-MATCHED MILESTONE COMPONENT STYLES
+   CSS Variables (Hardcoded from your SCSS)
 ======================================================= */
-
-.milestone-container {
-  padding: 80px 0;
-  /* Prevents horizontal scroll on small screens */
-}
-
-.milestone-main-title {
-  text-align: center;
- padding-bottom: 150px;
+:root {
+  --content-width: calc(40vw - 84px);
+  --margin: 20px;
+  --spacing: 20px;
+  --bdrs: 6px;
+  --circle-size: 40px;
  
-  font-weight: 700;
+  --bdrs-icon: 100%;
+
+  --color1: #9251ac;
+  /* Purple */
+  --color2: #f6a4ec;
+  /* Light Purple/Pink */
+
+  --color3: #87bbfe;
+  /* Light Blue */
+  --color4: #555ac0;
+  /* Dark Blue */
+
+  --color5: #24b47e;
+  /* Green */
+  --color6: #aff1b6;
+  /* Light Green */
+}
+
+/* =======================================================
+   BASE STYLES
+======================================================= */
+* {
+  box-sizing: border-box;
 }
 
 
-.timeline-wrapper {
-  position: relative;
-  width: 100%;
-  padding-top: 150px; /* Space for top cards */
-  padding-bottom: 150px; /* Space for bottom cards */
-}
 
-.timeline-line {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background-color: var(--color-ancor);
-  transform: translateY(-50%);
-}
 
-.timeline-items-container {
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-}
 
-.timeline-item {
+.timeline {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* Default vertical layout for all screen sizes, overridden by desktop media query */
+  margin: var(--margin) auto;
   position: relative;
-  width: 220px;
-
-
-  &::before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 30px; /* Length of the connector */
-    background-color:var(--color-ancor);
-    z-index: 1;
-  }
 }
 
-.timeline-dot {
+.timeline p{
+  line-height: normal !important;
+  font-size: 15px;
+  color: #152251;
+}
+
+.timeline__event {
+  margin-bottom: var(--spacing);
+  position: relative;
+  display: flex;
+  margin: var(--spacing) 0;
+  border-radius: var(--bdrs);
+  align-self: center;
+  /* Centers items in column layout */
+  width: 50vw;
+  
+}
+
+/* Alternating rows for desktop (default behavior due to flex-direction) */
+.timeline__event:nth-child(2n + 1) {
+  flex-direction: row-reverse;
+  /* Swap order for odd items to appear on the left */
+}
+
+.timeline__event:nth-child(2n + 1) .timeline__event__date {
+  border-radius: 0 var(--bdrs) var(--bdrs) 0;
+}
+
+.timeline__event:nth-child(2n + 1) .timeline__event__content {
+  border-radius: var(--bdrs) 0 0 var(--bdrs);
+}
+
+/* === CONNECTING LINES (always visible by default) === */
+/* Vertical line from icon to next icon */
+.timeline__event__icon::before {
+  content: "";
+  width: 2px;
+  height: calc(100% + var(--spacing));
+  /* Line extends past icon to next one */
+  background: var(--color2);
+  /* Default line color */
   position: absolute;
   top: 50%;
+  /* Start from center of current icon */
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background-color: #ffc107;
-  border: 3px solid white;
-  z-index: 2;
+  transform: translateX(-50%);
+  z-index: -1;
+  /* Removed animation properties here to make it static by default */
 }
 
-.timeline-card-wrapper {
+/* Horizontal line from icon to content (for EVEN items: content on right, icon on left) */
+.timeline__event__icon::after {
+  content: "";
+  width: var(--spacing);
+  /* Length of the horizontal line */
+  height: 2px;
+  background: var(--color2);
+  /* Default line color */
   position: absolute;
-  width: 100%;
+  left: 50%;
+  /* Starts from center of icon */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+  /* Removed animation properties here to make it static by default */
 }
 
-.timeline-card {
-  background-color: #fff;
-  border-radius: 8px;
-  font-size: 12px;
-  padding: 20px 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  h5 { font-weight: 600; }
-}
-
-.timeline-card p{
-    font-size: 14px !important;
-}
-
-/* Positioning for top items */
-.timeline-item.top {
-  .timeline-card-wrapper {
-    bottom: 30px; /* Space from connector */
-  }
-  &::before {
-    bottom: 0;
-  }
-}
-
-/* Positioning for bottom items */
-.timeline-item.bottom {
-  .timeline-card-wrapper {
-    top: 30px; /* Space from connector */
-  }
-  &::before {
-    top: 0;
-  }
+/* Horizontal line from icon to content (for ODD items: content on left, icon on right) */
+.timeline__event:nth-child(2n + 1) .timeline__event__icon::after {
+  content: "";
+  width: var(--spacing);
+  /* Length of the horizontal line */
+  height: 2px;
+  background: var(--color2);
+  /* Default line color */
+  position: absolute;
+  right: 50%;
+  /* Starts from center of icon */
+  left: auto;
+  /* Reset left property */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+  /* Removed animation properties here to make it static by default */
 }
 
 
-/* --- MOBILE & TABLET VERTICAL LAYOUT --- */
-@media (max-width: 992px) {
-  .timeline-wrapper {
-    padding: 0 0 0 20px; /* Left padding for the line */
-    position: relative;
+.timeline__event__title {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color1);
+  /* Default title color */
+  letter-spacing: 1.5px;
+}
+
+.timeline__event__content {
+  padding: var(--spacing);
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3),
+    0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  background: #fff;
+  width: var(--content-width);
+  border-radius: 0 var(--bdrs) var(--bdrs) 0;
+  /* Default border radius */
+}
+
+.timeline__event__date {
+  color: var(--color2);
+  /* Default date text color */
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: var(--color1);
+  /* Default date background color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 0 var(--spacing);
+  border-radius: var(--bdrs) 0 0 var(--bdrs);
+  /* Default border radius */
+}
+
+.timeline__event__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color1);
+  /* Default icon color */
+  padding: var(--spacing);
+  align-self: center;
+  margin: 0 var(--spacing);
+  background: var(--color2);
+  /* Default icon background */
+  border-radius: var(--bdrs-icon);
+  width: calc(var(--circle-size) + 80px);
+  /* Adjust size to include padding */
+  height: calc(var(--circle-size) + 80px);
+  position: relative;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3),
+    0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+
+  /* Set initial state for animation if not using external library */
+  /* Remove overflow: hidden; if you want the lines to originate outside the circle for effect */
+}
+
+.timeline__event__icon i {
+  /* This styling will apply to the SVG generated by Feather Icons */
+  /* Feather icons use 'stroke' for their color, not 'color' */
+  stroke: currentColor;
+  stroke-width: 2;
+  /* Default stroke width */
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  font-size: 35px;
+
+}
+
+/* =======================================================
+   COLOR VARIATIONS BY TYPE
+======================================================= */
+
+/* Type 2 Colors */
+.timeline__event--type2 .timeline__event__date {
+  color: var(--color3);
+  background: var(--color4);
+}
+
+.timeline__event--type2 .timeline__event__icon {
+  background: var(--color3);
+  color: var(--color4);
+}
+
+.timeline__event--type2 .timeline__event__icon::before,
+.timeline__event--type2 .timeline__event__icon::after {
+  background: var(--color3);
+  /* Line color for type2 */
+}
+
+.timeline__event--type2 .timeline__event__title {
+  color: var(--color4);
+}
+
+/* Type 3 Colors */
+.timeline__event--type3 .timeline__event__date {
+  color: var(--color6);
+  background-color: var(--color5);
+}
+
+.timeline__event--type3 .timeline__event__icon {
+  background: var(--color6);
+  color: var(--color5);
+}
+
+.timeline__event--type3 .timeline__event__icon::before,
+.timeline__event--type3 .timeline__event__icon::after {
+  background: var(--color6);
+  /* Line color for type3 */
+}
+
+.timeline__event--type3 .timeline__event__title {
+  color: var(--color5);
+}
+
+/* Hide connection lines for the very last item */
+.timeline__event:last-child .timeline__event__icon::before {
+  content: none;
+  /* Hides the vertical line extending past the last icon */
+}
+
+/* Ensure the horizontal line for the last odd/even item also disappears */
+.timeline__event:last-child .timeline__event__icon::after {
+  content: none;
+}
+
+
+/* =======================================================
+   ANIMATIONS (for fadeInUp - if not using Animate.css)
+   If you want the lines to *draw in* on scroll, you'll need
+   a JavaScript Intersection Observer and apply a class
+   to trigger the animations dynamically.
+======================================================= */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
   }
 
-  .timeline-line {
-    top: 0;
-    left: 8px; /* Position in the middle of the padding */
-    width: 2px;
-    height: 100%;
+  to {
+    opacity: 1;
     transform: none;
   }
-  
-  .timeline-items-container {
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.delay-1s {
+  animation-delay: 1s;
+}
+
+.delay-2s {
+  animation-delay: 2s;
+}
+
+.delay-3s {
+  animation-delay: 3s;
+}
+
+.delay-4s {
+  animation-delay: 4s;
+}
+
+.delay-5s {
+  animation-delay: 5s;
+}
+
+.delay-6s {
+  animation-delay: 6s;
+}
+
+.delay-7s {
+  animation-delay: 7s;
+}
+
+
+/* =======================================================
+   RESPONSIVE LAYOUT (for screens <= 786px)
+======================================================= */
+@media (max-width: 786px) {
+  .timeline__event {
     flex-direction: column;
-    align-items: flex-start;
+    /* Stack vertically for mobile */
+    align-self: center;
+    /* Center the stacked card */
+    width: 90%;
+    /* Make cards wider for better readability on small screens */
   }
 
-  .timeline-item {
+  .timeline__event__content {
     width: 100%;
-    padding-left: 30px; /* Space from the line to the card */
-    margin-bottom: 30px;
-    align-items: flex-start;
-
-    /* Hide desktop connectors */
-    &::before { display: none; }
+    /* Full width for content on mobile */
+    border-radius: 0 0 var(--bdrs) var(--bdrs);
+    /* Adjust border radius to stack correctly */
   }
 
-  .timeline-item:last-child {
-    margin-bottom: 0;
+  .timeline__event__icon {
+    border-radius: var(--bdrs) var(--bdrs) 0 0;
+    /* Adjust border radius for top of stack */
+    width: 100%;
+    /* Make icon full width */
+    margin: 0;
+    /* Remove horizontal margin */
+    box-shadow: none;
+    /* Remove shadow on icon for mobile for cleaner look */
+    height: auto;
+    /* Allow height to adjust to icon content */
+    padding: 20px;
+    /* Adjust padding for mobile icon */
   }
 
-  .timeline-dot {
-    top: 10px;
-    left: -22px; /* Position on the vertical line */
-    transform: none;
+  /* Hide connection lines for mobile, as it's a simple stack */
+  .timeline__event__icon::before,
+  .timeline__event__icon::after {
+    display: none;
+    /* Crucial: hide these lines for mobile vertical stacking */
   }
 
-  .timeline-card-wrapper {
-    position: static;
+  .timeline__event__date {
+    border-radius: 0;
+    /* No special radius needed when stacked */
+    padding: var(--spacing);
+    width: 100%;
+    /* Make date full width below icon */
   }
 
-  .timeline-card {
-    position: relative;
-    /* The arrow for mobile view */
-    &::before {
-      content: '';
-      position: absolute;
-      top: 10px;
-      left: -7px;
-      width: 0;
-      height: 0;
-      border-top: 8px solid transparent;
-      border-bottom: 8px solid transparent;
-      border-right: 8px solid #fff;
-    }
+  /* Reset odd item styles for mobile to match even items (vertical stack) */
+  .timeline__event:nth-child(2n + 1) {
+    flex-direction: column;
+    /* Ensure vertical stacking */
+    align-self: center;
   }
 
-  .timeline-card.bg-orange::before {
-    border-right-color: var(--color-ancor);
+  .timeline__event:nth-child(2n + 1) .timeline__event__date {
+    border-radius: 0;
+  }
+
+  .timeline__event:nth-child(2n + 1) .timeline__event__content {
+    border-radius: 0 0 var(--bdrs) var(--bdrs);
+    /* Adjust border radius */
+  }
+
+  .timeline__event:nth-child(2n + 1) .timeline__event__icon {
+    border-radius: var(--bdrs) var(--bdrs) 0 0;
+    margin: 0;
   }
 }

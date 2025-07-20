@@ -13,6 +13,7 @@ import languageClub from "../../public/images/banner/language-club.png";
 import SingleCourseData from "../../data/pages/11-singleCourse.json";
 
 import TabData from "../../data/elements/advanceTab.json";
+import ModernUniversityBanner from "../19-modern-university/ModernUniversity-Banner";
 const HomeTechnology = () => {
   useEffect(() => {
     import("venobox/dist/venobox.min.js").then((venobox) => {
@@ -23,6 +24,9 @@ const HomeTechnology = () => {
   }, []);
   return (
     <>
+      <div>
+        <ModernUniversityBanner />
+      </div>
       <div className="rbt-banner-area rbt-banner-7   header-transperent-spacer">
         <div className="wrapper w-100">
           <div className="container">
@@ -137,7 +141,7 @@ const HomeTechnology = () => {
 
       <div className="thumb-wrapper bg-color-white rbt-section-gapBottom mt--40">
         <div className="section-title text-center mb-5 ">
-          <h2 className="title"> Our Gallary</h2>
+          <h2 className="title"> Our Gallery</h2>
         </div>
         {TabData &&
           TabData.advanceFour.map((data, index) => (
