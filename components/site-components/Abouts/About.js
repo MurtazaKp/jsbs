@@ -74,7 +74,7 @@ const About = () => {
                 in sin.
               </p>
 
-              <p className="description has-small-font-size mt--10">
+              <p className="description has-small-font-size mt--10 text-justify pe-4">
                 Aljamea-Tus-Saifiyah Business School offers a unique blend of
                 academic rigor and ethical values rooted in its cultural
                 heritage, making it an attractive choice for students seeking a
@@ -88,7 +88,7 @@ const About = () => {
                 economy.
               </p>
 
-              <p className="description has-small-font-size mt--10">
+              <p className="description has-small-font-size mt--10 text-justify pe-4">
                 JSBS brings together the two primary characteristics of the
                 Dawoodi Bohra community — its orientation towards trade and its
                 dedication to education — into a single institution under the
@@ -102,7 +102,7 @@ const About = () => {
                 AS in Fatimi jurisprudential texts.
               </p>
 
-              <p className="description has-small-font-size mt--10">
+              <p className="description has-small-font-size mt--10 text-justify pe-4">
                 Most importantly, for a community whose single most fundamental
                 business premise is to refrain from interest transactions, a
                 comprehensive understanding of today’s markets and business
@@ -116,7 +116,7 @@ const About = () => {
                 development in the coming years.
               </p>
 
-              <p className="description has-small-font-size mt--10">
+              <p className="description has-small-font-size mt--10 text-justify pe-4">
                 Distinguishing itself from countless renowned business schools
                 across the globe, JSBS will adopt an approach to business
                 education that acknowledges modernity yet preserves the sanctity

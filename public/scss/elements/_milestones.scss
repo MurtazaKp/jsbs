@@ -1,0 +1,398 @@
+/* =======================================================
+   CSS Variables (Hardcoded from your SCSS)
+======================================================= */
+:root {
+  --content-width: calc(40vw - 84px);
+  --margin: 20px;
+  --spacing: 20px;
+  --bdrs: 6px;
+  --circle-size: 40px;
+ 
+  --bdrs-icon: 100%;
+
+  --color1: #9251ac;
+  /* Purple */
+  --color2: #f6a4ec;
+  /* Light Purple/Pink */
+
+  --color3: #87bbfe;
+  /* Light Blue */
+  --color4: #555ac0;
+  /* Dark Blue */
+
+  --color5: #24b47e;
+  /* Green */
+  --color6: #aff1b6;
+  /* Light Green */
+}
+
+/* =======================================================
+   BASE STYLES
+======================================================= */
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  /* Default vertical layout for all screen sizes, overridden by desktop media query */
+  margin: var(--margin) auto;
+  position: relative;
+}
+
+.timeline p{
+  line-height: normal !important;
+  font-size: 15px;
+  color: #152251;
+}
+
+.timeline__event {
+  margin-bottom: var(--spacing);
+  position: relative;
+  display: flex;
+  margin: var(--spacing) 0;
+  border-radius: var(--bdrs);
+  align-self: center;
+  /* Centers items in column layout */
+  width: 50vw;
+  
+}
+
+/* Alternating rows for desktop (default behavior due to flex-direction) */
+.timeline__event:nth-child(2n + 1) {
+  flex-direction: row-reverse;
+  /* Swap order for odd items to appear on the left */
+}
+
+.timeline__event:nth-child(2n + 1) .timeline__event__date {
+  border-radius: 0 var(--bdrs) var(--bdrs) 0;
+}
+
+.timeline__event:nth-child(2n + 1) .timeline__event__content {
+  border-radius: var(--bdrs) 0 0 var(--bdrs);
+}
+
+/* === CONNECTING LINES (always visible by default) === */
+/* Vertical line from icon to next icon */
+.timeline__event__icon::before {
+  content: "";
+  width: 2px;
+  height: calc(100% + var(--spacing));
+  /* Line extends past icon to next one */
+  background: var(--color2);
+  /* Default line color */
+  position: absolute;
+  top: 50%;
+  /* Start from center of current icon */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  /* Removed animation properties here to make it static by default */
+}
+
+/* Horizontal line from icon to content (for EVEN items: content on right, icon on left) */
+.timeline__event__icon::after {
+  content: "";
+  width: var(--spacing);
+  /* Length of the horizontal line */
+  height: 2px;
+  background: var(--color2);
+  /* Default line color */
+  position: absolute;
+  left: 50%;
+  /* Starts from center of icon */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+  /* Removed animation properties here to make it static by default */
+}
+
+/* Horizontal line from icon to content (for ODD items: content on left, icon on right) */
+.timeline__event:nth-child(2n + 1) .timeline__event__icon::after {
+  content: "";
+  width: var(--spacing);
+  /* Length of the horizontal line */
+  height: 2px;
+  background: var(--color2);
+  /* Default line color */
+  position: absolute;
+  right: 50%;
+  /* Starts from center of icon */
+  left: auto;
+  /* Reset left property */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+  /* Removed animation properties here to make it static by default */
+}
+
+
+.timeline__event__title {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color1);
+  /* Default title color */
+  letter-spacing: 1.5px;
+}
+
+.timeline__event__content {
+  padding: var(--spacing);
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3),
+    0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  background: #fff;
+  width: var(--content-width);
+  border-radius: 0 var(--bdrs) var(--bdrs) 0;
+  /* Default border radius */
+}
+
+.timeline__event__date {
+  color: var(--color2);
+  /* Default date text color */
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: var(--color1);
+  /* Default date background color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 0 var(--spacing);
+  border-radius: var(--bdrs) 0 0 var(--bdrs);
+  /* Default border radius */
+}
+
+.timeline__event__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color1);
+  /* Default icon color */
+  padding: var(--spacing);
+  align-self: center;
+  margin: 0 var(--spacing);
+  background: var(--color2);
+  /* Default icon background */
+  border-radius: var(--bdrs-icon);
+  width: calc(var(--circle-size) + 80px);
+  /* Adjust size to include padding */
+  height: calc(var(--circle-size) + 80px);
+  position: relative;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3),
+    0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+
+  /* Set initial state for animation if not using external library */
+  /* Remove overflow: hidden; if you want the lines to originate outside the circle for effect */
+}
+
+.timeline__event__icon i {
+  /* This styling will apply to the SVG generated by Feather Icons */
+  /* Feather icons use 'stroke' for their color, not 'color' */
+  stroke: currentColor;
+  stroke-width: 2;
+  /* Default stroke width */
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  font-size: 35px;
+
+}
+
+/* =======================================================
+   COLOR VARIATIONS BY TYPE
+======================================================= */
+
+/* Type 2 Colors */
+.timeline__event--type2 .timeline__event__date {
+  color: var(--color3);
+  background: var(--color4);
+}
+
+.timeline__event--type2 .timeline__event__icon {
+  background: var(--color3);
+  color: var(--color4);
+}
+
+.timeline__event--type2 .timeline__event__icon::before,
+.timeline__event--type2 .timeline__event__icon::after {
+  background: var(--color3);
+  /* Line color for type2 */
+}
+
+.timeline__event--type2 .timeline__event__title {
+  color: var(--color4);
+}
+
+/* Type 3 Colors */
+.timeline__event--type3 .timeline__event__date {
+  color: var(--color6);
+  background-color: var(--color5);
+}
+
+.timeline__event--type3 .timeline__event__icon {
+  background: var(--color6);
+  color: var(--color5);
+}
+
+.timeline__event--type3 .timeline__event__icon::before,
+.timeline__event--type3 .timeline__event__icon::after {
+  background: var(--color6);
+  /* Line color for type3 */
+}
+
+.timeline__event--type3 .timeline__event__title {
+  color: var(--color5);
+}
+
+/* Hide connection lines for the very last item */
+.timeline__event:last-child .timeline__event__icon::before {
+  content: none;
+  /* Hides the vertical line extending past the last icon */
+}
+
+/* Ensure the horizontal line for the last odd/even item also disappears */
+.timeline__event:last-child .timeline__event__icon::after {
+  content: none;
+}
+
+
+/* =======================================================
+   ANIMATIONS (for fadeInUp - if not using Animate.css)
+   If you want the lines to *draw in* on scroll, you'll need
+   a JavaScript Intersection Observer and apply a class
+   to trigger the animations dynamically.
+======================================================= */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.delay-1s {
+  animation-delay: 1s;
+}
+
+.delay-2s {
+  animation-delay: 2s;
+}
+
+.delay-3s {
+  animation-delay: 3s;
+}
+
+.delay-4s {
+  animation-delay: 4s;
+}
+
+.delay-5s {
+  animation-delay: 5s;
+}
+
+.delay-6s {
+  animation-delay: 6s;
+}
+
+.delay-7s {
+  animation-delay: 7s;
+}
+
+
+/* =======================================================
+   RESPONSIVE LAYOUT (for screens <= 786px)
+======================================================= */
+@media (max-width: 786px) {
+  .timeline__event {
+    flex-direction: column;
+    /* Stack vertically for mobile */
+    align-self: center;
+    /* Center the stacked card */
+    width: 90%;
+    /* Make cards wider for better readability on small screens */
+  }
+
+  .timeline__event__content {
+    width: 100%;
+    /* Full width for content on mobile */
+    border-radius: 0 0 var(--bdrs) var(--bdrs);
+    /* Adjust border radius to stack correctly */
+  }
+
+  .timeline__event__icon {
+    border-radius: var(--bdrs) var(--bdrs) 0 0;
+    /* Adjust border radius for top of stack */
+    width: 100%;
+    /* Make icon full width */
+    margin: 0;
+    /* Remove horizontal margin */
+    box-shadow: none;
+    /* Remove shadow on icon for mobile for cleaner look */
+    height: auto;
+    /* Allow height to adjust to icon content */
+    padding: 20px;
+    /* Adjust padding for mobile icon */
+  }
+
+  /* Hide connection lines for mobile, as it's a simple stack */
+  .timeline__event__icon::before,
+  .timeline__event__icon::after {
+    display: none;
+    /* Crucial: hide these lines for mobile vertical stacking */
+  }
+
+  .timeline__event__date {
+    border-radius: 0;
+    /* No special radius needed when stacked */
+    padding: var(--spacing);
+    width: 100%;
+    /* Make date full width below icon */
+  }
+
+  /* Reset odd item styles for mobile to match even items (vertical stack) */
+  .timeline__event:nth-child(2n + 1) {
+    flex-direction: column;
+    /* Ensure vertical stacking */
+    align-self: center;
+  }
+
+  .timeline__event:nth-child(2n + 1) .timeline__event__date {
+    border-radius: 0;
+  }
+
+  .timeline__event:nth-child(2n + 1) .timeline__event__content {
+    border-radius: 0 0 var(--bdrs) var(--bdrs);
+    /* Adjust border radius */
+  }
+
+  .timeline__event:nth-child(2n + 1) .timeline__event__icon {
+    border-radius: var(--bdrs) var(--bdrs) 0 0;
+    margin: 0;
+  }
+}

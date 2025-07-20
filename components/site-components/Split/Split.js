@@ -37,7 +37,7 @@ const Split = () => {
                   Campus Facilities
                 </h4>
                 <p
-                  className="description has-small-font-size sal-animate"
+                  className="description  sal-animate"
                   data-sal="slide-up"
                   data-sal-duration="400"
                   data-sal-delay="300"
@@ -51,7 +51,7 @@ const Split = () => {
                   enhance students' learning experiences.
                 </p>
                 <p
-                  className="description has-small-font-size sal-animate"
+                  className="description  sal-animate"
                   data-sal="slide-up"
                   data-sal-duration="400"
                   data-sal-delay="300"
