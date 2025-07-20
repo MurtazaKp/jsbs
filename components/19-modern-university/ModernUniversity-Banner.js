@@ -24,6 +24,7 @@ const ModernUniversityBanner = () => {
               modules={[Navigation, Autoplay]}
               loop={true}
               slidesPerView={1}
+              speed={800}
               autoplay={{
                 delay: 2500,
                 disableOnInteraction: false,
