@@ -59,7 +59,7 @@ const FeesStructurePage = ({ getBlog }) => {
 
           <div className="thumb-wrapper bg-color-white rbt-section-gapBottom mt--40">
             <div className="section-title text-center mb-5 ">
-              <h3 className="title"> Our Gallary</h3>
+              <h3 className="title"> Our Gallery</h3>
             </div>
             <TeacherGallery />
           </div>
