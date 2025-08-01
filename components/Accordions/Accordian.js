@@ -99,7 +99,7 @@ const AccordionThree = () => {
                       aria-labelledby={item.heading}
                       data-bs-parent="#accordionExamplec3"
                     >
-                      <div className="accordion-body card-body has-small-font-size description">
+                      <div className="accordion-body card-body has-small-font-size text-justify description">
                         {item.desc}
                       </div>
                     </div>

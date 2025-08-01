@@ -20,7 +20,7 @@ const HeaderStyleTwelve = () => {
     { id: "/student-life", label: "Student Life" },
     { id: "/campus-facilities", label: "Campus Facilities" },
     { id: "/graduate-profile", label: "Graduate's Profile" },
-    { id: "/fees-structure", label: "Fee Structure" },
+    // { id: "/fees-structure", label: "Fee Structure" },
   ];
 
   useEffect(() => {

@@ -22,9 +22,8 @@ const StudentLifePage = ({ getBlog }) => {
       <section className="rbt-split-area rbt-section-gap overflow-hidden">
         <div className="wrapper container">
           <div className="section-title text-center mb-4">
-            <span className="subtitle bg-coral-opacity ">
-              Student Activities
-            </span>
+            <span className="subtitle bg-coral-opacity ">Activities</span>
+            <h2 className="mb-5 text-center "> Student Activities</h2>
           </div>
 
           {/* Table Header */}

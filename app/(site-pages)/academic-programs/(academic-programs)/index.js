@@ -18,7 +18,7 @@ const AcademicProgramsPage = ({ getBlog }) => {
                 <span className="subtitle bg-coral-opacity">
                   Academic Programs
                 </span>
-                <h3>3 Year’s B.Sc. Business Administration</h3>
+                <h3>3 Years B.Sc. Business Administration</h3>
               </div>
 
               <div className="rbt-splite-style text-center">
@@ -92,7 +92,7 @@ const AcademicProgramsPage = ({ getBlog }) => {
           </div>
           <div className="rbt-section-gap">
             <div className="container py-5 ">
-              <h2 className="text-center mb-5">Admission Process</h2>
+              <h3 className="text-center mb-5">Admission Process</h3>
               <p className="description text-center">
                 To apply for the 3-Year B.Sc (Business Administration) course at
                 the University of London, you will typically need to follow
@@ -131,10 +131,10 @@ const AcademicProgramsPage = ({ getBlog }) => {
                   <div className="card step-card h-100">
                     <div className="card-body text-center">
                       <div className="step-icon mx-auto">3</div>
-                      <h5>Apply Online</h5>
+                      <h5>Seek Guidancee</h5>
                       <p className="description has-small-font-size">
-                        Use UCAS or UoL portal to complete your application with
-                        all required details.
+                        Seek guidelines from JSBS experts for completion of your
+                        application
                       </p>
                     </div>
                   </div>
@@ -144,10 +144,10 @@ const AcademicProgramsPage = ({ getBlog }) => {
                   <div className="card step-card h-100">
                     <div className="card-body text-center">
                       <div className="step-icon mx-auto">4</div>
-                      <h5>Choose a College</h5>
+                      <h5>Select JSBS</h5>
                       <p className="description has-small-font-size">
-                        Select your preferred University of London college
-                        offering the B.Sc program.
+                        Select JSBS – Burhani College (RTC) as your preferred
+                        college
                       </p>
                     </div>
                   </div>

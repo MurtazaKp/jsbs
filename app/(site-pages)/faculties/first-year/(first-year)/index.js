@@ -55,7 +55,9 @@ const FirstYearBsc = () => {
             {faculties.map((faculty, index) => (
               <div key={index} className="mb-5">
                 <h5 className=" mb-2 text-orange">{faculty.title}</h5>
-                <p className="description">{faculty.description}</p>
+                <p className="description text-justify">
+                  {faculty.description}
+                </p>
               </div>
             ))}
           </div>

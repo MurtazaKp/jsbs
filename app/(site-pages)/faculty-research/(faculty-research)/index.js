@@ -53,7 +53,7 @@ const FacultyOverview = () => {
                   <div className="card-body">
                     <h5 className=" mb-2">{yearItem.year}</h5>
                     <h6 className=" text-orange">{yearItem.faculty.title}</h6>
-                    <p className="description has-small-font-size">
+                    <p className="description has-small-font-size text-justify">
                       {yearItem.faculty.description}
                     </p>
                     <div className="text-end ">

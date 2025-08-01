@@ -35,7 +35,9 @@ const SplitTwo = ({ isImg }) => {
                       {data.tag}
                     </span>
                     <h2 className="title">{data.title}</h2>
-                    <p className="description mt--30">{data.desc}</p>
+                    <p className="description mt--30 text-justify">
+                      {data.desc}
+                    </p>
                   </div>
                 </div>
               </div>
