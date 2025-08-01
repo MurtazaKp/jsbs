@@ -92,7 +92,7 @@ const AcademicProgramsPage = ({ getBlog }) => {
           </div>
           <div className="rbt-section-gap">
             <div className="container py-5 ">
-              <h2 className="text-center mb-5">Admission Process</h2>
+              <h3 className="text-center mb-5">Admission Process</h3>
               <p className="description text-center">
                 To apply for the 3-Year B.Sc (Business Administration) course at
                 the University of London, you will typically need to follow

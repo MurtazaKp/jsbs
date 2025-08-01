@@ -80,7 +80,7 @@ const AdvanceTabFive = () => {
                 data-sal-duration="700"
                 data-sal-delay="100"
               >
-                <h2 className="title">Program Overview</h2>
+                <h3 className="title">Program Overview</h3>
                 <p className="description mt-2 text-justify">
                   Under the Academic Guidance of Royal Holloway, this degree is
                   designed to provide students with a strong academic foundation

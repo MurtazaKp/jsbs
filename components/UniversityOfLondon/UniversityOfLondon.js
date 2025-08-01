@@ -10,7 +10,7 @@ export default function SingleCourseProp({ courseData, image }) {
     <>
       <div className="col-lg-12">
         <div className="modern-course-features-box bg-dark-blue h-100">
-          <h2 className="title text-white mt-2 "> University Of London</h2>
+          <h3 className="title text-white mt-2 "> University Of London</h3>
           <div className="inner">
             <div className="">
               <p className="description text-white text-justify">
@@ -70,10 +70,10 @@ export default function SingleCourseProp({ courseData, image }) {
                   <Image src={imageTwo} width={558} height={397} alt="Image" />
                 </div>
                 <div className="content">
-                  <h2 className="title text-white">
+                  <h3 className="title text-white">
                     {" "}
                     Accreditation of Aljamea-Tus- Saifiyah Business School
-                  </h2>
+                  </h3>
                   <p className="description  text-white text-justify">
                     Aljamea-Tus-Saifiyah is an institution of higher education
                     that was founded in 1810 in Surat, India. It is primarily
@@ -94,10 +94,10 @@ export default function SingleCourseProp({ courseData, image }) {
             <div className="inner" key={index}>
               {data.certificateThree.map((innerData, innerIndex) => (
                 <div className="content" key={innerIndex}>
-                  <h2 className="title text-white mt-2">
+                  <h3 className="title text-white mt-2">
                     {" "}
                     Accreditation of University of London (UoL)
-                  </h2>
+                  </h3>
                   <p className="description pe-2 text-white text-justify">
                     The University of London (UoL) is a well-established
                     institution with a long history, dating back to its founding

@@ -79,7 +79,7 @@ const FooterThree = () => {
                         footerType={footer.usefulLinks}
                       />
 
-                      <div className="col-lg-2 offset-lg-1 col-md-6 col-sm-6 col-12 mt--30">
+                      <div className="col-lg-3 col-md-6 col-sm-6 col-12 mt--30">
                         <div className="footer-widget">
                           {/* <h5 className="ft-title">Get Contact</h5> */}
                           <ul className="ft-link">

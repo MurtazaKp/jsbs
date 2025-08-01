@@ -71,7 +71,7 @@ const Timeline = () => {
 
   return (
     <>
-      <h2 className="text-center">Our Milestones</h2>
+      <h3 className="text-center">Our Milestones</h3>
       <div className="timeline container px-0">
         {milestonesData.map((event, index) => (
           <div
