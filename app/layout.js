@@ -23,8 +23,7 @@ import "../public/scss/styles.scss";
 import HeaderStyleTwelve from "@/components/Header/HeaderStyle-Twelve";
 import FooterThree from "@/components/Footer/Footer-Three";
 import Context from "@/context/Context";
-import { Provider } from "react-redux";
-import Store from "@/redux/store";
+
 import SideNav from "@/components/Header/SideNav";
 import Separator from "@/components/site-components/Separator";
 
@@ -46,17 +45,16 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <Provider store={Store}>
+
+      <body className="" suppressHydrationWarning={true}>
         <Context>
-          <body className="" suppressHydrationWarning={true}>
-            <HeaderStyleTwelve />
-            <SideNav />
-            {children}
-            <Separator />
-            <FooterThree />
-          </body>
+          <HeaderStyleTwelve />
+          <SideNav />
+          {children}
+          <Separator />
+          <FooterThree />
         </Context>
-      </Provider>
+      </body>
     </html>
   );
 }
