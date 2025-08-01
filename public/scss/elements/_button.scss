@@ -941,7 +941,7 @@ span {
         }
 
         &:hover {
-            color: var(--color-primary) !important;
+            color: var(--color-primary) ;
 
             &::after {
                 width: 100%;

@@ -28,16 +28,16 @@ const Split = () => {
                     alt="Shape Images"
                   />
                 </div>
-                <h4
+                <h3
                   className="title sal-animate"
                   data-sal="slide-up"
                   data-sal-duration="400"
                   data-sal-delay="200"
                 >
                   Campus Facilities
-                </h4>
+                </h3>
                 <p
-                  className="description  sal-animate"
+                  className="description  sal-animate text-justify"
                   data-sal="slide-up"
                   data-sal-duration="400"
                   data-sal-delay="300"
@@ -51,7 +51,7 @@ const Split = () => {
                   enhance students' learning experiences.
                 </p>
                 <p
-                  className="description  sal-animate"
+                  className="description  sal-animate text-justify"
                   data-sal="slide-up"
                   data-sal-duration="400"
                   data-sal-delay="300"

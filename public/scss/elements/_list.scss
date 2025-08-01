@@ -118,22 +118,27 @@
     @extend %liststyle;
     margin: -10px;
 
+   
+
     li {
         font-size: 16px;
         margin: 10px;
 
         i {
-            width: 22px;
-            height: 22px;
+            width: 20px;
+            height: 20px;
             background: var(--color-success);
-            margin: 0 auto;
-            line-height: 22px;
+           padding: 5px;
+            line-height: 15px;
             text-align: center;
             border-radius: 100%;
             color: var(--color-white);
-            font-size: 14px;
+            font-size: 15px;
             margin-right: 10px;
-            display: inline-block;
+            display:flex;
+            margin-top:5px ;
+            justify-content: center;
+            align-items: center;
         }
 
         &.off {
@@ -188,7 +193,7 @@
 
     .inner {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
 
         @media #{$md-layout} {
             display: block;

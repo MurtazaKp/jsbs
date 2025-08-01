@@ -25,9 +25,9 @@ const faculties = [
       "The Faculty of Marketing Strategy typically focuses on equipping students and professionals with the skills and knowledge necessary to develop effective marketing strategies. This includes an exploration of market research, consumer behavior, branding, digital marketing, and strategic planning.",
   },
   {
-    title: "Faculty of Managing Organisational Change & Performance",
+    title: "Faculty of Management Accounting ",
     description:
-      "The Faculty of Managing Organisational Change and Performance focuses on the development and implementation of strategies to drive and sustain organisational change and performance improvement. It explores topics such as strategic management, innovation, leadership, and change implementation in business environments.",
+      "The faculty of management accounting focuses on providing financial and non-financial information to managers within organizations to assist in planning, controlling, decision-making, and improving operational efficiency. The faculty typically offers courses, conducts research, and provides certifications related to management accounting principles, techniques, and strategies to develop skilled professionals in this field.",
   },
   {
     title: "Faculty of Marketing Research",
@@ -38,11 +38,6 @@ const faculties = [
     title: "Faculty of Digital Marketing",
     description:
       "The Faculty of Digital Marketing equips students with the skills to plan and execute marketing strategies using digital tools and platforms, such as SEO, social media, content marketing, analytics, and email campaigns. It focuses on consumer behavior and ethics in the digital space.",
-  },
-  {
-    title: "Faculty of The Global Economy and Multinational Enterprise",
-    description:
-      "This faculty focuses on international economic policies, global trade, and how multinational corporations operate across diverse markets. It prepares students for careers in global finance, consulting, and business strategy.",
   },
 ];
 
@@ -60,7 +55,9 @@ const SecondYearBsc = () => {
             {faculties.map((faculty, index) => (
               <div key={index} className="mb-5">
                 <h5 className="text-orange mb-2">{faculty.title}</h5>
-                <p className="description">{faculty.description}</p>
+                <p className="description text-justify">
+                  {faculty.description}
+                </p>
               </div>
             ))}
           </div>

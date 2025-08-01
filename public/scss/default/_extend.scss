@@ -282,6 +282,10 @@
     color: var(--color-ancor) !important;
 }
 
+.text-dark-blue{
+    color: var(--color-heading) !important;
+}
+
 
 
 .card-bg-1 {
@@ -499,4 +503,17 @@
 
 .text-justify{
     text-align: justify;
+}
+
+a.rbt-btn-link:hover {
+    color: var(--color-ancor) !important;
+}
+
+
+.blockquote{
+    border-color: var(--color-ancor) !important;
+}
+.blockquote::before{
+background-image: url("/images/blockquote.svg") !important;
+filter: grayscale(0) !important;
 }
