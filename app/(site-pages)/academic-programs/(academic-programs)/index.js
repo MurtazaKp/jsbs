@@ -18,7 +18,7 @@ const AcademicProgramsPage = ({ getBlog }) => {
                 <span className="subtitle bg-coral-opacity">
                   Academic Programs
                 </span>
-                <h3>3 Years B.Sc. Business Administration</h3>
+                <h3>3 Year B.Sc. Business Administration</h3>
               </div>
 
               <div className="rbt-splite-style text-center">
@@ -131,7 +131,7 @@ const AcademicProgramsPage = ({ getBlog }) => {
                   <div className="card step-card h-100">
                     <div className="card-body text-center">
                       <div className="step-icon mx-auto">3</div>
-                      <h5>Seek Guidancee</h5>
+                      <h5>Seek Guidance</h5>
                       <p className="description has-small-font-size">
                         Seek guidelines from JSBS experts for completion of your
                         application

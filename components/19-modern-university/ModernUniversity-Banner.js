@@ -73,18 +73,18 @@ const ModernUniversityBanner = () => {
             </Swiper>
 
             <div className="rbt-slider-control">
-              <div className="rbt-swiper-arrow-2 rbt-arrow-left">
+              <div className="rbt-swiper-arrow-2 rbt-arrow-right">
                 <span className="icon">
                   <i className="rbt-icon-top feather-arrow-left"></i>
                 </span>
                 <span className="text">Prev</span>
-              </div>
 
-              <div className="rbt-swiper-arrow-2 rbt-arrow-right">
-                <span className="text">Next</span>
-                <span className="icon">
-                  <i className="rbt-icon feather-arrow-right"></i>
-                </span>
+                <div className="rbt-swiper-arrow-2 rbt-arrow-left">
+                  <span className="text">Next</span>
+                  <span className="icon">
+                    <i className="rbt-icon feather-arrow-right"></i>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
