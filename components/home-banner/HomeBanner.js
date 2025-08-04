@@ -84,7 +84,7 @@ const HomeTechnology = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-xl-6 order-1 order-lg-1 position-sticky  top-60  ">
+              <div className="col-xl-6 order-1 order-lg-1 sticky-xl-top  top-60  ">
                 <div className="thumbnail-wrapper">
                   <div className="thumbnail ">
                     <Image
