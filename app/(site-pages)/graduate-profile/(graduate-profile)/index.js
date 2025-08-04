@@ -61,8 +61,12 @@ const GraduateProfilePage = ({ getBlog }) => {
     <>
       <Provider store={Store}>
         <Context>
-          <section className="container  rbt-section-gap">
-            <h2 className="mb-5 text-center ">Our Graduates’ Profile</h2>
+          <section className="container  rbt-section-gap ">
+            <div className="section-title  text-center">
+              <span className="subtitle bg-coral-opacity">Profiles</span>
+            </div>
+
+            <h3 className="mb-5 text-center ">Our Graduates’ Profile</h3>
             <div className="row g-4">
               {graduateData.map((item, index) => (
                 <div key={index} className="col-md-6">

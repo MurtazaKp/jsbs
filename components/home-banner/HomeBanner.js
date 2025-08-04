@@ -24,21 +24,21 @@ const HomeTechnology = () => {
   }, []);
   return (
     <>
-      <div>
+      <div className=" header-transperent-spacer">
         <ModernUniversityBanner />
       </div>
-      <div className="rbt-banner-area rbt-banner-7   header-transperent-spacer">
+      <div className=" rbt-section-gap bg-light-orange">
         <div className="wrapper w-100">
           <div className="container">
             <div className="row g-5 justify-content-between align-items-start">
               <div className="col-12">
                 <h1> Aljamea-Tus-Saifiyah Business School</h1>
               </div>
-              <div className="col-lg-6 order-2 order-lg-2">
+              <div className="col-xl-6 order-2 order-lg-2">
                 <div className="content">
                   <div className="inner">
                     <div className="content">
-                      <p className="description has-small-font-size mt--10 text-justify">
+                      <p className="description  mt--10 text-justify">
                         His Holiness Dr. Syedna Mufaddal Saifuddin TUS bestowed
                         Raza Mubarak for Aljamea-Tus-Saifiyah Business School
                         (JSBS) in 1440/2018. JSBS integrates contemporary views
@@ -51,7 +51,7 @@ const HomeTechnology = () => {
                         principles and teachings of the Islamic ethos.
                       </p>
 
-                      <p className="description has-small-font-size mt--10 text-justify">
+                      <p className="description  mt--10 text-justify">
                         As part of the larger Aljamea-Tus-Saifiyah educational
                         framework, which offers a range of programs aimed at
                         holistic development, this business school emphasizes
@@ -66,7 +66,7 @@ const HomeTechnology = () => {
                         society.
                       </p>
 
-                      <p className="description has-small-font-size mt--10 text-justify">
+                      <p className="description mt--10 text-justify">
                         In addition to traditional learning, the school
                         incorporates various hands-on experiences such as
                         internships, industry partnerships, and workshops led by
@@ -84,11 +84,11 @@ const HomeTechnology = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-6 order-1 order-lg-1 align-self-center  ">
+              <div className="col-xl-6 order-1 order-lg-1 position-sticky  top-60  ">
                 <div className="thumbnail-wrapper">
                   <div className="thumbnail ">
                     <Image
-                      className="rounded-4 col-lg-11"
+                      className="rounded-4 "
                       src={languageClub}
                       width={597}
                       height={479}
@@ -110,9 +110,7 @@ const HomeTechnology = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="inner">
-                <div className="section-title text-center mb--60">
-                  <h2 className="title">University of London</h2>
-                </div>
+                <div className="section-title text-center mb--60"></div>
                 <div className="row g-5">
                   <SingleCourseProp courseData={SingleCourseData.certificate} />
                 </div>
@@ -120,87 +118,6 @@ const HomeTechnology = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="rbt-section-gap bg-light-orange">
-        <div className="text-center">
-          <h2 className="col-lg-6 mx-auto">
-            To know more about University of London{" "}
-          </h2>
-          <Link
-            className="rbt-btn bg-orange icon-hover"
-            href="https://www.london.ac.uk/"
-          >
-            Click Here to know more
-            <span className="btn-icon">
-              <i className="feather-arrow-right"></i>
-            </span>
-          </Link>
-        </div>
-      </div>
-
-      <div className="thumb-wrapper bg-color-white rbt-section-gapBottom mt--40">
-        <div className="section-title text-center mb-5 ">
-          <h2 className="title"> Our Gallery</h2>
-        </div>
-        {TabData &&
-          TabData.advanceFour.map((data, index) => (
-            <div className="container" key={index}>
-              {data.gallery.map((value, subIndex) => (
-                <div className="row g-5 mt--40" key={subIndex}>
-                  <div className="col-lg-6">
-                    <div className="rbt-category-gallery">
-                      <div className="thumbnail">
-                        <Link href="#">
-                          <Image
-                            src={value.img}
-                            width={value.width}
-                            height={value.height}
-                            alt="Gallery Images"
-                          />
-                        </Link>
-                        <div className="rbt-bg-overlay"></div>
-                        <div className="hover-content">
-                          <h3 className="title">{value.text}</h3>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-6">
-                    <div className="row g-5">
-                      {value.subGallery.map((subValue, subInnerIndex) => (
-                        <div
-                          className={`${
-                            subValue.lgImg
-                              ? "col-lg-12"
-                              : "col-lg-6 col-md-6 col-sm-6 col-12"
-                          }`}
-                          key={subInnerIndex}
-                        >
-                          <div className="rbt-category-gallery">
-                            <div className="thumbnail">
-                              <Link href="#">
-                                <Image
-                                  src={subValue.img}
-                                  width={subValue.width}
-                                  height={subValue.height}
-                                  alt="Gallery Images"
-                                />
-                              </Link>
-                              <div className="rbt-bg-overlay"></div>
-                              <div className="hover-content">
-                                <h3 className="title">{subValue.text}</h3>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          ))}
       </div>
     </>
   );

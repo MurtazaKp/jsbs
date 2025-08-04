@@ -264,7 +264,7 @@
             margin: 0;
             .nav-link {
                 color: var(--color-heading);
-                padding: 24px 44px;
+                padding: 15px 40px;
                 margin-bottom: 0px;
                 outline: none;
                 border: 0 none;
@@ -297,7 +297,7 @@
     // Tab Content 
     .rainbow-tab-content {
         background: var(--color-extra2);
-        padding: 40px;
+      
       
         @media #{$sm-layout} {
             padding: 30px;
@@ -305,7 +305,7 @@
 
 
         @media #{$lgtolp-device} {
-            height: 300px;
+            height: 370px;
         }
         p {
             &:last-child {

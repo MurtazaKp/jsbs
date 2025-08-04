@@ -11,11 +11,12 @@ const AdvanceTabFive = () => {
       img: "/images/tab/tabs-02.jpg",
       body: [
         {
-          text: "Foundation Level",
+          text: "Year 1",
           isActive: true,
           tab: "home-tab-5",
           target: "home-5",
           controls: "home",
+          title: "Mandatory: ",
           desc: [
             "Foundations of Quantitative Methods for Sustainable Organisations.",
             "Interpreting Management, Market and Consumption.",
@@ -25,11 +26,12 @@ const AdvanceTabFive = () => {
           descTwo: [],
         },
         {
-          text: "Advance Level",
+          text: "Year 2",
           isActive: false,
           tab: "profile-tab-5",
           target: "profile-5",
           controls: "profile",
+          title: "Mandatory: ",
           desc: [
             "Employability and Human Resource Management.",
             "Strategic Management and Accounting.",
@@ -43,11 +45,12 @@ const AdvanceTabFive = () => {
           ],
         },
         {
-          text: "Specialist Level",
+          text: "Year 3",
           isActive: false,
           tab: "contact-tab-5",
           target: "contact-5",
           controls: "contact",
+          title: "Mandatory: ",
           desc: [
             "Integrating Management: Business, Leadership and Innovation.",
           ],
@@ -55,6 +58,10 @@ const AdvanceTabFive = () => {
             "Choose any one:",
             "Consumer Behavior and Global Marketing.",
             "Brands, Branding and Advertising.",
+            "Emerging markets and Asia Pacific business",
+            "International human resource management",
+            "The individual at work and Globalisation",
+            "European business and international competition",
           ],
         },
       ],
@@ -73,8 +80,8 @@ const AdvanceTabFive = () => {
                 data-sal-duration="700"
                 data-sal-delay="100"
               >
-                <h2 className="title">Program Overview</h2>
-                <p className="description mt-2">
+                <h3 className="title">Program Overview</h3>
+                <p className="description mt-2 text-justify">
                   Under the Academic Guidance of Royal Holloway, this degree is
                   designed to provide students with a strong academic foundation
                   in core business functions including general business
@@ -86,7 +93,7 @@ const AdvanceTabFive = () => {
             </div>
           </div>
 
-          <div className="row row--30 align-items-start">
+          <div className="row row--30 align-items-center">
             <div className="col-lg-5">
               <Image
                 className="radius-small"
@@ -122,7 +129,7 @@ const AdvanceTabFive = () => {
                   ))}
                 </ul>
 
-                <div className="rainbow-tab-content tab-content bg-light-orange">
+                <div className="rainbow-tab-content tab-content p-4 p-sm-5 bg-light-orange">
                   {data.body.map((item, innerIndex) => (
                     <div
                       className={`tab-pane fade ${
@@ -133,29 +140,32 @@ const AdvanceTabFive = () => {
                       aria-labelledby={item.tab}
                       key={innerIndex}
                     >
+                      {item.title && <h6>{item.title}</h6>}
                       {item.desc.length > 0 && (
                         <ul className="plan-offer-list rbt-list-primary-opacity">
                           {item.desc.map((point, idx) => (
                             <li
-                              className="description has-small-font-size"
+                              className="description has-small-font-size mb-5 mb-sm-0 d-flex align-items-start justify-content-start"
                               key={idx}
                             >
-                              <i className="feather-check"></i> {point}
+                              <i className="feather-check"></i>{" "}
+                              <span>{point}</span>
                             </li>
                           ))}
                         </ul>
                       )}
 
                       {item.descTwo.length > 0 && (
-                        <div className="ps-5 pt-4">
-                          <h5 className="pb-0 m-0">{item.descTwo[0]}</h5>
-                          <ul className="rbt-list-style mt--10">
+                        <div className=" pt-4 mt-3">
+                          <h6 className="pb-0 m-0">{item.descTwo[0]}</h6>
+                          <ul className="plan-offer-list rbt-list-primary-opacity mt--10">
                             {item.descTwo.slice(1).map((point, idx) => (
                               <li
-                                className="description has-small-font-size"
+                                className="description has-small-font-size d-flex align-items-start"
                                 key={idx}
                               >
-                                {point}
+                                <i className="feather-check"></i>{" "}
+                                <span>{point}</span>
                               </li>
                             ))}
                           </ul>

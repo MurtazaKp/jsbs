@@ -14,15 +14,12 @@ const AboutUsPage = ({ getBlog }) => {
     <>
       <Provider store={Store}>
         <Context>
-          <div className="rbt-about-area about-style-1 bg-light-orange rbt-section-gap">
-            <ParallaxProvider>
-              <About />
-            </ParallaxProvider>
-          </div>
-          <div className="rbt-section-gap">
+          <div className="bg-light-orange rbt-section-gap">
             <Vision />
+            <About />
           </div>
-          <div className="rbt-section-gap bg-light-orange">
+
+          <div className="rbt-section-gap ">
             <Milestones />
           </div>
         </Context>

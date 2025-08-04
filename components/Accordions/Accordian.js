@@ -79,7 +79,7 @@ const AccordionThree = () => {
                       id={item.heading}
                     >
                       <button
-                        className={`accordion-button ${
+                        className={`accordion-button has-medium-font-size ${
                           !item.collapsed ? "collapsed" : ""
                         }`}
                         type="button"
@@ -99,8 +99,8 @@ const AccordionThree = () => {
                       aria-labelledby={item.heading}
                       data-bs-parent="#accordionExamplec3"
                     >
-                      <div className="accordion-body card-body has-small-font-size description">
-                        {item.desc}
+                      <div className="accordion-body card-body  text-justify description">
+                        <p>{item.desc}</p>
                       </div>
                     </div>
                   </div>
