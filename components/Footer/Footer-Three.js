@@ -50,7 +50,7 @@ const FooterThree = () => {
                             </Link>
                           </div>
 
-                          <p className="description mt--20">
+                          <p className="description mt--20 text-justify">
                             {footer.description}
                           </p>
 

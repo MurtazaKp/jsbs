@@ -52,14 +52,12 @@ const About = () => {
 
             <div>
               <h5>{aboutContent.quotes.syednaIntro}</h5>
-              <p className="description has-small-font-size">
-                {aboutContent.quotes.syednaQuote}
-              </p>
+              <p className="description ">{aboutContent.quotes.syednaQuote}</p>
 
               {aboutContent.missionParagraphs.map((para, index) => (
                 <p
                   key={index}
-                  className="description has-small-font-size mt--10 text-justify pe-4"
+                  className="description  mt--10 text-justify pe-4"
                 >
                   {para}
                 </p>
@@ -79,7 +77,7 @@ const About = () => {
                   className="mb-3 description d-flex align-items-start mb-3"
                 >
                   <i className="feather-check text-success me-2 mt-2"></i>
-                  <span>{aim}</span>
+                  <p className="description">{aim}</p>
                 </li>
               ))}
             </ul>
