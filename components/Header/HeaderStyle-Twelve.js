@@ -26,7 +26,6 @@ const HeaderStyleTwelve = () => {
     { id: "/student-life", label: "Student Life", protected: false },
     { id: "/campus-facilities", label: "Campus Facilities", protected: true },
     { id: "/graduate-profile", label: "Graduate's Profile", protected: true },
-    { id: "/fees-structure", label: "Fee Structure", protected: true },
   ];
 
   useEffect(() => {
