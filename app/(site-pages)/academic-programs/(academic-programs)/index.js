@@ -26,9 +26,52 @@ const AcademicProgramsPage = ({ getBlog }) => {
               </div>
             </div>
           </div>
+          <div className="container  rbt-section-gap">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="modern-course-features-box bg-dark-blue grid-content-reverse h-100">
+                  <div className="inner">
+                    <div className="content">
+                      <h3 className="title text-white mt-2">
+                        {" "}
+                        Accreditation of University of London (UoL)
+                      </h3>
+                      <p className="description pe-2 text-white text-justify">
+                        The University of London (UoL) is a well-established
+                        institution with a long history, dating back to its
+                        founding in 1836. It comprises several constituent
+                        colleges and institutions, each of which may have its
+                        own accreditation and recognition. The University of
+                        London itself is recognized by several relevant bodies,
+                        including UK Government and Education Authorities: As a
+                        recognized university in the UK, it is subject to
+                        oversight by the UK Quality Assurance Agency for Higher
+                        Education (QAA), which ensures standards are maintained
+                        across UK institutions. Professional Accreditations:
+                        Many of the University of London’s programs are
+                        accredited by relevant professional bodies, depending on
+                        the field of study. For example, programs in business
+                        may be accredited by bodies like the Association of MBAs
+                        (AMBA) or the Chartered Institute of Personnel and
+                        Development (CIPD).International Recognition: The
+                        University of London degrees are recognized globally,
+                        and its distance learning programs, in particular,
+                        attract students from around the world. The London
+                        School of Economics and Political Science (LSE), one of
+                        its most renowned constituent colleges, is also highly
+                        regarded and holds multiple accreditations related to
+                        its specific programs.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="rbt-tab-area bg-color-white rbt-section-gap">
             <AdvanceTabFive />
           </div>
+
           <div className="bg-light-orange  rbt-section-gap ">
             <section className="container py-5">
               <h3 className="mb-4 ">Admissions: General Entry Requirement</h3>

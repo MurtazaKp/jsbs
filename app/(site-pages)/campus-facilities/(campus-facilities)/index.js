@@ -37,12 +37,6 @@ const CampusFacilitiesPage = ({ getBlog }) => {
             </div>
           </div>
 
-          <div className="rbt-split-area bg-light-orange  rbt-section-gap overflow-hidden">
-            <div className="wrapper">
-              <AccordionThree />
-            </div>
-          </div>
-
           <div className="rbt-split-area  rbt-section-gap overflow-hidden">
             <div className="wrapper">
               <div className="section-title text-center mb--60">
