@@ -68,7 +68,7 @@ const Publications = () => {
     <>
       {/* Bootstrap CSS */}
 
-      <div className="container rbt-section-gap">
+      <div className="container rbt-section-gap px-4 px-lg-0">
         {/* Header Section */}
         <div className="header-section">
           <div className="d-flex flex-column align-items-center section-title">
