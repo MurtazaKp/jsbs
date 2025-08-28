@@ -68,19 +68,6 @@ const FacultyOverview = () => {
           </div>
         </div>
       </div>
-      <section className="rbt-split-area  rbt-section-gap overflow-hidden">
-        <div className="wrapper container text-center">
-          <div className="section-title mb-4">
-            <span className="subtitle bg-coral-opacity ">
-              Research & Publication
-            </span>
-          </div>
-
-          <div className="rbt-splite-style">
-            <h2 className="fw-bold">Coming Soon</h2>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

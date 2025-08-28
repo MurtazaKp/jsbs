@@ -14,6 +14,7 @@ import SingleCourseData from "../../data/pages/11-singleCourse.json";
 
 import TabData from "../../data/elements/advanceTab.json";
 import ModernUniversityBanner from "../19-modern-university/ModernUniversity-Banner";
+import AccordionThree from "../Accordions/Accordian";
 const HomeTechnology = () => {
   useEffect(() => {
     import("venobox/dist/venobox.min.js").then((venobox) => {
@@ -24,10 +25,10 @@ const HomeTechnology = () => {
   }, []);
   return (
     <>
-      <div className=" header-transperent-spacer">
+      <div className=" header-transperent-spacer bg-light-orange ">
         <ModernUniversityBanner />
       </div>
-      <div className=" rbt-section-gap bg-light-orange">
+      <div className=" rbt-section-gap ">
         <div className="wrapper w-100">
           <div className="container">
             <div className="row g-5 justify-content-between align-items-start">
@@ -99,6 +100,12 @@ const HomeTechnology = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="rbt-split-area bg-light-orange  rbt-section-gap overflow-hidden">
+        <div className="wrapper">
+          <AccordionThree />
         </div>
       </div>
 

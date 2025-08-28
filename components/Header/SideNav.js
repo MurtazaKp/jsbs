@@ -6,18 +6,21 @@ import Image from "next/image";
 
 import logo from "../../public/images/logo/logo.svg";
 import { useAppContext } from "@/context/Context";
+import { usePathname } from "next/navigation";
 
 const SideNav = () => {
   const { mobile, setMobile } = useAppContext();
   const sideNavRef = useRef(null);
+  const pathname = usePathname();
 
   const sections = [
     { id: "/about-us", label: "About Us" },
     { id: "/academic-programs", label: "Academic Programs" },
-    { id: "/faculty-research", label: "Faculty & Research" },
+    { id: "/faculty-research", label: "Faculty" },
     { id: "/student-life", label: "Student Life" },
     { id: "/campus-facilities", label: "Campus Facilities" },
-    { id: "/graduate-profile", label: "Graduate's Profile" },
+    { id: "/research-publication", label: "Research & Publication" },
+    // { id: "/graduate-profile", label: "Graduate's Profile" },
   ];
 
   // Close sidebar when clicking outside
@@ -104,7 +107,7 @@ const SideNav = () => {
           <nav className="side-nav w-100 mt--60 mb--80">
             <ul className="navbar-nav">
               {sections.map((sec, i) => (
-                <li key={i}>
+                <li className={pathname === sec.id ? "current" : ""} key={i}>
                   <Link onClick={() => setMobile(!mobile)} href={sec.id}>
                     {sec.label}
                   </Link>
