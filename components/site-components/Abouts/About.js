@@ -13,7 +13,7 @@ const aboutContent = {
   subTitle: "WHY JSBS",
   quotes: {
     amirStatement:
-      "Amir al-Mumineen has stated: “Learn Fiqh, then enter the marketplace”",
+      "Amir al-Mumineen AS has stated: “Learn Fiqh, then enter the marketplace”",
     syednaIntro:
       "Al-Dai al-Ajal Syedna Aali Qadr Mufaddal Saifuddin TUS states:",
     syednaQuote:
@@ -48,7 +48,9 @@ const About = () => {
               <h5 className="title mt--20">{aboutContent.subTitle}</h5>
             </div>
 
-            <p className="description">{aboutContent.quotes.amirStatement}</p>
+            <p className="description">
+              <em>{aboutContent.quotes.amirStatement}</em>
+            </p>
 
             <div>
               <h5>{aboutContent.quotes.syednaIntro}</h5>

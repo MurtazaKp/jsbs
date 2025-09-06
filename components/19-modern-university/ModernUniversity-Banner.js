@@ -78,7 +78,8 @@ const ModernUniversityBanner = () => {
                   <i className="rbt-icon-top feather-arrow-left"></i>
                 </span>
                 <span className="text">Prev</span>
-
+              </div>
+              <div>
                 <div className="rbt-swiper-arrow-2 rbt-arrow-left">
                   <span className="text">Next</span>
                   <span className="icon">
