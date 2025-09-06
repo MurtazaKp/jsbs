@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const AdvanceTabFive = () => {
   const tabData = [
@@ -24,6 +25,7 @@ const AdvanceTabFive = () => {
             "International Business and Accounting.",
           ],
           descTwo: [],
+          viewMoreLink: "/faculties/first-year",
         },
         {
           text: "Year 2",
@@ -43,6 +45,7 @@ const AdvanceTabFive = () => {
             "Marketing Research and Digital Marketing.",
             "The Global Economy and Multinational Enterprise.",
           ],
+          viewMoreLink: "/faculties/second-year",
         },
         {
           text: "Year 3",
@@ -63,6 +66,7 @@ const AdvanceTabFive = () => {
             "The individual at work and Globalisation",
             "European business and international competition",
           ],
+          viewMoreLink: "/faculties/third-year",
         },
       ],
     },
@@ -131,37 +135,22 @@ const AdvanceTabFive = () => {
 
                 <div className="rainbow-tab-content tab-content p-4 p-sm-5 bg-light-orange">
                   {data.body.map((item, innerIndex) => (
-                    <div
-                      className={`tab-pane fade ${
-                        item.isActive ? "active show" : ""
-                      }`}
-                      id={item.target}
-                      role="tabpanel"
-                      aria-labelledby={item.tab}
-                      key={innerIndex}
-                    >
-                      {item.title && <h6>{item.title}</h6>}
-                      {item.desc.length > 0 && (
-                        <ul className="plan-offer-list rbt-list-primary-opacity">
-                          {item.desc.map((point, idx) => (
-                            <li
-                              className="description has-small-font-size mb-5 mb-sm-0 d-flex align-items-start justify-content-start"
-                              key={idx}
-                            >
-                              <i className="feather-check"></i>{" "}
-                              <span>{point}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-
-                      {item.descTwo.length > 0 && (
-                        <div className=" pt-4 mt-3">
-                          <h6 className="pb-0 m-0">{item.descTwo[0]}</h6>
-                          <ul className="plan-offer-list rbt-list-primary-opacity mt--10">
-                            {item.descTwo.slice(1).map((point, idx) => (
+                    <>
+                      <div
+                        className={`tab-pane fade ${
+                          item.isActive ? "active show" : ""
+                        }`}
+                        id={item.target}
+                        role="tabpanel"
+                        aria-labelledby={item.tab}
+                        key={innerIndex}
+                      >
+                        {item.title && <h6>{item.title}</h6>}
+                        {item.desc.length > 0 && (
+                          <ul className="plan-offer-list rbt-list-primary-opacity pb-3">
+                            {item.desc.map((point, idx) => (
                               <li
-                                className="description has-small-font-size d-flex align-items-start"
+                                className="description has-small-font-size mb-5 mb-sm-0 d-flex align-items-start justify-content-start"
                                 key={idx}
                               >
                                 <i className="feather-check"></i>{" "}
@@ -169,9 +158,32 @@ const AdvanceTabFive = () => {
                               </li>
                             ))}
                           </ul>
+                        )}
+
+                        {item.descTwo.length > 0 && (
+                          <div className=" pt-4 mt-3">
+                            <h6 className="pb-0 m-0">{item.descTwo[0]}</h6>
+                            <ul className="plan-offer-list rbt-list-primary-opacity mt--10">
+                              {item.descTwo.slice(1).map((point, idx) => (
+                                <li
+                                  className="description has-small-font-size d-flex align-items-start"
+                                  key={idx}
+                                >
+                                  <i className="feather-check"></i>{" "}
+                                  <span>{point}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                        <div className={innerIndex === 0 ? "mt-4" : "pt-3"}>
+                          <Link href={item.viewMoreLink}>
+                            {" "}
+                            View More Details
+                          </Link>
                         </div>
-                      )}
-                    </div>
+                      </div>
+                    </>
                   ))}
                 </div>
               </div>

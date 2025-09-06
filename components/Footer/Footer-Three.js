@@ -26,7 +26,7 @@ const FooterThree = () => {
                 {FooterData &&
                   FooterData.footerOne.map((footer, index) => (
                     <div className="row row--15 mt_dec--30" key={index}>
-                      <div className="col-xl-5 col-md-12 col-sm-12 col-12 mt--30">
+                      <div className="col-xl-7 col-md-12 col-sm-12 col-12 mt--30">
                         <div className="footer-widget">
                           <div className="logo">
                             <Link href="/">
@@ -71,52 +71,22 @@ const FooterThree = () => {
                         </div>
                       </div>
 
-                      <div className=" col-xl-3 offset-xl-1 col-md-6 col-sm-6 col-12 align-items-end d-flex">
+                      <div className="col-xl-3 offset-xl-2  col-md-6 col-sm-6 col-12 mt--30 align-items-end d-flex">
                         <div className="footer-widget">
-                          <h5 className="ft-title">Mumbai Campus</h5>
+                          <h5 className="ft-title">JSBS Campuses</h5>
                           <ul className="ft-link">
+                            <li>
+                              <span>Location:</span> {footer.address}
+                            </li>
                             <li>
                               <span>Phone:</span>
                               <Link href="#">{footer.phone}</Link>
                             </li>
                             <li>
                               <span>E-mail:</span>
-                              <Link href="mailto:hr@example.com">
+                              <Link href="mailto:jsbs@jameasafiyah.edu">
                                 {footer.mail}
                               </Link>
-                            </li>
-                            <li>
-                              <span>Location:</span> {footer.address}
-                            </li>
-                          </ul>
-                          <ul className="social-icon social-default icon-naked justify-content-start mt--20">
-                            {footer.socialLink.map((value, innerIndex) => (
-                              <li key={innerIndex}>
-                                <Link href={value.link}>
-                                  <i className={value.icon}></i>
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-
-                      <div className="col-xl-3  col-md-6 col-sm-6 col-12 mt--30 align-items-end d-flex">
-                        <div className="footer-widget">
-                          <h5 className="ft-title">Nairobi Campus</h5>
-                          <ul className="ft-link">
-                            <li>
-                              <span>Phone:</span>
-                              <Link href="#">{footer.phone}</Link>
-                            </li>
-                            <li>
-                              <span>E-mail:</span>
-                              <Link href="mailto:hr@example.com">
-                                {footer.mail}
-                              </Link>
-                            </li>
-                            <li>
-                              <span>Location:</span> {footer.address}
                             </li>
                           </ul>
                           <ul className="social-icon social-default icon-naked justify-content-start mt--20">

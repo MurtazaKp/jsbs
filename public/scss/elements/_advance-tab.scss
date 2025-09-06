@@ -305,7 +305,8 @@
 
 
         @media #{$lgtolp-device} {
-            height: 370px;
+            height: 410px;
+            overflow: auto;
         }
         p {
             &:last-child {

@@ -1,12 +1,12 @@
 import BackToTop from "@/app/backToTop";
-import AcademicProgramsPage from "./(academic-programs)";
+import AcademicProgramsPage from "../(degree-course)";
 
 export const metadata = {
   title: "Academic Programs | JSBS",
   description: "Online Courses & Education NEXTJS14 Template",
 };
 
-const AcademicProgramLayout = () => {
+const DegreeCourseLayout = () => {
   return (
     <>
       <AcademicProgramsPage />
@@ -15,4 +15,4 @@ const AcademicProgramLayout = () => {
   );
 };
 
-export default AcademicProgramLayout;
+export default DegreeCourseLayout;

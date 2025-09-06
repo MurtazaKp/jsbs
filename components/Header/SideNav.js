@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState, useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -15,12 +15,21 @@ const SideNav = () => {
 
   const sections = [
     { id: "/about-us", label: "About Us" },
-    { id: "/academic-programs", label: "Academic Programs" },
+    {
+      id: "/academic-programs",
+      label: "Academic Programs",
+      children: [
+        { id: "/academic-programs/degree-course", label: "Degree Course" },
+        {
+          id: "/academic-programs/certificate-course",
+          label: "Certification Course",
+        },
+      ],
+    },
     { id: "/faculty-research", label: "Faculty" },
     { id: "/student-life", label: "Student Life" },
     { id: "/campus-facilities", label: "Campus Facilities" },
     { id: "/research-publication", label: "Research & Publication" },
-    // { id: "/graduate-profile", label: "Graduate's Profile" },
   ];
 
   // Close sidebar when clicking outside
@@ -34,116 +43,135 @@ const SideNav = () => {
         setMobile(true);
       }
     };
-
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [mobile]);
 
-  // Lock body scroll when sidebar is open
-  useEffect(() => {
-    if (!mobile) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
+  // Determine if section should be expanded based on pathname
+  const isSectionActive = (sec) => {
+    if (pathname === sec.id) return true;
+    if (sec.children) {
+      return sec.children.some((child) => pathname === child.id);
     }
-
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [mobile]);
+    return false;
+  };
 
   return (
-    <>
-      <div
-        ref={sideNavRef}
-        className={`side-menu ${!mobile ? "side-menu-active" : ""}`}
-      >
-        <div className="inner-wrapper side-menu-wrapper">
-          <div className="inner-top">
-            <div className="content">
-              <div className="logo">
-                <Link onClick={() => setMobile(!mobile)} href="/">
-                  <Image
-                    src={logo}
-                    width={152}
-                    height={50}
-                    alt="Education Logo Images"
-                  />
-                </Link>
-              </div>
-              <div className="rbt-btn-close" id="btn_sideNavClose">
-                <button
-                  className="rbt-round-btn"
-                  onClick={() => setMobile(!mobile)}
-                >
-                  <i className="feather-x"></i>
-                </button>
-              </div>
+    <div
+      ref={sideNavRef}
+      className={`side-menu ${!mobile ? "side-menu-active" : ""}`}
+    >
+      <div className="inner-wrapper side-menu-wrapper">
+        <div className="inner-top">
+          <div className="content d-flex justify-content-between align-items-center">
+            <div className="logo">
+              <Link onClick={() => setMobile(!mobile)} href="/">
+                <Image src={logo} width={152} height={50} alt="Logo" />
+              </Link>
             </div>
-
-            <p className="description">
-              Aljamea-Tus-Saifiyah Business School offers a unique blend of
-              academic rigor and ethical values rooted in its cultural heritage,
-              making it an attractive choice for students seeking a holistic
-              education.
-            </p>
-
-            <ul className="navbar-top-left rbt-information-list justify-content-start">
-              <li>
-                <a href="mailto:hello@example.com">
-                  <i className="feather-mail"></i>example@gmail.com
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="feather-phone"></i>(302) 555-0107
-                </a>
-              </li>
-            </ul>
+            <button
+              className="btn-close"
+              onClick={() => setMobile(!mobile)}
+            ></button>
           </div>
+          <p className="description">
+            Aljamea-Tus-Saifiyah Business School offers a unique blend of
+            academic rigor and ethical values rooted in its cultural heritage.
+          </p>
+        </div>
 
-          <nav className="side-nav w-100 mt--60 mb--80">
-            <ul className="navbar-nav">
-              {sections.map((sec, i) => (
-                <li className={pathname === sec.id ? "current" : ""} key={i}>
-                  <Link onClick={() => setMobile(!mobile)} href={sec.id}>
+        <nav className="side-nav w-100 mt-3">
+          <ul className="navbar-nav">
+            {sections.map((sec, i) => (
+              <li
+                key={i}
+                className={`nav-item ${
+                  isSectionActive(sec) ? "active-parent" : ""
+                }`}
+              >
+                {sec.children ? (
+                  <>
+                    <a
+                      className="nav-link d-flex justify-content-between align-items-center"
+                      data-bs-toggle="collapse"
+                      href={`#collapse-${i}`}
+                      role="button"
+                      aria-expanded={isSectionActive(sec) ? "true" : "false"}
+                      aria-controls={`collapse-${i}`}
+                    >
+                      {sec.label}
+                      <i
+                        className={`feather-chevron-${
+                          isSectionActive(sec) ? "up" : "down"
+                        } ms-2`}
+                      ></i>
+                    </a>
+                    <div
+                      className={`collapse ${
+                        isSectionActive(sec) ? "show" : ""
+                      }`}
+                      id={`collapse-${i}`}
+                    >
+                      <ul className="navbar-nav ms-3">
+                        {sec.children.map((child, j) => (
+                          <li key={j} className="nav-item">
+                            <Link
+                              className={`nav-link ${
+                                pathname === child.id ? "text-primary" : ""
+                              }`}
+                              onClick={() => setMobile(true)}
+                              href={child.id}
+                            >
+                              {child.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </>
+                ) : (
+                  <Link
+                    className={`nav-link ${
+                      pathname === sec.id ? "text-primary" : ""
+                    }`}
+                    onClick={() => setMobile(true)}
+                    href={sec.id}
+                  >
                     {sec.label}
                   </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+                )}
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-          <div className="social-share-wrapper">
-            <span className="rbt-short-title d-block">Find With Us</span>
-            <ul className="social-icon social-default transparent-with-border justify-content-start mt--20">
-              <li>
-                <a href="https://www.facebook.com/">
-                  <i className="feather-facebook"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.twitter.com">
-                  <i className="feather-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/">
-                  <i className="feather-instagram"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkdin.com/">
-                  <i className="feather-linkedin"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
+        <div className="social-share-wrapper">
+          <span className="rbt-short-title d-block">Find With Us</span>
+          <ul className="social-icon social-default transparent-with-border justify-content-start mt--20">
+            <li>
+              <a href="https://www.facebook.com/">
+                <i className="feather-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.twitter.com">
+                <i className="feather-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/">
+                <i className="feather-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkdin.com/">
+                <i className="feather-linkedin"></i>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

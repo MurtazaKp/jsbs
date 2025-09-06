@@ -7,7 +7,7 @@ import Context from "@/context/Context";
 import Image from "next/image";
 import AdvanceTabFive from "@/components/site-components/AdvanceTab-Five";
 
-const AcademicProgramsPage = ({ getBlog }) => {
+const DegreeCoursePage = ({ getBlog }) => {
   return (
     <>
       <Provider store={Store}>
@@ -304,4 +304,4 @@ const AcademicProgramsPage = ({ getBlog }) => {
   );
 };
 
-export default AcademicProgramsPage;
+export default DegreeCoursePage;
