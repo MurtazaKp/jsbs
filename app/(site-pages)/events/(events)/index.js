@@ -75,6 +75,7 @@ const EventsLayout = ({ getBlog }) => {
         description:
           "Understanding ethical considerations, guidelines and best practices in research conduct and publication",
         date: "Saturday, 13th September 2025",
+        time: "2:30pm to 4:30pm",
       },
       {
         number: "Session 6",
@@ -100,7 +101,7 @@ const EventsLayout = ({ getBlog }) => {
               <h3>{eventData.title}</h3>
               <p className="description col-12">{eventData.description}</p>
 
-              <div className="d-flex gap-4 justify-content-center text-center">
+              <div className="d-flex flex-column flex-md-row align-items-center gap-4 justify-content-center text-center">
                 {eventData.details.map((item, idx) => (
                   <div
                     key={idx}
@@ -110,13 +111,15 @@ const EventsLayout = ({ getBlog }) => {
                       <i className={`${item.icon} text-orange fs-4`}></i>
                     </div>
                     <div>
-                      <p className="mb-2 fs-4">
+                      <p className=" fs-4">
                         <span className="text-orange">{item.label}</span>{" "}
                         {item.value}
                       </p>
                     </div>
                     {idx < eventData.details.length - 1 && (
-                      <div className="text-dark-blue mx-3">|</div>
+                      <div className="text-dark-blue mx-3 d-none d-md-block">
+                        |
+                      </div>
                     )}
                   </div>
                 ))}
@@ -191,7 +194,7 @@ const EventsLayout = ({ getBlog }) => {
                       <p className="card-text description">
                         {session.description}
                       </p>
-                      <div className="d-flex justify-content-between">
+                      <div className="d-flex flex-column flex-md-row justify-content-between">
                         <div className="session-date">
                           <i className="feather-calendar text-orange fs-3"></i>
                           <span> {session.date}</span>
