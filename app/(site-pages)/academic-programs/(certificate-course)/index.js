@@ -4,9 +4,8 @@ import { Provider } from "react-redux";
 import Store from "@/redux/store";
 
 import Context from "@/context/Context";
-import Image from "next/image";
-import AdvanceTabFive from "@/components/site-components/AdvanceTab-Five";
-import CertificationOverview from "@/components/site-components/certificationOverview";
+
+import CertificationOverview from "@/components/site-components/CertificationOverview";
 
 const CertificatePage = ({ getBlog }) => {
   return (
