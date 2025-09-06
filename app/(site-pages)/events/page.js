@@ -2,7 +2,7 @@ import React from "react";
 import EventsLayout from "./(events)";
 
 export const metadata = {
-  title: "Academic Programs | JSBS",
+  title: "Events | JSBS",
   description: "Online Courses & Education NEXTJS14 Template",
 };
 

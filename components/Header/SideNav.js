@@ -30,6 +30,7 @@ const SideNav = () => {
     { id: "/student-life", label: "Student Life" },
     { id: "/campus-facilities", label: "Campus Facilities" },
     { id: "/research-publication", label: "Research & Publication" },
+    { id: "/events", label: "Events" },
   ];
 
   // Close sidebar when clicking outside
