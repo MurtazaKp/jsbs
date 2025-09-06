@@ -72,7 +72,7 @@ const Publications = () => {
         {/* Header Section */}
         <div className="header-section">
           <div className="d-flex flex-column align-items-center section-title">
-            <span className="subtitle bg-coral-opacity">Publication</span>
+            <span className="subtitle bg-coral-opacity">Publications</span>
             <h2 className="page-title">Annual Magazines</h2>
           </div>
 

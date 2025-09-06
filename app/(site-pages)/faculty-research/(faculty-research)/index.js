@@ -1,3 +1,4 @@
+import FacultySection from "@/components/FacultySection/FacultySection";
 import Link from "next/link";
 
 const yearFaculties = [
@@ -32,42 +33,8 @@ const yearFaculties = [
 
 const FacultyOverview = () => {
   return (
-    <div className="">
-      <div className="bg-light-orange  rbt-section-gap">
-        <div className="container">
-          <div className="rbt-split-area  overflow-hidden">
-            <div className="wrapper">
-              <div className="section-title text-center mb--60">
-                <span className="subtitle bg-coral-opacity">
-                  Faculty & Research
-                </span>
-                <h3>Faculty Directory</h3>
-              </div>
-            </div>
-          </div>
-
-          <div className="row g-4">
-            {yearFaculties.map((yearItem, index) => (
-              <div className="col-md-12" key={index}>
-                <div className="rbt-card variation-01 rbt-hover card-list-2 ">
-                  <div className="card-body">
-                    <h5 className=" mb-2">{yearItem.year}</h5>
-                    <h6 className=" text-orange">{yearItem.faculty.title}</h6>
-                    <p className="description  text-justify">
-                      {yearItem.faculty.description}
-                    </p>
-                    <div className="text-end ">
-                      <Link href={yearItem.link} className="text-orange fs-4">
-                        View All Faculties
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+    <div>
+      <FacultySection />
     </div>
   );
 };

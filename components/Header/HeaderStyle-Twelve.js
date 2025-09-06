@@ -15,11 +15,22 @@ const HeaderStyleTwelve = () => {
 
   const sections = [
     { id: "/about-us", label: "About Us" },
-    { id: "/academic-programs", label: "Academic Programs" },
+    {
+      id: "/academic-programs/degree-course",
+      label: "Academic Programs",
+      children: [
+        { id: "/academic-programs/degree-course", label: "Degree Course" },
+        {
+          id: "/academic-programs/certificate-course",
+          label: "Certification Course",
+        },
+      ],
+    },
     { id: "/faculty-research", label: "Faculty" },
     { id: "/student-life", label: "Student Life" },
     { id: "/campus-facilities", label: "Campus Facilities" },
-    { id: "/research-publication", label: "Research & Publication" },
+    { id: "/research-publication", label: "Research & Publications" },
+    { id: "/events", label: "Events" },
   ];
 
   useEffect(() => {
@@ -30,63 +41,93 @@ const HeaderStyleTwelve = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const isActiveSection = (section) => {
+    if (pathname === section.id) return true;
+    if (section.children) {
+      return section.children.some((child) => pathname === child.id);
+    }
+    return false;
+  };
+
   return (
-    <header className="rbt-header">
-      <div className="rbt-sticky-placeholder"></div>
+    <>
+      <header className="rbt-header">
+        <div className="rbt-sticky-placeholder"></div>
 
-      <div className={`rbt-header-wrapper ${isSticky ? "rbt-sticky" : ""}`}>
-        <div className="container">
-          <div className="mainbar-row rbt-navigation-center align-items-center">
-            {/* Logo */}
-            <div className="header-left">
-              <div className="logo">
-                <Link href="/">
-                  <Image
-                    src={logo}
-                    width={80}
-                    height={80}
-                    alt="Education Logo Images"
-                  />
-                </Link>
+        <div className={`rbt-header-wrapper ${isSticky ? "rbt-sticky" : ""}`}>
+          <div className="container">
+            <div className="mainbar-row rbt-navigation-center align-items-center">
+              <div className="header-left">
+                <div className="logo">
+                  <Link href="/">
+                    <Image
+                      src={logo}
+                      width={80}
+                      height={80}
+                      alt="Education Logo Images"
+                    />
+                  </Link>
+                </div>
               </div>
-            </div>
 
-            {/* Navigation */}
-            <div className="rbt-main-navigation d-none d-xxl-block">
-              <nav className="mainmenu-nav onepagenav">
-                <ul className="mainmenu">
-                  {sections.map((sec, i) => (
-                    <li
-                      key={i}
-                      className={pathname === sec.id ? "current" : ""}
-                    >
-                      <Link href={sec.id}>{sec.label}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </div>
+              <div className="rbt-main-navigation d-none d-xxl-block">
+                <nav className="mainmenu-nav onepagenav">
+                  <ul className="mainmenu">
+                    {sections.map((sec, i) => (
+                      <li
+                        key={i}
+                        className={`menu-item ${
+                          isActiveSection(sec) ? "active-parent" : ""
+                        } ${sec.children ? "has-dropdown " : ""}`}
+                      >
+                        <Link href={sec.id}>
+                          {" "}
+                          {sec.label}
+                          {sec.children && (
+                            <i className="feather-chevron-down ms-1"></i>
+                          )}{" "}
+                        </Link>
 
-            {/* Mobile Trigger */}
-            <div className="header-right ">
-              <div
-                className="rbt-offcanvas-trigger"
-                id="rbt-offcanvas-activation"
-                onClick={() => setMobile(!mobile)}
-              >
-                <span className="offcanvas-trigger">
-                  <span className="offcanvas-bars">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                        {sec.children && (
+                          <ul className="submenu">
+                            {sec.children.map((child, j) => (
+                              <li
+                                key={j}
+                                className={
+                                  pathname === child.id ? "active-child" : ""
+                                }
+                              >
+                                <Link href={child.id}>{child.label}</Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+              </div>
+
+              <div className="header-right">
+                <div
+                  className="rbt-offcanvas-trigger"
+                  id="rbt-offcanvas-activation"
+                  onClick={() => setMobile(!mobile)}
+                >
+                  <span className="offcanvas-trigger">
+                    <span className="offcanvas-bars">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </span>
                   </span>
-                </span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 };
 
