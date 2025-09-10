@@ -17,6 +17,7 @@ const CertificationOverview = () => {
           target: "term1",
           controls: "term1",
           title: "Business Foundations (3 months)",
+          mainTitle: "",
           desc: [
             "Entrepreneurial Mindset",
             "Business Economics",
@@ -33,6 +34,7 @@ const CertificationOverview = () => {
           tab: "term2-tab",
           target: "term2",
           controls: "term2",
+          mainTitle: "",
           title:
             "Advanced Business & Growth Strategies (3 months) + Internship (2 months)",
           desc: [
@@ -51,14 +53,14 @@ const CertificationOverview = () => {
           ],
         },
         {
-          text: "Term 3",
+          text: "Term 3 (3 Months)",
           isActive: false,
           tab: "term3-tab",
           target: "term3",
           controls: "term3",
-          title: "Specializations (3 months)",
+          mainTitle: "Choose any one :",
+          title: " Specilization 1 - Family Business Management",
           desc: [
-            "Family Business Management:",
             "Understanding Family Business",
             "Business Taxation",
             "Corporate Social Responsibility & Sustainability",
@@ -66,7 +68,7 @@ const CertificationOverview = () => {
             "Building Lasting Family Business - Synergy in Vision, Values & Strategy",
           ],
           descTwo: [
-            "Entrepreneurship and New Ventures:",
+            "Specilization 2 - Entrepreneurship and New Ventures:",
             " Digital Marketing for Startups",
             " Launching and Managing an Enterprise",
             " Talent Management: From Startup to Scale up",
@@ -92,12 +94,17 @@ const CertificationOverview = () => {
               >
                 <h3 className="title">Program Overview</h3>
                 <p className="description mt-2 text-justify">
-                  Under the Academic Guidance of Royal Holloway, this degree is
-                  designed to provide students with a strong academic foundation
-                  in core business functions including general business
-                  administration, accounting, finance, project management,
-                  information technology, human resources, marketing,
-                  international business, logistics and organizational behavior.
+                  Aljamea-tus-Saifiyah Business School (JSBS) along with
+                  Entrepreneurship Development Institute of India (EDII) has
+                  designed this course for aspiring entrepreneurs and family
+                  business leaders to acquire skills for new venture creation or
+                  family business growth. The program is structured into three
+                  semesters &amp; 2 months Internship. The course emphasizes
+                  practical application and assimilating knowledge through
+                  industry interactions, case studies, mentorship, and a
+                  potential internship, focusing on aspects like strategic
+                  thinking, innovation, governance, and succession planning for
+                  family businesses
                 </p>
               </div>
             </div>
@@ -150,6 +157,9 @@ const CertificationOverview = () => {
                       aria-labelledby={item.tab}
                       key={innerIndex}
                     >
+                      {item.mainTitle && (
+                        <h6 className="pb-0 mb-4">{item.mainTitle}</h6>
+                      )}
                       {item.title && <h6>{item.title}</h6>}
                       {item.desc.length > 0 && (
                         <ul className="plan-offer-list rbt-list-primary-opacity">

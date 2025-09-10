@@ -5,18 +5,18 @@ const Publications = () => {
   const publications = [
     {
       id: 1,
-      title: "Business School Magazine",
+      title: "Ijmal Issue 1",
       filename: "Business School Magazine Final.pdf",
       description:
         "The latest edition of our Business School Magazine featuring cutting-edge research, faculty insights, and student achievements in the world of business.",
-      year: "2024",
+      year: "2021",
       category: "Business Education",
       image: "/images/al-ijmal.png",
       link: "https://drive.google.com/file/d/1qi1HJag1TLKmWDzoVF-gGM0q67AxnclU/view",
     },
     {
       id: 2,
-      title: "September 2023 Edition",
+      title: "Ijmal Issue 2",
       filename: "September 2023 v2.pdf",
       description:
         "A comprehensive quarterly publication covering industry trends, academic developments, and innovative research findings from September 2023.",
@@ -27,22 +27,22 @@ const Publications = () => {
     },
     {
       id: 3,
-      title: "Al Ijmal Magazine 1445H",
+      title: "Ijmal Issue 3",
       filename: "Al Ijmal Magazine 1445H v6.pdf",
       description:
         "Al Ijmal Magazine presents scholarly articles and research in Islamic studies, contemporary issues, and academic discourse for the Hijri year 1445.",
-      year: "1445H",
+      year: "2024",
       category: "Islamic Studies",
       image: "/images/al-ijmal-3.png",
       link: "https://drive.google.com/file/d/1xXIJapMFF6yEBY3pMEZHEJ05BnJuxhzA/view",
     },
     {
       id: 4,
-      title: "JSBS Magazine Issue 4",
+      title: "Ijmal Issue 4",
       filename: "JSBS Magazine Issue 4_Print.pdf",
       description:
         "The fourth issue of JSBS Magazine featuring groundbreaking research, case studies, and professional insights from leading industry experts.",
-      year: "2024",
+      year: "2025",
       category: "Research Journal",
       image: "/images/jsbs-magzine.png",
       link: "https://drive.google.com/file/d/1wOt2SeRVU8s3sYLUfENm79MWYGNH13om/view",

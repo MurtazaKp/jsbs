@@ -5,7 +5,7 @@ const facultyData = [
     name: "Prof. (Dr). Nardeep. K. Maheshwary",
     title: "Director Academics, JSBS",
     description:
-      "More than 29 years’ experience as an academician, researcher, administrator and dean...",
+      "More than 29 years’ experience as an academician, researcher, administrator and dean. Presented &amp; published more than 30 research papers articles in various national international journals. Published 6 books on subjects of management. Taught subjects of Management at NAAC Accredited Universities of repute in India.",
     qualification: "B. Com, MBA, Ph.D.",
     specialization:
       "Corporate Finance, SAPM, Marketing Management & other Management subjects.",
@@ -16,7 +16,7 @@ const facultyData = [
     name: "Shk Mufaddal M. Qutbuddin Shakir",
     title: "Head of Faculty of Business Studies",
     description:
-      "He leads curricular innovation within one of the world’s most respected Arabic academic institutions...",
+      "He leads curricular innovation and departmental operations within one of the world’s most respected Arabic academic institutions. He brings over 18 years of progressive educational experience, having held leadership roles across multiple departments and contributed significantly to both academic and co-curricular excellence",
     qualification: "Al Faqih Al Jayyid, MBA",
     specialization:
       "Research Analyst, Project management, Leadership & Management",
@@ -26,7 +26,8 @@ const facultyData = [
   {
     name: "CA Pratiksha Jain",
     title: "Faculty - Accounts & Finance",
-    description: "Chartered Accountant by Profession, Professor by Passion...",
+    description:
+      "Chartered Accountant by Profession, Professor by Passion, Taught Accounts Finance Subject across 10,000+ students across India.",
     qualification: "Chartered Accountant",
     specialization: "Accounts, Costing and Finance",
     imageUrl: "https://placehold.co/600x600",
@@ -36,7 +37,7 @@ const facultyData = [
     name: "Pankaj Patil",
     title: "Faculty - IT & Systems",
     description:
-      "Dedicated educator with focus on DBMS, system design, cryptography...",
+      "An inquisitive dedicated educator, teaching computer science or related subjects with a focus on topics like database management, system design, cryptography, information security, Information Technology and Systems.",
     qualification: "B.E., M.E., PG-DAC",
     specialization: "Information Technology, Databases, Programming",
     imageUrl: "https://placehold.co/600x600",
@@ -46,7 +47,7 @@ const facultyData = [
     name: "Dr CA Purvaa Jain",
     title: "Faculty - Finance & Management",
     description:
-      "Founder at Pro Capitalist Advisory. Strategic finance evangelist...",
+      "Founder at Pro Capitalist Advisory, Seasoned Finance Professional, with blended experience of academia and industry. Strategic finance evangelist, with one and a half decades of experience, specializing in designing, aligning financial strategy with the vision and organizational goals and exponential growth enablement across multiple sectors.",
     qualification: "CA, PhD",
     specialization: "Finance and Management",
     imageUrl: "https://placehold.co/600x600",
@@ -56,7 +57,7 @@ const facultyData = [
     name: "Sulagna Ray Purkayastha",
     title: "Faculty - Sociology & HR",
     description:
-      "18 years’ experience teaching national and international courses...",
+      "As a teacher with 18 years’ experience of teaching several national and international courses. I live by the maxim: teach, inspire and empower",
     qualification: "Postgraduate in Sociology",
     specialization: "Labour, HRM, Development Studies",
     imageUrl: "https://placehold.co/600x600",
@@ -66,7 +67,7 @@ const facultyData = [
     name: "Uma Lele",
     title: "Faculty - Statistics & Six Sigma",
     description:
-      "25 years of industry experience. Conducted Lean Six Sigma workshops...",
+      "25 years of industry experience, Conducted lean six Sigma workshops for corporates, Statistics faculty and Statistical Analysis for clinical trials/research.",
     qualification: "BSc, DBM, Diploma MR, Six Sigma",
     specialization: "Statistics, Six Sigma",
     imageUrl: "https://placehold.co/600x600",
@@ -88,7 +89,7 @@ const Faculty = () => {
 
         <div className="row team-items">
           {facultyData.map((member, index) => (
-            <div className="col-md-6 col-sm-6 col-lg-4 single-item" key={index}>
+            <div className="col-md-6 col-sm-6 col-xl-4 single-item" key={index}>
               <div className="item">
                 <div className="thumb">
                   <img
@@ -97,13 +98,13 @@ const Faculty = () => {
                     alt={member.name}
                   />
                   <div className="overlay">
-                    <p>
+                    <p className="">
                       <strong>Qualification:</strong> {member.qualification}
                     </p>
                     <div className="seperator" />
-                    <p>{member.description}</p>
+                    <p className="">{member.description}</p>
                     <div className="seperator" />
-                    <p>
+                    <p className=" ">
                       <strong>Specialization:</strong> {member.specialization}
                     </p>
                   </div>

@@ -160,7 +160,7 @@ const EventsLayout = ({ getBlog }) => {
                   {eventData.objectives.map((objective, idx) => (
                     <li
                       key={idx}
-                      className="description fs-1 d-flex align-items-start"
+                      className="description fs-2 d-flex align-items-start"
                     >
                       {idx + 1}. {objective}
                     </li>

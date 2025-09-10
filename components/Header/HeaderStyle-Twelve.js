@@ -30,7 +30,17 @@ const HeaderStyleTwelve = () => {
     { id: "/student-life", label: "Student Life" },
     { id: "/campus-facilities", label: "Campus Facilities" },
     { id: "/research-publication", label: "Research & Publications" },
-    { id: "/events", label: "Events" },
+    {
+      id: "/events/rsch-meth-course",
+      label: "Events",
+      children: [
+        { id: "/events/rsch-meth-course", label: "Rsch Meth Course" },
+        {
+          id: "/JSBSConference.pdf",
+          label: "Conference",
+        },
+      ],
+    },
   ];
 
   useEffect(() => {
@@ -97,7 +107,17 @@ const HeaderStyleTwelve = () => {
                                   pathname === child.id ? "active-child" : ""
                                 }
                               >
-                                <Link href={child.id}>{child.label}</Link>
+                                {child.id.endsWith(".pdf") ? (
+                                  <a
+                                    href={child.id}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    {child.label}
+                                  </a>
+                                ) : (
+                                  <Link href={child.id}>{child.label}</Link>
+                                )}
                               </li>
                             ))}
                           </ul>

@@ -34,24 +34,9 @@
     "imgIcon": "/images/icons/youtube.png",
     "desc": "The modern classrooms at Aljamea-Tus-Saifiyah are designed to foster an engaging and interactive learning environment, incorporating advanced teaching methodologies and technology. These classrooms balance Islamic studies with modern subjects, preparing students to contribute positively to society."
   },
-  {
-    "tag": "HOSTEL LIFE",
-    "title": "Comfortable Lodging and Boarding Facilities",
-    "subTitle": "Residential Campus",
-    "img": "/images/split/split-03.jpg",
-    "imgTwo": "/images/others/video-03.jpg",
-    "imgIcon": "/images/icons/youtube.png",
-    "desc": "Aljamea-Tus-Saifiyah Business School provides its students with comprehensive lodging and boarding facilities, including well-furnished hostels, dining halls, laundry services, recreation areas, and prayer rooms—creating a home away from home."
-  },
-  {
-    "tag": "MAWAID",
-    "title": "Nutritious Meals with Mawaid",
-    "subTitle": "Three Meals a Day",
-    "img": "/images/split/split-04.jpg",
-    "imgTwo": "/images/others/video-04.jpg",
-    "imgIcon": "/images/icons/youtube.png",
-    "desc": "Students are provided with three nutritious meals a day through Mawaid, ensuring their dietary needs are met in a healthy and balanced manner according to high standards."
-  },
+
+  
+  
   {
     "tag": "LIBRARY",
     "title": "Vast Library of Knowledge",

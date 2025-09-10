@@ -84,14 +84,7 @@ const CertificatePage = ({ getBlog }) => {
                     <ul className="list-unstyled">
                       <li className="mb-3 d-flex align-items-start description">
                         <i className="feather-check  text-orange me-2 mt-1"></i>
-                        <span>Al Fiqh Certificate</span>
-                      </li>
-                      <li className="mb-1 d-flex align-items-start description">
-                        <i className="feather-check  text-orange me-2 mt-1"></i>
-                        <span>
-                          General English Communication Course (IELTS / TOEFL /
-                          Duolingo)
-                        </span>
+                        <span>Faqeeh Certificate</span>
                       </li>
                     </ul>
                   </div>
@@ -107,24 +100,8 @@ const CertificatePage = ({ getBlog }) => {
                       <li className="mb-3 d-flex align-items-start description">
                         <i className="feather-check text-orange me-2 mt-1"></i>
                         <span>
-                          Year XII – All India Boards (CBSE / CISCE / NIOS):
+                          10+2 or Equivalent
                           <br />
-                          <ul className="mt-2 ps-5 description">
-                            <li className="description">
-                              4 subjects passed with 70% or above OR
-                            </li>
-                            <li className="description">
-                              Overall average of 70% across all Year XII
-                              subjects
-                            </li>
-                          </ul>
-                        </span>
-                      </li>
-                      <li className="mb-1 d-flex align-items-start description">
-                        <i className="feather-check  text-orange me-2 mt-1"></i>
-                        <span>
-                          General English Communication Course (IELTS / TOEFL /
-                          Duolingo)
                         </span>
                       </li>
                     </ul>
