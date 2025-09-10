@@ -36,18 +36,6 @@ const CampusFacilitiesPage = ({ getBlog }) => {
               </div>
             </div>
           </div>
-
-          <div className="rbt-split-area  rbt-section-gap overflow-hidden">
-            <div className="wrapper">
-              <div className="section-title text-center mb--60">
-                <span className="subtitle bg-coral-opacity">Events</span>
-              </div>
-
-              <div className="rbt-splite-style text-center">
-                <h2>Comming Soon</h2>
-              </div>
-            </div>
-          </div>
         </Context>
       </Provider>
     </>

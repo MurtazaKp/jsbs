@@ -1,5 +1,5 @@
 import React from "react";
-import EventsLayout from "./(events)";
+import EventsLayout from "../(events)";
 
 export const metadata = {
   title: "Events | JSBS",

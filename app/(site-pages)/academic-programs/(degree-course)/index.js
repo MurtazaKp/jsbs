@@ -84,7 +84,7 @@ const DegreeCoursePage = ({ getBlog }) => {
                     <ul className="list-unstyled">
                       <li className="mb-3 d-flex align-items-start description">
                         <i className="feather-check  text-orange me-2 mt-1"></i>
-                        <span>Al Fiqh Certificate</span>
+                        <span>Faqeeh Certificate</span>
                       </li>
                       <li className="mb-1 d-flex align-items-start description">
                         <i className="feather-check  text-orange me-2 mt-1"></i>
