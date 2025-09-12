@@ -42,8 +42,10 @@ const milestonesData = [
     description: (
       <>
         Affiliation with <strong>University of London</strong> for degree
-        courses, training needs analysis completed in India and Karachi, and a
-        series of webinars conducted on business-mindedness.
+        courses. Training Needs Analysis completed in India with participation
+        from across urban, semi-urban and rural locations. Series of webinars
+        conducted on <strong>Business-Mindedness</strong> based on competencies
+        identified for developing the same.
       </>
     ),
     icon: "globe",

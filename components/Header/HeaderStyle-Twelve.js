@@ -34,9 +34,12 @@ const HeaderStyleTwelve = () => {
       id: "/events/rsch-meth-course",
       label: "Events",
       children: [
-        { id: "/events/rsch-meth-course", label: "Rsch Meth Course" },
         {
-          id: "/JSBSConference.pdf",
+          id: "/events/rsch-meth-course",
+          label: "Research Methodology Course",
+        },
+        {
+          id: "/events/conference",
           label: "Conference",
         },
       ],
@@ -107,17 +110,7 @@ const HeaderStyleTwelve = () => {
                                   pathname === child.id ? "active-child" : ""
                                 }
                               >
-                                {child.id.endsWith(".pdf") ? (
-                                  <a
-                                    href={child.id}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                  >
-                                    {child.label}
-                                  </a>
-                                ) : (
-                                  <Link href={child.id}>{child.label}</Link>
-                                )}
+                                <Link href={child.id}>{child.label}</Link>
                               </li>
                             ))}
                           </ul>
