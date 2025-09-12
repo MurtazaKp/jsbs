@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function SingleCourseProp({ courseData, image }) {
   return (
     <>
-      <div className="col-lg-12">
+      <div className="col-12">
         <div className="modern-course-features-box bg-dark-blue h-100">
           <h3 className="title text-white mt-2 "> University Of London</h3>
           <div className="inner">
@@ -54,6 +54,28 @@ export default function SingleCourseProp({ courseData, image }) {
                 Click Here
               </Link>
             </p>
+          </div>
+        </div>
+      </div>
+      <div className="col-12">
+        <div className="modern-course-features-box bg-dark-blue h-100">
+          <h3 className="title text-white mt-2 ">Certification Course</h3>
+          <div className="inner">
+            <div className="">
+              <p className="description text-white text-justify">
+                Aljamea-tus-Saifiyah Business School (JSBS) along with
+                Entrepreneurship Development Institute of India (EDII) has
+                designed this course for aspiring entrepreneurs and family
+                business leaders to acquire skills for new venture creation or
+                family business growth. The program is structured into three
+                semesters & 2 months Internship. The course emphasizes practical
+                application and assimilating knowledge through industry
+                interactions, case studies, mentorship, and a potential
+                internship, focusing on aspects like strategic thinking,
+                innovation, governance, and succession planning for family
+                businesses
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -34,9 +34,12 @@ const SideNav = () => {
       id: "/events/rsch-meth-course",
       label: "Events",
       children: [
-        { id: "/events/rsch-meth-course", label: "Rsch Meth Course" },
         {
-          id: "/JSBSConference.pdf",
+          id: "/events/rsch-meth-course",
+          label: "Research Methodology Course",
+        },
+        {
+          id: "/events/conference",
           label: "Conference",
         },
       ],
@@ -126,27 +129,15 @@ const SideNav = () => {
                       <ul className="navbar-nav ms-3">
                         {sec.children.map((child, j) => (
                           <li key={j} className="nav-item">
-                            {child.id.endsWith(".pdf") ? (
-                              <a
-                                className="nav-link"
-                                href={child.id}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                onClick={() => setMobile(true)}
-                              >
-                                {child.label}
-                              </a>
-                            ) : (
-                              <Link
-                                className={`nav-link ${
-                                  pathname === child.id ? "text-primary" : ""
-                                }`}
-                                onClick={() => setMobile(true)}
-                                href={child.id}
-                              >
-                                {child.label}
-                              </Link>
-                            )}
+                            <Link
+                              className={`nav-link ${
+                                pathname === child.id ? "text-primary" : ""
+                              }`}
+                              onClick={() => setMobile(true)}
+                              href={child.id}
+                            >
+                              {child.label}
+                            </Link>
                           </li>
                         ))}
                       </ul>
