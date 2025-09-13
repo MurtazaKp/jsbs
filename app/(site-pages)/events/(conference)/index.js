@@ -100,6 +100,17 @@ const ConferenceLayout = ({ getBlog }) => {
         {/* Hero Section */}
         <div className="rbt-split-area rbt-section-gap overflow-hidden bg-light-orange">
           <div className="wrapper container">
+            <div className="row d-flex justify-content-center gap-3 pb-5">
+              <div className="col-2 d-flex justify-content-center align-items-center">
+                <img className="" src="/images/logo.png"></img>
+              </div>
+              <div className="col-3 d-flex justify-content-center align-items-center">
+                <img className="" src="/images/burhani-logo.png"></img>
+              </div>
+              <div className="col-3 d-flex justify-content-center align-items-center">
+                <img className="" src="/images/edi-logo.png"></img>
+              </div>
+            </div>
             <div className="section-title text-center mb--60">
               <span className="subtitle bg-coral-opacity">
                 {eventData.subtitle}
