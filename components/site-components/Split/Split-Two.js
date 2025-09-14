@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import SplitData from "@/data/elements/split.json";
 
-const SplitTwo = ({ isImg }) => {
+const SplitTwo = () => {
   return (
     <>
       {SplitData &&
@@ -51,7 +51,7 @@ const SplitTwo = ({ isImg }) => {
                 <div className="video-popup-wrapper">
                   <Image
                     className="w-100 rbt-radius"
-                    src={isImg ? data.img : data.imgTwo}
+                    src={data.img}
                     width={638}
                     height={458}
                     alt="Split Image"

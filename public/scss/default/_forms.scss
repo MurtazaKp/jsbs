@@ -34,7 +34,7 @@ select {
     line-height: 28px;
     font-weight: 400;
     padding-right: 30px;
-    background: #ffffff url(../../images/icons/arrow.png) no-repeat center right 20px;
+    // background: #ffffff url(../../images/icons/arrow.png) no-repeat center right 20px;
 }
 
 input[type="text"],
@@ -478,7 +478,7 @@ input[disabled] {
         border-radius: 6px;
 
         &::after {
-            background-image: url(../../images/icons/yes.png) !important;
+            // background-image: url(../../images/icons/yes.png) !important;
             opacity: 0;
             position: absolute !important;
             content: "" !important;

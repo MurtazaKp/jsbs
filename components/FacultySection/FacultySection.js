@@ -9,7 +9,7 @@ const facultyData = [
     qualification: "B. Com, MBA, Ph.D.",
     specialization:
       "Corporate Finance, SAPM, Marketing Management & other Management subjects.",
-    imageUrl: "https://placehold.co/600x600",
+    imageUrl: "/images/faculty/prof-nardeep-maheshwari.png",
     icon: "book-open", // Feather icon name
   },
   {
@@ -20,7 +20,7 @@ const facultyData = [
     qualification: "Al Faqih Al Jayyid, MBA",
     specialization:
       "Research Analyst, Project management, Leadership & Management",
-    imageUrl: "https://placehold.co/600x600",
+    imageUrl: "/images/faculty/shk-mufaddal-shakir.jpg",
     icon: "briefcase",
   },
   {
@@ -30,7 +30,7 @@ const facultyData = [
       "Chartered Accountant by Profession, Professor by Passion, Taught Accounts Finance Subject across 10,000+ students across India.",
     qualification: "Chartered Accountant",
     specialization: "Accounts, Costing and Finance",
-    imageUrl: "https://placehold.co/600x600",
+    imageUrl: "/images/faculty/ca-pratiksha-jain.png",
     icon: "bar-chart-2",
   },
   {
@@ -40,7 +40,7 @@ const facultyData = [
       "An inquisitive dedicated educator, teaching computer science or related subjects with a focus on topics like database management, system design, cryptography, information security, Information Technology and Systems.",
     qualification: "B.E., M.E., PG-DAC",
     specialization: "Information Technology, Databases, Programming",
-    imageUrl: "https://placehold.co/600x600",
+    imageUrl: "/images/faculty/mr-pankaj-patil.jpg",
     icon: "cpu",
   },
   {
@@ -50,7 +50,7 @@ const facultyData = [
       "Founder at Pro Capitalist Advisory, Seasoned Finance Professional, with blended experience of academia and industry. Strategic finance evangelist, with one and a half decades of experience, specializing in designing, aligning financial strategy with the vision and organizational goals and exponential growth enablement across multiple sectors.",
     qualification: "CA, PhD",
     specialization: "Finance and Management",
-    imageUrl: "https://placehold.co/600x600",
+    imageUrl: "/images/faculty/dr-purva-shah.jpg",
     icon: "pie-chart",
   },
   {
@@ -60,7 +60,7 @@ const facultyData = [
       "As a teacher with 18 years’ experience of teaching several national and international courses. I live by the maxim: teach, inspire and empower",
     qualification: "Postgraduate in Sociology",
     specialization: "Labour, HRM, Development Studies",
-    imageUrl: "https://placehold.co/600x600",
+    imageUrl: "/images/faculty/mrs-sulagna-ray.jpg",
     icon: "users",
   },
   {
@@ -93,7 +93,8 @@ const Faculty = () => {
               <div className="item">
                 <div className="thumb">
                   <img
-                    className="img-fluid"
+                    className="card-img-top img-fluid"
+                    style={{ objectFit: "cover", height: "425px" }}
                     src={member.imageUrl}
                     alt={member.name}
                   />

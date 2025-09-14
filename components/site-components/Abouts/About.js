@@ -1,12 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import { useParallax } from "react-scroll-parallax";
-
-import aboutImg7 from "@/public/images/about/about-07.jpg";
-import aboutImg8 from "@/public/images/about/about-08.jpg";
-import aboutImg9 from "@/public/images/about/about-09.jpg";
-
 // ✅ All content in one object
 const aboutContent = {
   sectionTitle: "Mission",

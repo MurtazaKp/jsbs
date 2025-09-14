@@ -22,7 +22,7 @@ Testimonial Styles
             height: 100%;
             left: -64px;
             top: -57px;
-            background-image: url(../../images/testimonial/image-1.png);
+            // background-image: url(../../images/testimonial/image-1.png);
             content: "";
             opacity: 1;
             background-repeat: no-repeat;
@@ -394,7 +394,7 @@ ul {
             right: 40px;
             top: 40px;
             z-index: -1;
-            background-image: url(../../images/shape/quote.svg);
+            // background-image: url(../../images/shape/quote.svg);
             background-repeat: no-repeat, repeat;
             width: 52px;
             height: 44px;
@@ -434,7 +434,7 @@ ul {
             border-radius: var(--radius);
 
             &::before {
-                background-image: url(../../images/icons/quote.svg);
+                // background-image: url(../../images/icons/quote.svg);
             }
         }
     }
@@ -542,7 +542,7 @@ ul {
             text-align: center;
 
             &::before {
-                background-image: url(../../images/icons/quote.svg);
+                // background-image: url(../../images/icons/quote.svg);
             }
         }
 

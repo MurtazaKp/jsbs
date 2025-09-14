@@ -9,7 +9,7 @@ const AdvanceTabFive = () => {
     {
       tag: "YOU CAN CUSTOMIZE ALL",
       title: "Advance Tab Style Five.",
-      img: "/images/tab/tabs-02.jpg",
+      img: "/images/degree/program-overview.jpg",
       body: [
         {
           text: "Year 1",
