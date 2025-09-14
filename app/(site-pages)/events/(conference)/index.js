@@ -100,14 +100,14 @@ const ConferenceLayout = ({ getBlog }) => {
         {/* Hero Section */}
         <div className="rbt-split-area rbt-section-gap overflow-hidden bg-light-orange">
           <div className="wrapper container">
-            <div className="row d-flex justify-content-center gap-3 pb-5">
-              <div className="col-2 d-flex justify-content-center align-items-center">
+            <div className="row d-flex justify-content-center gap-sm-3 pb-5">
+              <div className="col-4 col-md-2 d-flex justify-content-center align-items-center">
                 <img className="" src="/images/logo.png"></img>
               </div>
-              <div className="col-3 d-flex justify-content-center align-items-center">
-                <img className="" src="/images/burhani-logo.png"></img>
+              <div className="col-4 col-md-2 d-flex justify-content-center align-items-center">
+                <img className="" src="/images/burhani-logo.jpg"></img>
               </div>
-              <div className="col-3 d-flex justify-content-center align-items-center">
+              <div className="col-4 col-md-3 d-flex justify-content-center align-items-center">
                 <img className="" src="/images/edi-logo.png"></img>
               </div>
             </div>
@@ -146,7 +146,7 @@ const ConferenceLayout = ({ getBlog }) => {
         </div>
 
         {/* Concept Notes */}
-        <div className="container rbt-section-gap">
+        <div className="container rbt-section-gap px-3">
           <div className="row">
             <div className="col-lg-12">
               <div className="modern-course-features-box bg-dark-blue grid-content-reverse h-100">
@@ -274,6 +274,18 @@ const ConferenceLayout = ({ getBlog }) => {
                 </a>
               </div>
             </div>
+          </div>
+          <div className="d-flex justify-content-center align-items-center flex-column pt-3">
+            <ul>
+              <span className="text-dark-blue"> Note :</span>
+              <li className="text-orange has-small-font-size">
+                1) Paper to be only send on jsbs.conference@gmail.com
+              </li>
+              <li className="text-orange has-small-font-size">
+                2) Email Subject should be : JSBS Conference Name of the
+                subtheme
+              </li>
+            </ul>
           </div>
         </div>
       </Context>

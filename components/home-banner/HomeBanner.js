@@ -8,7 +8,7 @@ import "venobox/dist/venobox.min.css";
 
 import SingleCourseProp from "../UniversityOfLondon/UniversityOfLondon";
 
-import languageClub from "../../public/images/banner/language-club.png";
+import languageClub from "../../public/images/home-page.jpg";
 
 import SingleCourseData from "../../data/pages/11-singleCourse.json";
 

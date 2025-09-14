@@ -1,8 +1,6 @@
 import Image from "next/image";
 import React from "react";
 
-import imageOne from "@/public/images/course/single-course-02.jpg";
-import imageTwo from "@/public/images/course/course-feature-03.jpg";
 import Link from "next/link";
 
 export default function SingleCourseProp({ courseData, image }) {

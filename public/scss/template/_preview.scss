@@ -13,7 +13,7 @@
     padding-bottom: 100px;
     position: relative;
     overflow: hidden;
-    background-image: url(../../images/splash/bg/bg-2.png);
+    // background-image: url(../../images/splash/bg/bg-2.png);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -43,7 +43,7 @@
         position: absolute;
         bottom: -2px;
         left: 0;
-        background: url(../../images/bg/banner-bg-shape-1.svg);
+        // background: url(../../images/bg/banner-bg-shape-1.svg);
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
@@ -1257,7 +1257,7 @@
 
     .inner {
         background-color: var(--color-bodyest);
-        background-image: url(../../images/splash/cta-01.png);
+        // background-image: url(../../images/splash/cta-01.png);
         background-position: center right;
         background-repeat: no-repeat;
         transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
