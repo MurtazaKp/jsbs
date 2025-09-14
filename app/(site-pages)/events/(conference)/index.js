@@ -11,7 +11,7 @@ const ConferenceLayout = ({ getBlog }) => {
     subtitle: "Conference",
     title: "Conference on Learning to Lead: Bridging Education and Business",
     description:
-      " Organised by - Aljamea-tus-Saifiyah Business School (JSBS) Burhani College & Entrepreneurship Development Institute of India (EDII)",
+      " Organised by - Aljamea-tus-Saifiyah Business School (JSBS), Burhani College & Entrepreneurship Development Institute of India (EDII)",
     details: [
       {
         icon: "feather-map-pin",
@@ -228,7 +228,7 @@ const ConferenceLayout = ({ getBlog }) => {
 
         <div className="container px-3  rbt-section-gap">
           <div className="">
-            <h3 className="text-center mb-4">Resgister Now</h3>
+            <h3 className="text-center mb-4">Register Now</h3>
 
             <p className="text-center description col-sm-8 col-lg-6 mx-auto pb-5">
               Registration opens on 1st September. Click below to register now
