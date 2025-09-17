@@ -27,6 +27,7 @@ import { Provider } from "react-redux";
 import Store from "@/redux/store";
 import SideNav from "@/components/Header/SideNav";
 import Separator from "@/components/site-components/Separator";
+import Whatsapp from "@/components/site-components/Whatapp/whatsapp";
 
 export default function RootLayout({ children }) {
   useEffect(() => {

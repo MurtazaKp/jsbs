@@ -44,6 +44,11 @@ const HeaderStyleTwelve = () => {
         },
       ],
     },
+    {
+      id: "/image-gallary/year-2025-26",
+      label: "Image Gallery",
+      children: [{ id: "/image-gallery/year-2025-26", label: "Year 2025-26" }],
+    },
   ];
 
   useEffect(() => {

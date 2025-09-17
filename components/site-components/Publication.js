@@ -104,7 +104,7 @@ const Publications = () => {
                 <h4 className="card-title">{publication.title}</h4>
                 <p className="card-description">{publication.description}</p>
 
-                <div className="card-meta">
+                {/* <div className="card-meta">
                   <div className="meta-item">
                     <i className="fas fa-tag"></i>
                     {publication.category}
@@ -113,7 +113,7 @@ const Publications = () => {
                     <i className="fas fa-file-pdf"></i>
                     PDF Format
                   </div>
-                </div>
+                </div> */}
 
                 <Link
                   target="_blank"

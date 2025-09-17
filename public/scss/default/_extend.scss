@@ -523,8 +523,54 @@ filter: grayscale(0) !important;
   
 }
 
+
+.whatsapp-floating-icon {
+    width: 46px;
+    height: 46px;
+    background-color: #29C986;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 100px;
+    color: white;
+    right: 10px;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 200ms linear;
+    cursor: pointer;
+}
+
+.whatsapp-floating-icon:hover{
+    scale: 1.2;
+}
+
+.whatsapp-floating-icon.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
 @media screen and (min-width:1200px) {
         .sticky-xl-top{
             z-index:unset !important;
         }
+
+                .whatsapp-floating-icon{
+                    right: 30px;
+                }
 }
+
+.admission-badge{
+    border-radius: 40px;
+    position: absolute;
+    right: -115px;
+    top:-5px;
+}
+
+
+
+

@@ -8,10 +8,10 @@ const CertificationOverview = () => {
     {
       tag: "COURSE OUTLINE",
       title: "Program Structure",
-      img: "/images/tab/tabs-02.jpg",
+      img: "/images/edii-image.jpg",
       body: [
         {
-          text: "Term 1",
+          text: "Trimester 1",
           isActive: true,
           tab: "term1-tab",
           target: "term1",
@@ -29,7 +29,7 @@ const CertificationOverview = () => {
           descTwo: [],
         },
         {
-          text: "Term 2",
+          text: "Trimester 2",
           isActive: false,
           tab: "term2-tab",
           target: "term2",
@@ -45,15 +45,25 @@ const CertificationOverview = () => {
             "Legal Aspects of Business",
             "Managing Business Growth, Divestiture & Exit",
           ],
-          descTwo: [
-            "Internship Opportunities:",
-            "Work with Startups",
-            "Family Business Firms",
-            "Incubators",
-          ],
+          descTwo: [],
         },
         {
-          text: "Term 3 (3 Months)",
+          text: "Internship",
+          isActive: false,
+          tab: "term3-tab",
+          target: "term4",
+          controls: "term4",
+          mainTitle: "",
+          title: "Internship Opportunities (2 months):",
+          desc: [
+            "Work with Startups",
+            "Family Business Firms",
+            "Incubatorsdfdd",
+          ],
+          descTwo: [],
+        },
+        {
+          text: "Trimester 3",
           isActive: false,
           tab: "term3-tab",
           target: "term3",
@@ -92,7 +102,12 @@ const CertificationOverview = () => {
                 data-sal-duration="700"
                 data-sal-delay="100"
               >
-                <h3 className="title">Program Overview</h3>
+                <div className="position-relative d-inline-block">
+                  <h3 className="title">Program Overview</h3>
+                  <span class="badge admission-badge bg-orange">
+                    Admissions Open
+                  </span>
+                </div>
                 <p className="description mt-2 text-justify">
                   Aljamea-tus-Saifiyah Business School (JSBS) along with
                   Entrepreneurship Development Institute of India (EDII) has

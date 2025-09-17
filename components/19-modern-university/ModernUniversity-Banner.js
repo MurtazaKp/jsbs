@@ -39,7 +39,7 @@ const ModernUniversityBanner = () => {
               <SwiperSlide className="swiper-slide  ">
                 <ModernUniversityProps
                   parentClass="bg_image--24"
-                  bannerImg={bannerImg}
+                  bannerImg={"/images/home/degree-banner.png"}
                   rating="Excellent 4.9 out of 5"
                   trustpilotImg={trustpilotImg}
                   title="Education Is The Best Key Success In Life"
@@ -50,7 +50,7 @@ const ModernUniversityBanner = () => {
               <SwiperSlide className="swiper-slide ">
                 <ModernUniversityProps
                   parentClass="bg_image--25"
-                  bannerImg={bannerImg}
+                  bannerImg={"/images/home/cetification-banner.png"}
                   rating="Excellent 4.9 out of 5"
                   trustpilotImg={trustpilotImg}
                   title="Unlock Your Potential with Quality Education"
@@ -62,7 +62,7 @@ const ModernUniversityBanner = () => {
               <SwiperSlide className="swiper-slide ">
                 <ModernUniversityProps
                   parentClass="bg_image--26"
-                  bannerImg={bannerImg}
+                  bannerImg={"/images/home/conference-banner.png"}
                   rating="Excellent 4.9 out of 5"
                   trustpilotImg={trustpilotImg}
                   title="Online Learning Now In Your Fingertps"

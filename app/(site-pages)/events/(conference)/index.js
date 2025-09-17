@@ -25,7 +25,7 @@ const ConferenceLayout = ({ getBlog }) => {
       },
     ],
     conceptNotes: {
-      title: "Concepts Notes",
+      title: "Concept Notes",
       description:
         "This Conference will bring together innovators, entrepreneurs, business owners, researchers, academicians, policymakers, and industry professionals. It serves as a platform for presenting cutting-edge business & entrepreneurial research and innovation in allied fields. Over two days, participants will engage in enriching technical sessions, workshops and discussions. All these with renowned industry leaders, researchers and policymakers.",
     },
@@ -34,19 +34,19 @@ const ConferenceLayout = ({ getBlog }) => {
         id: 1,
         title: "Aljamea-tus-Saifiyah Business School (JSBS)",
         description: `Aljamea-tus-Saifiyah Business School (JSBS) is established under the auspices of prestigious Arabic institute Aljamea-tus-Saifiyah. JSBS located at Jamea Campus in Mumbai & Nairobi is a testament to the Dawoodi Bohra community’s heritage. JSBS integrates contemporary views along with preserving the sanctity and wisdom of tradition in the field of Business Studies.`,
-        image: "https://placehold.co/600x400", // replace with actual path
+        image: "/images/conference/jsbs-building.jpg", // replace with actual path
       },
       {
         id: 2,
         title: "Burhani College, Mumbai",
         description: `Burhani College, Mumbai is a Commerce, Liberal Arts, Management Science and Life Skills College located in the heart of Mumbai. The courses cover a Junior College in Commerce and Arts; a Degree College leading to Bachelor of Commerce, of Arts, of Management Studies, of Arts in Mass Media and Communication; Bachelor of Science (Computer Science) and Master of Commerce; and Certificate courses in vital life skills under the Sciences of the Home program.`,
-        image: "https://placehold.co/600x400", // replace with actual path
+        image: "/images/conference/burhani-college.jpg", // replace with actual path
       },
       {
         id: 3,
         title: "Entrepreneurship Development Institute of India (EDII)",
         description: `Entrepreneurship Development Institute of India (EDII) is a premier institute in Ahmedabad dedicated to entrepreneurship education, research, and capacity building. It is supported by financial institutions and the Government of Gujarat. EDII developed successful models like the EDII-EDP for new enterprise creation. It has established entrepreneurship development centers across India and internationally in countries like Cambodia and Rwanda.`,
-        image: "https://placehold.co/600x400", // replace with actual path
+        image: "/images/conference/edii-building.jpg", // replace with actual path
       },
     ],
     sessions: [
@@ -105,7 +105,7 @@ const ConferenceLayout = ({ getBlog }) => {
                 <img className="" src="/images/logo.png"></img>
               </div>
               <div className="col-4 col-md-2 d-flex justify-content-center align-items-center">
-                <img className="" src="/images/burhani-logo.jpg"></img>
+                <img className="col-10" src="/images/burhani-logo.jpg"></img>
               </div>
               <div className="col-4 col-md-3 d-flex justify-content-center align-items-center">
                 <img className="" src="/images/edi-logo.png"></img>
@@ -175,7 +175,8 @@ const ConferenceLayout = ({ getBlog }) => {
                   <img
                     src={institue.image}
                     alt={institue.title}
-                    className="w-100"
+                    className="card-img-top img-fluid"
+                    style={{ objectFit: "cover", height: "250px" }}
                   />
                   <div className="p-4">
                     <h5 className="card-title">{institue.title}</h5>

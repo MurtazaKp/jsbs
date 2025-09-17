@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const ModernUniversityProps = ({}) => {
+const ModernUniversityProps = ({ bannerImg }) => {
   return (
     <>
       <div className={` bg_image runded-1 `}>
@@ -11,7 +11,7 @@ const ModernUniversityProps = ({}) => {
           width={1820}
           height={820}
           alt="Banner Image"
-          src={"/images/bg/bg-image-24.jpg"}
+          src={bannerImg}
         ></Image>
       </div>
     </>

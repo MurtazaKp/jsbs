@@ -22,7 +22,7 @@ const DegreeCoursePage = ({ getBlog }) => {
               </div>
 
               <div className="rbt-splite-style text-center">
-                <img src={"/images/Uol.jpg"} />
+                <img className="col-10 mx-auto" src={"/images/Uol.jpg"} />
               </div>
             </div>
           </div>

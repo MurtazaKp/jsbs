@@ -24,7 +24,7 @@ const EventsLayout = ({ getBlog }) => {
       },
     ],
     conceptNotes: {
-      title: "Concepts Notes",
+      title: "Concept Notes",
       description:
         "Research is a systematic method of inquiry that includes data gathering documentation of information, analysis and interpretation of that data/information, all under appropriate methodology established by certain professional and academic disciplines. It empowers policymakers with data to make informed decisions and fosters critical thinking skills within the population, both essential for navigating the complexities of our world. In short, research serves as the cornerstone of societal progress.",
     },
@@ -254,8 +254,8 @@ const EventsLayout = ({ getBlog }) => {
                 />
                 <div className="image-caption pt-2">
                   <p className="small text-orange mb-0 text-center">
-                    Prof (Dr). Anil Sutar taking Session 1 - Fundamentals of
-                    Research
+                    Prof (Dr). NK Maheshwary giving introduction to Research
+                    Methodology Workshop
                   </p>
                 </div>
               </div>
@@ -270,13 +270,13 @@ const EventsLayout = ({ getBlog }) => {
                 />
                 <div className="image-caption pt-2">
                   <p className="small text-orange mb-0 text-center">
-                    Prof (Dr). NK Maheshwary giving introduction to Research
-                    Methodology Workshop
+                    Prof (Dr). Anil Sutar taking Session 1 - Fundamentals of
+                    Research
                   </p>
                 </div>
               </div>
             </div>
-            <div className="col-lg-12  pt-5 mt-5">
+            {/* <div className="col-lg-12  pt-5 mt-5">
               <div className="image-container h-100">
                 <img
                   src="/images/eventThree.jpg"
@@ -285,12 +285,12 @@ const EventsLayout = ({ getBlog }) => {
                 />
                 <div className="image-caption pt-2">
                   <p className="small text-orange mb-0 text-center">
-                    Prof (Dr). NK Maheshwary giving introduction to Research
-                    Methodology Workshop
+                    Prof (Dr). Anil Sutar taking Session 1 - Fundamentals of
+                    Research
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </Context>

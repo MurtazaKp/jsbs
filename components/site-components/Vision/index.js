@@ -3,21 +3,39 @@ import React from "react";
 const Vision = () => {
   return (
     <section className="container ">
-      <div className="bg-light-orange blockquote-wrapper  border-start border-4 border-warning p-4 mb-4">
-        <blockquote className="blockquote mb-0">
-          <p className="mb-1 fw-semibold text-orange">
-            O believer! Shall I not guide you to a trade that will save you from
-            a painful punishment?
-          </p>
-          <footer className="blockquote-footer mt-1 text-dark-blue fs-4">
-            It is to have faith in Allah and His Messenger, and to strive in the
-            cause of Allah with your wealth and your souls.
-            <br />
-            That is best for you, if only you knew.
-          </footer>
-        </blockquote>
-      </div>
+      <div className="quote-highlight-wrapper ">
+        <div className="blockquote-wrapper col-10 mx-auto">
+          <div className="blockquote">
+            <div className="col-10 col-sm-9 col-lg-10 mx-auto">
+              <h3 className="">
+                O believer! Shall I not guide you to a trade that will save you
+                from a painful punishment?
+              </h3>
 
+              <footer className="">
+                <h6>
+                  It is to have faith in Allah and His Messenger, and to strive
+                  in the cause of Allah with your wealth and your souls.
+                  <br />
+                  That is best for you, if only you knew.
+                </h6>
+              </footer>
+            </div>
+
+            <img
+              className="curly1"
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/95802/Curly_Krungthep.svg"
+              alt=""
+            />
+
+            <img
+              className="curly2"
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/95802/Curly_Krungthep.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
       <div className=" mb-5">
         <div className="card-body">
           <h3 className="">Vision</h3>

@@ -73,19 +73,19 @@ const StudentLifePage = ({ getBlog }) => {
           {/* Activities */}
           {[
             {
-              date: "15 September",
+              date: "15 September 2024",
               name: "Maraz Ilmi",
               details: "Std 8 – 11 students",
             },
             {
-              date: "2 October",
-              name: "Cryptocurrency and other Fraudulent Schemes",
-              details: "Std 8 – 11 students",
-            },
-            {
-              date: "15 September",
+              date: "15 September 2024",
               name: "Alumni Program",
               details: "Alumni of JSBS Batch 1 & 2",
+            },
+            {
+              date: "2 October 2024",
+              name: "Cryptocurrency and other Fraudulent Schemes",
+              details: "Std 8 – 11 students",
             },
           ].map((activity, index) => (
             <div

@@ -854,3 +854,108 @@
 
 
 // timeline css
+.blockquote-wrapper {
+    display: flex;
+   
+    padding: 0 20px;
+}
+
+/* Blockquote main style */
+.blockquote {
+    background-color: #ffffff;
+    position: relative;
+    font-family: 'Work Sans', sans-serif;
+   
+    margin: 0px auto 80px;
+    align-self: center;
+    border: 0.3rem solid green;
+    border-radius: 3rem 0;
+    padding: 35px 10px;
+   
+}
+
+/* Blockquote header */
+.blockquote p {
+    
+    font-weight: 200;
+    line-height: 1.1;
+    margin: 0;
+    width: calc(100%);
+    letter-spacing: -1px;
+}
+
+.blockqoute h1 strong {
+    font-weight: 500;
+}
+
+
+
+/* Blockquote right double quotes */
+.curly1 {
+    position: absolute;
+    display: block;
+    width: 5rem;
+    bottom: -.5rem;
+    left: -.5rem;
+}
+
+.curly2 {
+    position: absolute;
+    display: block;
+    width: 5rem;
+    top: -.5rem;
+    right: -.5rem;
+    z-index: 2;
+    transform: rotatez(180deg);
+}
+
+/* Blockquote subheader */
+.blockquote h4 {
+    text-align: right;
+    position: relative;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0;
+    padding-top: 1.5rem;
+    z-index: 1;
+}
+
+.blockquote h4:first-letter {
+    margin-left: -12px;
+}
+
+.pinkish {
+    color: #FA709A;
+}
+
+/* increase header size after 600px */
+@media all and (min-width: 600px) {
+
+    .blockquote {
+        padding: 3rem;
+    }
+
+    .blockquote h1 {
+        font-size: 2.3rem;
+        width: calc(100% - 7rem);
+    }
+
+    .curly1 {
+        width: 10rem;
+        bottom: -1rem;
+        left: -1rem;
+    }
+
+    .curly2 {
+        width: 10rem;
+        top: -1rem;
+        right: -1rem;
+    }
+
+    /* Blockquote subheader */
+    .blockquote h4 {
+        text-align: right;
+    }
+
+}

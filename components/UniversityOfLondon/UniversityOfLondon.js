@@ -8,7 +8,10 @@ export default function SingleCourseProp({ courseData, image }) {
     <>
       <div className="col-12">
         <div className="modern-course-features-box bg-dark-blue h-100">
-          <h3 className="title text-white mt-2 "> University Of London</h3>
+          <div className="position-relative d-inline-block">
+            <h3 className="title text-white mt-2">University Of London</h3>
+            <span class="badge admission-badge bg-orange">Admissions Open</span>
+          </div>
           <div className="inner">
             <div className="">
               <p className="description text-white text-justify">
@@ -57,7 +60,11 @@ export default function SingleCourseProp({ courseData, image }) {
       </div>
       <div className="col-12">
         <div className="modern-course-features-box bg-dark-blue h-100">
-          <h3 className="title text-white mt-2 ">Certification Course</h3>
+          <div className="position-relative d-inline-block">
+            <h3 className="title text-white mt-2">Certification Course</h3>
+            <span class="badge admission-badge bg-orange">Admissions Open</span>
+          </div>
+
           <div className="inner">
             <div className="">
               <p className="description text-white text-justify">
@@ -72,6 +79,17 @@ export default function SingleCourseProp({ courseData, image }) {
                 internship, focusing on aspects like strategic thinking,
                 innovation, governance, and succession planning for family
                 businesses
+              </p>
+
+              <p className="description  text-white">
+                To Know more About Certificate Course{" "}
+                <Link
+                  className="text-orange rbt-btn-link"
+                  target={"_blank"}
+                  href={"https://ediindia.org/"}
+                >
+                  Click Here
+                </Link>
               </p>
             </div>
           </div>
