@@ -280,7 +280,7 @@ const ConferenceLayout = ({ getBlog }) => {
             <ul>
               <span className="text-dark-blue"> Note :</span>
               <li className="text-orange has-small-font-size">
-                1) Paper to be only send on jsbs.conference@gmail.com
+                1) Paper to be only sent on jsbs.conference@gmail.com
               </li>
               <li className="text-orange has-small-font-size">
                 2) Email Subject should be : JSBS Conference Name of the
