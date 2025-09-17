@@ -4,7 +4,7 @@ const Vision = () => {
   return (
     <section className="container ">
       <div className="quote-highlight-wrapper ">
-        <div className="blockquote-wrapper col-10 mx-auto">
+        <div className="blockquote-wrapper col-12 col-sm-10 mx-auto">
           <div className="blockquote">
             <div className="col-10 col-sm-9 col-lg-10 mx-auto">
               <h3 className="">

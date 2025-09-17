@@ -16,7 +16,7 @@ const SideNav = () => {
   const sections = [
     { id: "/about-us", label: "About Us" },
     {
-      id: "/academic-programs",
+      id: "/academic-programs/degree-course",
       label: "Academic Programs",
       children: [
         { id: "/academic-programs/degree-course", label: "Degree Course" },
@@ -29,7 +29,7 @@ const SideNav = () => {
     { id: "/faculty-research", label: "Faculty" },
     { id: "/student-life", label: "Student Life" },
     { id: "/campus-facilities", label: "Campus Facilities" },
-    { id: "/research-publication", label: "Research & Publication" },
+    { id: "/research-publication", label: "Research & Publications" },
     {
       id: "/events/rsch-meth-course",
       label: "Events",
@@ -43,6 +43,11 @@ const SideNav = () => {
           label: "Conference",
         },
       ],
+    },
+    {
+      id: "/image-gallary/year-2025-26",
+      label: "Image Gallery",
+      children: [{ id: "/image-gallery/year-2025-26", label: "Year 2025-26" }],
     },
   ];
 
