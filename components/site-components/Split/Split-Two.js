@@ -48,7 +48,7 @@ const SplitTwo = () => {
                   isEven ? "order-1 order-lg-2" : "order-1 order-lg-1"
                 }`}
               >
-                <div className="video-popup-wrapper">
+                <div className="video-popup-wrapper shadow-4">
                   <Image
                     className="w-100 rbt-radius"
                     src={data.img}

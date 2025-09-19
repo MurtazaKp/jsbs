@@ -40,7 +40,7 @@ const Vision = () => {
         <div className="card-body">
           <h3 className="">Vision</h3>
           <p className="description ">
-            Aljamea-Tus-Saifiyah Business School envisions to cultivate
+            Aljamea-tus-Saifiyah Business School envisions to cultivate
             insightful, ethical, and innovative leaders through a robust
             education that integrates business acumen with ethical principles
             derived from Islamic teachings. The institution aims to empower

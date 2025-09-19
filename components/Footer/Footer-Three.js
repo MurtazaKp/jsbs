@@ -92,8 +92,9 @@ const FooterThree = () => {
     ),
     "/": (
       <>
-        All our dreams can come true if we have the courage to pursue them.
-        <br /> – Walt Disney
+        The pursuit of knowledge is obligatory upon every Muslim man and woman"
+        <br />
+        -Prophet Mohammed
       </>
     ),
   };

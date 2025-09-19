@@ -5,7 +5,7 @@ import Link from "next/link";
 const ModernUniversityProps = ({ bannerImg }) => {
   return (
     <>
-      <div className={` bg_image runded-1 `}>
+      <div className={` bg_image rounded-3 `}>
         <Image
           className="rounded-3"
           width={1820}

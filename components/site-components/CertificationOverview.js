@@ -55,11 +55,7 @@ const CertificationOverview = () => {
           controls: "term4",
           mainTitle: "",
           title: "Internship Opportunities (2 months):",
-          desc: [
-            "Work with Startups",
-            "Family Business Firms",
-            "Incubatorsdfdd",
-          ],
+          desc: ["Work with Startups", "Family Business Firms", "Incubators"],
           descTwo: [],
         },
         {

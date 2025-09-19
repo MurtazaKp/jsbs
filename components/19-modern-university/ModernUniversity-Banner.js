@@ -38,36 +38,30 @@ const ModernUniversityBanner = () => {
             >
               <SwiperSlide className="swiper-slide  ">
                 <ModernUniversityProps
-                  parentClass="bg_image--24"
-                  bannerImg={"/images/home/degree-banner.png"}
-                  rating="Excellent 4.9 out of 5"
-                  trustpilotImg={trustpilotImg}
-                  title="Education Is The Best Key Success In Life"
-                  desc="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat."
-                  userProfiles={profiles}
+                  bannerImg={"/images/home/carousel/infrastructure.jpg"}
                 />
               </SwiperSlide>
               <SwiperSlide className="swiper-slide ">
                 <ModernUniversityProps
-                  parentClass="bg_image--25"
-                  bannerImg={"/images/home/cetification-banner.png"}
-                  rating="Excellent 4.9 out of 5"
-                  trustpilotImg={trustpilotImg}
-                  title="Unlock Your Potential with Quality Education"
-                  desc="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat."
-                  userProfiles={profiles}
+                  bannerImg={"/images/home/carousel/jsbs.png"}
                 />
               </SwiperSlide>
 
               <SwiperSlide className="swiper-slide ">
                 <ModernUniversityProps
-                  parentClass="bg_image--26"
-                  bannerImg={"/images/home/conference-banner.png"}
-                  rating="Excellent 4.9 out of 5"
-                  trustpilotImg={trustpilotImg}
-                  title="Online Learning Now In Your Fingertps"
-                  desc="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat."
-                  userProfiles={profiles}
+                  bannerImg={"/images/home/carousel/library.jpg"}
+                />
+              </SwiperSlide>
+
+              <SwiperSlide className="swiper-slide ">
+                <ModernUniversityProps
+                  bannerImg={"/images/home/carousel/nairobi-jamea.jpg"}
+                />
+              </SwiperSlide>
+
+              <SwiperSlide className="swiper-slide ">
+                <ModernUniversityProps
+                  bannerImg={"/images/home/carousel/sports-complex.png"}
                 />
               </SwiperSlide>
             </Swiper>

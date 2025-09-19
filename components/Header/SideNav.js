@@ -94,7 +94,7 @@ const SideNav = () => {
             ></button>
           </div>
           <p className="description">
-            Aljamea-Tus-Saifiyah Business School offers a unique blend of
+            Aljamea-tus-Saifiyah Business School offers a unique blend of
             academic rigor and ethical values rooted in its cultural heritage.
           </p>
         </div>

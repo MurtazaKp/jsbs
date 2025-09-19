@@ -5326,6 +5326,18 @@
 
     @media (max-width: 767px) {
         .bg_image img{
-        height: 300px !important;
+        height: 250px !important;
     }
+
+
+        
 }
+ @media (min-width: 767px) {
+    .bg_image img{
+        height: 800px !important;
+        object-fit: cover !important;
+    }
+ }
+
+
+

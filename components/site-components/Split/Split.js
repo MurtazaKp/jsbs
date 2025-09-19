@@ -37,12 +37,12 @@ const Split = () => {
                   Campus Facilities
                 </h3>
                 <p
-                  className="description  sal-animate text-justify"
+                  className="description has-small-font-size  sal-animate text-justify"
                   data-sal="slide-up"
                   data-sal-duration="400"
                   data-sal-delay="300"
                 >
-                  Aljamea-Tus-Saifiyah Business School (JSBS) has campuses at
+                  Aljamea-tus-Saifiyah Business School (JSBS) has campuses at
                   Kenya & India. The campuses are usually designed to support an
                   engaging learning environment with various facilities,
                   including classrooms, libraries, computer labs, and spaces for
@@ -51,12 +51,12 @@ const Split = () => {
                   enhance students' learning experiences.
                 </p>
                 <p
-                  className="description  sal-animate text-justify"
+                  className="description has-small-font-size  sal-animate text-justify"
                   data-sal="slide-up"
                   data-sal-duration="400"
                   data-sal-delay="300"
                 >
-                  Aljamea-Tus-Saifiyah Business School features a range of
+                  Aljamea-tus-Saifiyah Business School features a range of
                   modern facilities designed to enhance the learning experience.
                   The campus includes well-equipped classrooms with advanced
                   audio-visual technology, dedicated seminar rooms, and a

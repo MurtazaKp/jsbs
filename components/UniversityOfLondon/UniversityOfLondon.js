@@ -86,7 +86,9 @@ export default function SingleCourseProp({ courseData, image }) {
                 <Link
                   className="text-orange rbt-btn-link"
                   target={"_blank"}
-                  href={"https://ediindia.org/"}
+                  href={
+                    "https://ediindia.org/event/11-months-certificate-program-for-jsbs-burhani-college-mumbai/"
+                  }
                 >
                   Click Here
                 </Link>
