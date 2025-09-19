@@ -53,7 +53,7 @@ const HeaderStyleTwelve = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsSticky(window.scrollY > 180);
+      setIsSticky(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);

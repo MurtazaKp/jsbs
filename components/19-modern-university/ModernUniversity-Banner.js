@@ -39,29 +39,39 @@ const ModernUniversityBanner = () => {
               <SwiperSlide className="swiper-slide  ">
                 <ModernUniversityProps
                   bannerImg={"/images/home/carousel/infrastructure.jpg"}
+                  title="Modern Infrastructure"
+                  description="State-of-the-art facilities designed for excellence in education and research."
                 />
               </SwiperSlide>
               <SwiperSlide className="swiper-slide ">
                 <ModernUniversityProps
                   bannerImg={"/images/home/carousel/jsbs.png"}
+                  title="Jamea Business School"
+                  description="Leading business education with Islamic principles and modern methodology."
                 />
               </SwiperSlide>
 
               <SwiperSlide className="swiper-slide ">
                 <ModernUniversityProps
                   bannerImg={"/images/home/carousel/library.jpg"}
+                  title="World-Class Library"
+                  description="Extensive collection of books and digital resources for comprehensive learning."
                 />
               </SwiperSlide>
 
               <SwiperSlide className="swiper-slide ">
                 <ModernUniversityProps
                   bannerImg={"/images/home/carousel/nairobi-jamea.jpg"}
+                  title="Global Campus Network"
+                  description="International campuses connecting students across continents."
                 />
               </SwiperSlide>
 
               <SwiperSlide className="swiper-slide ">
                 <ModernUniversityProps
                   bannerImg={"/images/home/carousel/sports-complex.png"}
+                  title="Sports Complex"
+                  description="Modern sports facilities promoting healthy lifestyle and team spirit."
                 />
               </SwiperSlide>
             </Swiper>

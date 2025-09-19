@@ -28,7 +28,7 @@
   {
     "tag": "CLASSROOMS",
     "title": "Modern Classrooms Built for Engagement",
-    "img": "/images/campus-facilities/campus-facilities-2.png",
+    "img": ["/images/campus-facilities/campus-facilities-2.png"],
     "desc": "The modern classrooms at Aljamea-tus-Saifiyah are designed to foster an engaging and interactive learning environment, incorporating advanced teaching methodologies and technology. These classrooms balance Islamic studies with modern subjects, preparing students to contribute positively to society."
   },
 
@@ -37,14 +37,14 @@
   {
     "tag": "Library & Computer Lab",
     "title": "Vast Library of Knowledge",
-    "img": "/images/campus-facilities/campus-facilities-3.jpg",
+    "img": ["/images/campus-facilities/campus-facilities-3.jpg","/images/campus-facilities/campus-facilities-5.png"],
     "desc": "The library houses an extensive collection of rare manuscripts, books, and scholarly texts focused not only on Islamic teachings but also on Business and Management. In addition to books and periodicals, students are also provided access to  a wide variety of online resources and institutional subscriptions.Further it has a well maintained Computer Lab with Internet facility for the Staff & Students."
   },
 
    {
     "tag": "SPORTS",
     "title": "Holistic Playgrounds",
-    "img": "/images/campus-facilities/campus-facilities-4.jpg",
+    "img": ["/images/campus-facilities/campus-facilities-4.jpg"],
     "desc": "Emphasis on holistic development of Mind & Body along with complete education and healthy well being is a top priority. Facilities offered include practice of indoor and outdoor sports."
   }
 ]

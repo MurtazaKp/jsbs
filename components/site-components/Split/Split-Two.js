@@ -4,6 +4,8 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 
 import SplitData from "@/data/elements/split.json";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
 
 const SplitTwo = () => {
   return (
@@ -49,13 +51,43 @@ const SplitTwo = () => {
                 }`}
               >
                 <div className="video-popup-wrapper shadow-4">
-                  <Image
-                    className="w-100 rbt-radius"
-                    src={data.img}
-                    width={638}
-                    height={458}
-                    alt="Split Image"
-                  />
+                  {data.img.length > 1 ? (
+                    <Swiper
+                      className="swiper-wrapper"
+                      modules={[Autoplay]}
+                      loop={true}
+                      slidesPerView={1}
+                      speed={800}
+                      autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                      }}
+                      spaceBetween={0}
+                    >
+                      {data.img.map((img, idx) => (
+                        <SwiperSlide key={index} className="swiper-slide  ">
+                          <Image
+                            className="w-100 rbt-radius"
+                            src={img}
+                            width={638}
+                            height={458}
+                            alt="Split Image"
+                          />
+                        </SwiperSlide>
+                      ))}
+                    </Swiper>
+                  ) : (
+                    data.img.map((img, idx) => (
+                      <Image
+                        key={idx}
+                        className="w-100 rbt-radius"
+                        src={img}
+                        width={638}
+                        height={458}
+                        alt="Split Image"
+                      />
+                    ))
+                  )}
                 </div>
               </div>
             </div>

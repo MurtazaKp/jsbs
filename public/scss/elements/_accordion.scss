@@ -6,6 +6,12 @@
         background: var(--color-primary-lighter);
         border: 0;
         border-radius: var(--radius) !important;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
 
         .card-header {
             background-color: transparent;
