@@ -73,7 +73,7 @@ const AccordionThree = () => {
             <div className="rbt-accordion-style rbt-accordion-04 accordion">
               <div className="accordion" id="accordionExamplec3">
                 {data.faqBody.map((item, index) => (
-                  <div className="accordion-item card" key={index}>
+                  <div className="accordion-item card bg-white" key={index}>
                     <h2
                       className="accordion-header card-header "
                       id={item.heading}

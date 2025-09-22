@@ -2,7 +2,12 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const ModernUniversityProps = ({ bannerImg, title, description }) => {
+const ModernUniversityProps = ({
+  bannerImg,
+  title,
+  description,
+  viewMoreLink,
+}) => {
   return (
     <>
       <div className={`bg_image rounded-1 banner-image-container`}>
@@ -17,7 +22,19 @@ const ModernUniversityProps = ({ bannerImg, title, description }) => {
         <div className="banner-overlay">
           <div className="banner-description">
             {title && <h3 className="banner-title">{title}</h3>}
-            {description && <p className="banner-text">{description}</p>}
+            {description && (
+              <p className="banner-text">
+                {description}{" "}
+                {viewMoreLink && (
+                  <Link
+                    href={viewMoreLink}
+                    className="text-white text-underline"
+                  >
+                    Know More{" "}
+                  </Link>
+                )}
+              </p>
+            )}
           </div>
         </div>
       </div>

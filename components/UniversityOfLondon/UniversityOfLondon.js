@@ -46,7 +46,7 @@ export default function SingleCourseProp({ courseData, image }) {
               can make significant contributions to society.
             </p>
             <p className="description  text-white">
-              To Know more About University of London{" "}
+              To Know More About University of London{" "}
               <Link
                 className="text-orange rbt-btn-link"
                 target={"_blank"}
@@ -58,10 +58,12 @@ export default function SingleCourseProp({ courseData, image }) {
           </div>
         </div>
       </div>
-      <div className="col-12">
+      <div className="col-12 edii">
         <div className="modern-course-features-box bg-dark-blue h-100">
           <div className="position-relative d-inline-block">
-            <h3 className="title text-white mt-2">Certification Course</h3>
+            <h3 className="title text-white mt-2">
+              Entrepreneurship Development Institute of India (EDII)
+            </h3>
             <span class="badge admission-badge bg-orange">Admissions Open</span>
           </div>
 
@@ -82,7 +84,8 @@ export default function SingleCourseProp({ courseData, image }) {
               </p>
 
               <p className="description  text-white">
-                To Know more About Certificate Course{" "}
+                To Know more About Entrepreneurship Development Institute of
+                India (EDII)
                 <Link
                   className="text-orange rbt-btn-link"
                   target={"_blank"}

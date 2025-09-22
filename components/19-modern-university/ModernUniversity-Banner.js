@@ -74,6 +74,15 @@ const ModernUniversityBanner = () => {
                   description="Modern sports facilities promoting healthy lifestyle and team spirit."
                 />
               </SwiperSlide>
+
+              <SwiperSlide className="swiper-slide ">
+                <ModernUniversityProps
+                  bannerImg={"/images/home/carousel/conference.png"}
+                  title="Conference"
+                  description="Organised by - Aljamea-tus-Saifiyah Business School (JSBS), Burhani College & Entrepreneurship Development Institute of India (EDII)"
+                  viewMoreLink="/events/conference"
+                />
+              </SwiperSlide>
             </Swiper>
 
             <div className="rbt-slider-control">

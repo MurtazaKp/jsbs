@@ -164,8 +164,8 @@ const FooterThree = () => {
                             </Link>
                           </div>
 
-                          {/* Replacing description with quote */}
-                          <p className="description mt--20 text-justify">
+                          {/* Replacing description with quote and adding a custom class for highlighting */}
+                          <p className="description mt--20 text-justify highlighted-quote">
                             {quoteToShow}
                           </p>
                         </div>
