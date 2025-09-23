@@ -88,7 +88,8 @@ const ImageGallaryPage = () => {
         <div className="mt--100">
           <div></div>
           <h3 className="text-center mb--30">
-            Prof (Dr). Anil Sutar taking Session 1 - Fundamentals of Research
+            Prof (Dr). Anil Sutar taking Session 1 - Fundamentals of Research on
+            9th August 2025
           </h3>
           <div className="row g-5">
             {images.researchMethodologyWorkshop.map((path, index) => (
