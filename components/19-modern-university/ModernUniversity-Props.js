@@ -27,6 +27,7 @@ const ModernUniversityProps = ({
                 {description}{" "}
                 {viewMoreLink && (
                   <Link
+                    target="_blank"
                     href={viewMoreLink}
                     className="text-white text-underline"
                   >
