@@ -31,7 +31,7 @@ const ImageGallaryPage = () => {
     <div>
       <div className="container text-center px-4 my-5 rbt-section-gap">
         <div className="section-title">
-          <span className="subtitle bg-coral-opacity">Image Gallery</span>
+          <span className="subtitle bg-coral-opacity">Gallery</span>
           <h3 className="text-center mb--30">
             University of London Representative Visit on 12th March and 20th
             March

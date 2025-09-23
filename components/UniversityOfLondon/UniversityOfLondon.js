@@ -87,7 +87,7 @@ export default function SingleCourseProp({ courseData, image }) {
                 To Know more About Entrepreneurship Development Institute of
                 India (EDII)
                 <Link
-                  className="text-orange rbt-btn-link"
+                  className="text-orange rbt-btn-link ms-2  text-underline"
                   target={"_blank"}
                   href={
                     "https://ediindia.org/event/11-months-certificate-program-for-jsbs-burhani-college-mumbai/"
