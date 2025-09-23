@@ -29,7 +29,7 @@ const ModernUniversityProps = ({
                   <Link
                     target="_blank"
                     href={viewMoreLink}
-                    className="text-white text-underline"
+                    className="text-orange rbt-btn-link text-underline"
                   >
                     Know More{" "}
                   </Link>
