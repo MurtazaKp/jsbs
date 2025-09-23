@@ -31,11 +31,11 @@ const HeaderStyleTwelve = () => {
     { id: "/campus-facilities", label: "Campus Facilities" },
     { id: "/research-publication", label: "Research & Publications" },
     {
-      id: "/events/rsch-meth-course",
+      id: "/events/research-methodology-course",
       label: "Events",
       children: [
         {
-          id: "/events/rsch-meth-course",
+          id: "/events/research-methodology-course",
           label: "Research Methodology Course",
         },
         {
@@ -45,9 +45,9 @@ const HeaderStyleTwelve = () => {
       ],
     },
     {
-      id: "/image-gallary/year-2025-26",
-      label: "Image Gallery",
-      children: [{ id: "/image-gallery/year-2025-26", label: "Year 2025-26" }],
+      id: "/gallary/year-2025-26",
+      label: "Gallery",
+      children: [{ id: "/gallery/year-2025-26", label: "Year 2025-26" }],
     },
   ];
 
