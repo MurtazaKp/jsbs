@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Rule to redirect directories to their index.html file
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^(.*)/$ $1/index.html [L]
+
+  # Rule to serve .html file for extensionless URLs
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.*)$ $1.html [L,QSA]
+
+</IfModule>
