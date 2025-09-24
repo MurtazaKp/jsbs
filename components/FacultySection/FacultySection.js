@@ -63,16 +63,16 @@ const facultyData = [
     imageUrl: "/images/faculty/mrs-sulagna-ray.jpg",
     icon: "users",
   },
-  {
-    name: "Uma Lele",
-    title: "Faculty - Statistics & Six Sigma",
-    description:
-      "25 years of industry experience, Conducted lean six Sigma workshops for corporates, Statistics faculty and Statistical Analysis for clinical trials/research.",
-    qualification: "BSc, DBM, Diploma MR, Six Sigma",
-    specialization: "Statistics, Six Sigma",
-    imageUrl: "https://placehold.co/600x600",
-    icon: "trending-up",
-  },
+  // {
+  //   name: "Uma Lele",
+  //   title: "Faculty - Statistics & Six Sigma",
+  //   description:
+  //     "25 years of industry experience, Conducted lean six Sigma workshops for corporates, Statistics faculty and Statistical Analysis for clinical trials/research.",
+  //   qualification: "BSc, DBM, Diploma MR, Six Sigma",
+  //   specialization: "Statistics, Six Sigma",
+  //   imageUrl: "https://placehold.co/600x600",
+  //   icon: "trending-up",
+  // },
 ];
 
 const Faculty = () => {
