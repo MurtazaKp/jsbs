@@ -11,10 +11,8 @@ import SingleCourseProp from "../UniversityOfLondon/UniversityOfLondon";
 import languageClub from "../../public/images/home-page.jpg";
 
 import SingleCourseData from "../../data/pages/11-singleCourse.json";
+import dynamic from "next/dynamic";
 
-import TabData from "../../data/elements/advanceTab.json";
-import ModernUniversityBanner from "../19-modern-university/ModernUniversity-Banner";
-import AccordionThree from "../Accordions/Accordian";
 const HomeTechnology = () => {
   const ModernUniversityBanner = dynamic(
     () => import("../19-modern-university/ModernUniversity-Banner"),
