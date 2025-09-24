@@ -16,21 +16,18 @@ export const metadata = {
     "EDII conference",
   ],
 
-  authors: [
-    { name: "JSBS", url: "https://jameasaifiyah-bussiness-school.vercel.app/" },
-  ],
+  authors: [{ name: "JSBS", url: "https://jsbs.jameasaifiyah.edu/" }],
   publisher: "JSBS",
 
   alternates: {
-    canonical:
-      "https://jameasaifiyah-bussiness-school.vercel.app/events/conference",
+    canonical: "https://jsbs.jameasaifiyah.edu/events/conference",
   },
 
   openGraph: {
     title: "JSBS Conference: Learning to Lead, Bridging Education and Business",
     description:
       "A collaborative conference exploring the synergy between education and industry, focusing on leadership, innovation, and digital transformation.",
-    url: "https://jameasaifiyah-bussiness-school.vercel.app/events/conference",
+    url: "https://jsbs.jameasaifiyah.edu/events/conference",
     siteName: "JSBS",
     images: [
       {

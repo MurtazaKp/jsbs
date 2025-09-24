@@ -16,14 +16,11 @@ export const metadata = {
     "student activities",
   ],
 
-  authors: [
-    { name: "JSBS", url: "https://jameasaifiyah-bussiness-school.vercel.app/" },
-  ],
+  authors: [{ name: "JSBS", url: "https://jsbs.jameasaifiyah.edu/" }],
   publisher: "JSBS",
 
   alternates: {
-    canonical:
-      "https://jameasaifiyah-bussiness-school.vercel.app/gallery/year-2025-26",
+    canonical: "https://jsbs.jameasaifiyah.edu/gallery/year-2025-26",
   },
 
   icons: {
@@ -36,7 +33,7 @@ export const metadata = {
     title: "Image Gallery (2025-26): Student Life at JSBS",
     description:
       "A visual journey through the events, culture, and student life at JSBS.",
-    url: "https://jameasaifiyah-bussiness-school.vercel.app/gallery/year-2025-26",
+    url: "https://jsbs.jameasaifiyah.edu/gallery/year-2025-26",
     siteName: "JSBS",
     images: [
       {

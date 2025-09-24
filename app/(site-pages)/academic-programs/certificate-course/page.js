@@ -17,21 +17,19 @@ export const metadata = {
     "JSBS certificate",
   ],
 
-  authors: [
-    { name: "JSBS", url: "https://jameasaifiyah-bussiness-school.vercel.app/" },
-  ],
+  authors: [{ name: "JSBS", url: "https://jsbs.jameasaifiyah.edu/" }],
   publisher: "JSBS",
 
   alternates: {
     canonical:
-      "https://jameasaifiyah-bussiness-school.vercel.app/academic-programs/certificate-course",
+      "https://jsbs.jameasaifiyah.edu/academic-programs/certificate-course",
   },
 
   openGraph: {
     title: "11-Month Certificate in Entrepreneurship & Family Business | JSBS",
     description:
       "A practical, hands-on certification for the next generation of business leaders, offered in collaboration with EDII.",
-    url: "https://jameasaifiyah-bussiness-school.vercel.app/academic-programs/certificate-course",
+    url: "https://jsbs.jameasaifiyah.edu/academic-programs/certificate-course",
     siteName: "JSBS",
     images: [
       {

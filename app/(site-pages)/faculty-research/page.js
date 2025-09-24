@@ -14,21 +14,18 @@ export const metadata = {
     "meet the faculty",
   ],
 
-  authors: [
-    { name: "JSBS", url: "https://jameasaifiyah-bussiness-school.vercel.app/" },
-  ],
+  authors: [{ name: "JSBS", url: "https://jsbs.jameasaifiyah.edu/" }],
   publisher: "JSBS",
 
   alternates: {
-    canonical:
-      "https://jameasaifiyah-bussiness-school.vercel.app/faculty-research",
+    canonical: "https://jsbs.jameasaifiyah.edu/faculty-research",
   },
 
   openGraph: {
     title: "Meet the Expert Faculty at JSBS",
     description:
       "Discover the academic leaders and distinguished professors who guide our students and define the academic excellence at JSBS.",
-    url: "https://jameasaifiyah-bussiness-school.vercel.app/faculty-research",
+    url: "https://jsbs.jameasaifiyah.edu/faculty-research",
     siteName: "JSBS",
     images: [
       {

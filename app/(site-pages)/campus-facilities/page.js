@@ -17,21 +17,18 @@ export const metadata = {
     "student resources",
   ],
 
-  authors: [
-    { name: "JSBS", url: "https://jameasaifiyah-bussiness-school.vercel.app/" },
-  ],
+  authors: [{ name: "JSBS", url: "https://jsbs.jameasaifiyah.edu/" }],
   publisher: "JSBS",
 
   alternates: {
-    canonical:
-      "https://jameasaifiyah-bussiness-school.vercel.app/campus-facilities",
+    canonical: "https://jsbs.jameasaifiyah.edu/campus-facilities",
   },
 
   openGraph: {
     title: "Explore the JSBS Campus: State-of-the-Art Facilities",
     description:
       "Discover our modern learning environment, from fully-equipped classrooms and a vast library to comfortable student housing.",
-    url: "https://jameasaifiyah-bussiness-school.vercel.app/campus-facilities",
+    url: "https://jsbs.jameasaifiyah.edu/campus-facilities",
     siteName: "JSBS",
     images: [
       {

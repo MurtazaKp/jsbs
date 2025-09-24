@@ -15,20 +15,18 @@ export const metadata = {
     "ethical leadership",
   ],
 
-  authors: [
-    { name: "JSBS", url: "https://jameasaifiyah-bussiness-school.vercel.app/" },
-  ],
+  authors: [{ name: "JSBS", url: "https://jsbs.jameasaifiyah.edu/" }],
   publisher: "JSBS",
 
   alternates: {
-    canonical: "https://jameasaifiyah-bussiness-school.vercel.app/about-us",
+    canonical: "https://jsbs.jameasaifiyah.edu/about-us",
   },
 
   openGraph: {
     title: "Discover Our Story | al Jamea tus Saifiyah Business School",
     description:
       "Explore the mission, vision, and values that define JSBS and our approach to business education.",
-    url: "https://jameasaifiyah-bussiness-school.vercel.app/about-us",
+    url: "https://jsbs.jameasaifiyah.edu/about-us",
     siteName: "JSBS",
     images: [
       {

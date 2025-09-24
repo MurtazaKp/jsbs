@@ -35,8 +35,8 @@ export default function RootLayout({ children }) {
     "@type": "CollegeOrUniversity",
     name: "al Jamea tus Saifiyah Business School",
     alternateName: "JSBS",
-    url: "https://jameasaifiyah-bussiness-school.vercel.app/",
-    logo: "https://jameasaifiyah-bussiness-school.vercel.app/images/logo.png",
+    url: "https://jsbs.jameasaifiyah.edu/",
+    logo: "https://jsbs.jameasaifiyah.edu/images/logo.png",
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+91 98765 43210",

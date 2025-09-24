@@ -15,20 +15,18 @@ export const metadata = {
     "apply to business school",
   ],
 
-  authors: [
-    { name: "JSBS", url: "https://jameasaifiyah-bussiness-school.vercel.app/" },
-  ],
+  authors: [{ name: "JSBS", url: "https://jsbs.jameasaifiyah.edu/" }],
   publisher: "JSBS",
 
   alternates: {
-    canonical: "https://jameasaifiyah-bussiness-school.vercel.app/",
+    canonical: "https://jsbs.jameasaifiyah.edu/",
   },
 
   openGraph: {
     title: "Home | JSBS",
     description:
       "Discover how we blend modern business education with timeless principles to create the leaders of tomorrow. Explore our programs and apply today.",
-    url: "https://jameasaifiyah-bussiness-school.vercel.app/",
+    url: "https://jsbs.jameasaifiyah.edu/",
     siteName: "JSBS",
     images: [
       {

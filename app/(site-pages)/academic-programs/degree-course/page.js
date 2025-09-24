@@ -15,21 +15,18 @@ export const metadata = {
     "bachelor of science",
   ],
 
-  authors: [
-    { name: "JSBS", url: "https://jameasaifiyah-bussiness-school.vercel.app/" },
-  ],
+  authors: [{ name: "JSBS", url: "https://jsbs.jameasaifiyah.edu/" }],
   publisher: "JSBS",
 
   alternates: {
-    canonical:
-      "https://jameasaifiyah-bussiness-school.vercel.app/academic-programs/degree-course",
+    canonical: "https://jsbs.jameasaifiyah.edu/academic-programs/degree-course",
   },
 
   openGraph: {
     title: "Earn Your B.Sc. in Business Administration at JSBS",
     description:
       "Discover our 3-year undergraduate program designed to build a strong foundation in essential business principles.",
-    url: "https://jameasaifiyah-bussiness-school.vercel.app/academic-programs/degree-course",
+    url: "https://jsbs.jameasaifiyah.edu/academic-programs/degree-course",
     siteName: "JSBS",
     images: [
       {

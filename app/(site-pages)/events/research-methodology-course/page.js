@@ -16,21 +16,19 @@ export const metadata = {
     "JSBS workshop",
   ],
 
-  authors: [
-    { name: "JSBS", url: "https://jameasaifiyah-bussiness-school.vercel.app/" },
-  ],
+  authors: [{ name: "JSBS", url: "https://jsbs.jameasaifiyah.edu/" }],
   publisher: "JSBS",
 
   alternates: {
     canonical:
-      "https://jameasaifiyah-bussiness-school.vercel.app/events/research-methodology-course",
+      "https://jsbs.jameasaifiyah.edu/events/research-methodology-course",
   },
 
   openGraph: {
     title: "Intensive Workshop on Research Methodology | JSBS",
     description:
       "Equipping Jamea students with essential skills in research, from formulating problems to data analysis and ethical publishing.",
-    url: "https://jameasaifiyah-bussiness-school.vercel.app/events/research-methodology-course",
+    url: "https://jsbs.jameasaifiyah.edu/events/research-methodology-course",
     siteName: "JSBS",
     images: [
       {

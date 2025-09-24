@@ -15,20 +15,18 @@ export const metadata = {
     "JSBS students",
   ],
 
-  authors: [
-    { name: "JSBS", url: "https://jameasaifiyah-bussiness-school.vercel.app/" },
-  ],
+  authors: [{ name: "JSBS", url: "https://jsbs.jameasaifiyah.edu/" }],
   publisher: "JSBS",
 
   alternates: {
-    canonical: "https://jameasaifiyah-bussiness-school.vercel.app/student-life",
+    canonical: "https://jsbs.jameasaifiyah.edu/student-life",
   },
 
   openGraph: {
     title: "Experience Vibrant Student Life at JSBS",
     description:
       "From student-led clubs to cultural festivals, see how JSBS offers a rich and balanced campus experience.",
-    url: "https://jameasaifiyah-bussiness-school.vercel.app/student-life",
+    url: "https://jsbs.jameasaifiyah.edu/student-life",
     siteName: "JSBS",
     images: [
       {

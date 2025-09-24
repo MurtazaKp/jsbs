@@ -15,21 +15,18 @@ export const metadata = {
     "faculty papers",
   ],
 
-  authors: [
-    { name: "JSBS", url: "https://jameasaifiyah-bussiness-school.vercel.app/" },
-  ],
+  authors: [{ name: "JSBS", url: "https://jsbs.jameasaifiyah.edu/" }],
   publisher: "JSBS",
 
   alternates: {
-    canonical:
-      "https://jameasaifiyah-bussiness-school.vercel.app/research-publication",
+    canonical: "https://jsbs.jameasaifiyah.edu/research-publication",
   },
 
   openGraph: {
     title: "Explore Faculty Research & Publications | JSBS",
     description:
       "Browse the collection of academic articles, case studies, and publications from our distinguished faculty.",
-    url: "https://jameasaifiyah-bussiness-school.vercel.app/research-publication",
+    url: "https://jsbs.jameasaifiyah.edu/research-publication",
     siteName: "JSBS",
     images: [
       {
