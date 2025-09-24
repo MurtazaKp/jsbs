@@ -6,7 +6,7 @@ const Whatsapp = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleClick = () => {
-    const phoneNumber = " +91 99155 60606"; // Replace with your WhatsApp number
+    const phoneNumber = "+919915560606"; // Replace with your WhatsApp number
     const message = encodeURIComponent(
       "Hello! I Would Like To Know More About JSBS."
     );
