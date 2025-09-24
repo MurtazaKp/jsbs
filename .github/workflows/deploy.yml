@@ -32,19 +32,6 @@ jobs:
       - name: Install rsync
         run: sudo apt-get update && sudo apt-get install -y rsync
 
-      - name: Validate SSH deploy secrets
-        env:
-          SSH_USER: ${{ secrets.SSH_USER }}
-          SSH_HOST: ${{ secrets.SSH_HOST }}
-          SSH_PORT: ${{ secrets.SSH_PORT }}
-          SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          REMOTE_DIR: ${{ secrets.REMOTE_DIR }}
-        run: |
-          if [ -z "$SSH_USER" ] || [ -z "$SSH_HOST" ] || [ -z "$SSH_KEY" ] || [ -z "$REMOTE_DIR" ]; then
-            echo "Missing one or more required secrets: SSH_USER, SSH_HOST, SSH_PRIVATE_KEY, REMOTE_DIR" >&2
-            exit 1
-          fi
-
       - name: Deploy via rsync (atomic, delete removed)
         env:
           SSH_USER: ${{ secrets.SSH_USER }}
@@ -56,13 +43,54 @@ jobs:
           mkdir -p ~/.ssh
           echo "$SSH_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          RSYNC_SSH="ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -p ${SSH_PORT:-22}"
-          rsync -az --delete --info=progress2 -e "$RSYNC_SSH" \
-            out/ ${SSH_USER}@${SSH_HOST}:${REMOTE_DIR}
+          cat >> ~/.ssh/config <<EOF
+          Host target
+            HostName $SSH_HOST
+            User $SSH_USER
+            Port ${SSH_PORT:-22}
+            IdentityFile ~/.ssh/id_rsa
+            StrictHostKeyChecking no
+          EOF
+          rsync -az --delete --info=progress2 \
+            out/ target:${REMOTE_DIR}
 
       - name: Purge SiteGround cache (optional)
-        if: ${{ env.SG_CACHE_PURGE_URL != '' }}
-        env:
-          SG_CACHE_PURGE_URL: ${{ secrets.SG_CACHE_PURGE_URL }}
+        if: ${{ secrets.SG_CACHE_PURGE_URL != '' }}
         run: |
           curl -sS -X POST "$SG_CACHE_PURGE_URL" || true
+name: FTP Deploy
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get latest code
+        uses: actions/checkout@v3
+
+      # Optional, but good practice
+      - name: Clear npm Cache
+        run: npm cache clean --force
+
+      - name: Install Dependencies
+        run: npm install
+
+      # This is the crucial new steps
+      - name: Clean Build Cache
+        run: rm -rf ./out ./.next
+
+      - name: Build Next.js Static Site
+        run: npm run build
+
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./out/
+          server-dir: jsbs.jameasaifiyah.edu/public_html/
