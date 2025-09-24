@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get latest code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       # Optional, but good practice
       - name: Clear npm Cache
@@ -19,7 +19,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      # This is the crucial new step
+      # This is the crucial new steps
       - name: Clean Build Cache
         run: rm -rf ./out ./.next
 
