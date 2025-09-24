@@ -100,7 +100,7 @@ const CertificationOverview = () => {
               >
                 <div className="position-relative d-inline-block">
                   <h3 className="title">Program Overview</h3>
-                  <span class="badge admission-badge bg-orange">
+                  <span className="badge admission-badge bg-orange">
                     Admissions Open
                   </span>
                 </div>

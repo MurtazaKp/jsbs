@@ -10,7 +10,7 @@ export default function SingleCourseProp({ courseData, image }) {
         <div className="modern-course-features-box bg-dark-blue h-100">
           <div className="position-relative d-inline-block">
             <h3 className="title text-white mt-2">University Of London</h3>
-            <span class="badge admission-badge bg-orange">Admissions Open</span>
+            <span className="badge admission-badge bg-orange">Admissions Open</span>
           </div>
           <div className="inner">
             <div className="">
@@ -64,7 +64,7 @@ export default function SingleCourseProp({ courseData, image }) {
             <h3 className="title text-white mt-2">
               Entrepreneurship Development Institute of India (EDII)
             </h3>
-            <span class="badge admission-badge bg-orange">Admissions Open</span>
+            <span className="badge admission-badge bg-orange">Admissions Open</span>
           </div>
 
           <div className="inner">
