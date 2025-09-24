@@ -4,7 +4,7 @@ import React, { useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import logo from "../../public/images/logo/logo.svg";
+import logo from "../../public/images/logo.png";
 import { useAppContext } from "@/context/Context";
 import { usePathname } from "next/navigation";
 
@@ -85,7 +85,7 @@ const SideNav = () => {
           <div className="content d-flex justify-content-between align-items-center">
             <div className="logo">
               <Link onClick={() => setMobile(!mobile)} href="/">
-                <Image src={logo} width={152} height={50} alt="Logo" />
+                <Image src={logo} width={100} height={100} alt="Logo" />
               </Link>
             </div>
             <button
