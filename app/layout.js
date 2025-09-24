@@ -89,7 +89,6 @@ export default function RootLayout({ children }) {
             <Separator />
             <FooterThree />
           </body>
-          f
         </Context>
       </Provider>
     </html>
