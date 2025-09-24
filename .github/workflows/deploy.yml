@@ -34,4 +34,3 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
           server-dir: jsbs.jameasaifiyah.edu/public_html/
-          ftp-args: -a
