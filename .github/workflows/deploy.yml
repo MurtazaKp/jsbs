@@ -32,5 +32,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
-          remote-dir: /public_html/
+          remote-dir: jsbs.jameasaifiyah.edu/public_html/
           cleanup: true

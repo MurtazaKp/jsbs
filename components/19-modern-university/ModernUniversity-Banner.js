@@ -3,8 +3,6 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 
-import bannerImg from "../../public/images/shape/m-banner-shape-01.png";
-import trustpilotImg from "../../public/images/icons/trustpilot-white.png";
 import ModernUniversityProps from "./ModernUniversity-Props";
 
 const profiles = [
