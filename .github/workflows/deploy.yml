@@ -32,6 +32,19 @@ jobs:
       - name: Install rsync
         run: sudo apt-get update && sudo apt-get install -y rsync
 
+      - name: Validate SSH deploy secrets
+        env:
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
+          SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          REMOTE_DIR: ${{ secrets.REMOTE_DIR }}
+        run: |
+          if [ -z "$SSH_USER" ] || [ -z "$SSH_HOST" ] || [ -z "$SSH_KEY" ] || [ -z "$REMOTE_DIR" ]; then
+            echo "Missing one or more required secrets: SSH_USER, SSH_HOST, SSH_PRIVATE_KEY, REMOTE_DIR" >&2
+            exit 1
+          fi
+
       - name: Deploy via rsync (atomic, delete removed)
         env:
           SSH_USER: ${{ secrets.SSH_USER }}
@@ -43,16 +56,9 @@ jobs:
           mkdir -p ~/.ssh
           echo "$SSH_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          cat >> ~/.ssh/config <<EOF
-          Host target
-            HostName $SSH_HOST
-            User $SSH_USER
-            Port ${SSH_PORT:-22}
-            IdentityFile ~/.ssh/id_rsa
-            StrictHostKeyChecking no
-          EOF
-          rsync -az --delete --info=progress2 \
-            out/ target:${REMOTE_DIR}
+          RSYNC_SSH="ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -p ${SSH_PORT:-22}"
+          rsync -az --delete --info=progress2 -e "$RSYNC_SSH" \
+            out/ ${SSH_USER}@${SSH_HOST}:${REMOTE_DIR}
 
       - name: Purge SiteGround cache (optional)
         if: ${{ env.SG_CACHE_PURGE_URL != '' }}
