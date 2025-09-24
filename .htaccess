@@ -1,37 +1,14 @@
-# This file should be placed in the `public` folder of your project.
-# It will be copied to the root of your website on deployment.
-
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # ----------------------------------------------------------------------
-  # RULE #1: ALLOW ACCESS TO THE _NEXT FOLDER
-  # This rule is the fix for your 404 errors. It tells the server
-  # to stop processing and immediately serve any file requested
-  # from the _next directory.
-  # ----------------------------------------------------------------------
-  RewriteRule ^_next/ - [L]
+  # Rule to redirect directories to their index.html file
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^(.*)/$ $1/index.html [L]
 
-  # ----------------------------------------------------------------------
-  # RULE #2: HANDLE PAGE ROUTING
-  # These rules ensure that URLs like /about-us/ correctly serve
-  # the /about-us/index.html file that Next.js creates.
-  # It also redirects non-slash URLs (e.g. /about-us) to the
-  # version with a slash for consistency.
-  # ----------------------------------------------------------------------
-
-  # First, check if a directory exists, and if so, serve its index.html
+  # Rule to serve .html file for extensionless URLs
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_URI} (.+)/$
-  RewriteCond %{DOCUMENT_ROOT}%1/index.html -f
-  RewriteRule ^(.+)/$ /$1/index.html [L]
-
-  # Second, redirect requests without a trailing slash to the slash version
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_URI} !^/.well-known/
-  RewriteCond %{REQUEST_URI} !(.*)/$
-  RewriteCond %{REQUEST_FILENAME} !.*\..{1,4}$
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1/ [L,R=301]
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.*)$ $1.html [L,QSA]
 
 </IfModule>
-
