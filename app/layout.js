@@ -30,6 +30,34 @@ import Separator from "@/components/site-components/Separator";
 import Whatsapp from "@/components/site-components/Whatapp/whatsapp";
 
 export default function RootLayout({ children }) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "CollegeOrUniversity",
+    name: "al Jamea tus Saifiyah Business School",
+    alternateName: "JSBS",
+    url: "https://jameasaifiyah-bussiness-school.vercel.app/",
+    logo: "https://jameasaifiyah-bussiness-school.vercel.app/images/logo.png",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+91 98765 43210",
+      contactType: "Admissions Office",
+      email: "info@jsbs.com",
+    },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Street Address",
+      addressLocality: "Mumbai",
+      addressRegion: "Maharashtra",
+      postalCode: "400001",
+      addressCountry: "IN",
+    },
+    sameAs: [
+      "https://www.facebook.com/your-profile",
+      "https://www.twitter.com/JSBS_handle",
+      "https://www.linkedin.com/school/your-profile",
+    ],
+  };
+
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
   }, []);
@@ -45,6 +73,11 @@ export default function RootLayout({ children }) {
         <link
           href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap"
           rel="stylesheet"
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       </head>
       <Provider store={Store}>
