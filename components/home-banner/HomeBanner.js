@@ -11,20 +11,10 @@ import SingleCourseProp from "../UniversityOfLondon/UniversityOfLondon";
 import languageClub from "../../public/images/home-page.jpg";
 
 import SingleCourseData from "../../data/pages/11-singleCourse.json";
-import dynamic from "next/dynamic";
 
+import ModernUniversityBanner from "../19-modern-university/ModernUniversity-Banner";
+import AccordionThree from "../Accordions/Accordian";
 const HomeTechnology = () => {
-  const ModernUniversityBanner = dynamic(
-    () => import("../19-modern-university/ModernUniversity-Banner"),
-    {
-      ssr: false,
-    }
-  );
-
-  const AccordionThree = dynamic(() => import("../Accordions/Accordian"), {
-    ssr: false,
-  });
-
   useEffect(() => {
     import("venobox/dist/venobox.min.js").then((venobox) => {
       new venobox.default({
