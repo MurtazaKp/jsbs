@@ -55,42 +55,8 @@ jobs:
             out/ target:${REMOTE_DIR}
 
       - name: Purge SiteGround cache (optional)
-        if: ${{ secrets.SG_CACHE_PURGE_URL != '' }}
+        if: ${{ env.SG_CACHE_PURGE_URL != '' }}
+        env:
+          SG_CACHE_PURGE_URL: ${{ secrets.SG_CACHE_PURGE_URL }}
         run: |
           curl -sS -X POST "$SG_CACHE_PURGE_URL" || true
-name: FTP Deploy
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  web-deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-    steps:
-      - name: Get latest code
-        uses: actions/checkout@v3
-
-      # Optional, but good practice
-      - name: Clear npm Cache
-        run: npm cache clean --force
-
-      - name: Install Dependencies
-        run: npm install
-
-      # This is the crucial new steps
-      - name: Clean Build Cache
-        run: rm -rf ./out ./.next
-
-      - name: Build Next.js Static Site
-        run: npm run build
-
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@4.3.3
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./out/
-          server-dir: jsbs.jameasaifiyah.edu/public_html/
