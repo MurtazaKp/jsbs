@@ -16,6 +16,17 @@ import TabData from "../../data/elements/advanceTab.json";
 import ModernUniversityBanner from "../19-modern-university/ModernUniversity-Banner";
 import AccordionThree from "../Accordions/Accordian";
 const HomeTechnology = () => {
+  const ModernUniversityBanner = dynamic(
+    () => import("../19-modern-university/ModernUniversity-Banner"),
+    {
+      ssr: false,
+    }
+  );
+
+  const AccordionThree = dynamic(() => import("../Accordions/Accordian"), {
+    ssr: false,
+  });
+
   useEffect(() => {
     import("venobox/dist/venobox.min.js").then((venobox) => {
       new venobox.default({
