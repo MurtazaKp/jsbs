@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
@@ -13,11 +13,15 @@ const profiles = [
 ];
 
 const ModernUniversityBanner = () => {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
   return (
     <>
       <div className="rbt-banner-area rbt-banner-19 rbt-section-gapBottom pt-5 ">
         <div className="wrapper">
           <div className="swiper rbt-banner-activation-2 rbt-slider-animation rbt-arrow-between">
+            {/** Use refs for navigation to avoid SSR/selector timing issues */}
+            
             <Swiper
               className="swiper-wrapper"
               modules={[Navigation, Autoplay]}
@@ -29,10 +33,25 @@ const ModernUniversityBanner = () => {
                 disableOnInteraction: false,
               }}
               spaceBetween={0}
-              navigation={{
-                nextEl: ".rbt-arrow-left",
-                prevEl: ".rbt-arrow-right",
-                clickable: true,
+              onBeforeInit={(swiper) => {
+                // Attach navigation refs just before init
+                const prevEl = prevRef.current;
+                const nextEl = nextRef.current;
+                if (prevEl && nextEl) {
+                  // Ensure correct mapping: left = prev, right = next
+                  swiper.params.navigation = {
+                    ...(swiper.params.navigation || {}),
+                    prevEl,
+                    nextEl,
+                  };
+                }
+              }}
+              onInit={(swiper) => {
+                // Initialize and update navigation once refs are set
+                if (swiper.params.navigation && swiper.navigation) {
+                  swiper.navigation.init();
+                  swiper.navigation.update();
+                }
               }}
             >
               <SwiperSlide className="swiper-slide  ">
@@ -85,19 +104,17 @@ const ModernUniversityBanner = () => {
             </Swiper>
 
             <div className="rbt-slider-control">
-              <div className="rbt-swiper-arrow-2 rbt-arrow-right">
+              <div ref={prevRef} className="rbt-swiper-arrow-2 rbt-arrow-left" aria-label="Previous slide">
                 <span className="icon">
                   <i className="rbt-icon-top feather-arrow-left"></i>
                 </span>
                 <span className="text">Prev</span>
               </div>
-              <div>
-                <div className="rbt-swiper-arrow-2 rbt-arrow-left">
-                  <span className="text">Next</span>
-                  <span className="icon">
-                    <i className="rbt-icon feather-arrow-right"></i>
-                  </span>
-                </div>
+              <div ref={nextRef} className="rbt-swiper-arrow-2 rbt-arrow-right" aria-label="Next slide">
+                <span className="text">Next</span>
+                <span className="icon">
+                  <i className="rbt-icon feather-arrow-right"></i>
+                </span>
               </div>
             </div>
           </div>
