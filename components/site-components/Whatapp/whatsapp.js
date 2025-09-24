@@ -6,8 +6,10 @@ const Whatsapp = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleClick = () => {
-    const phoneNumber = "1234567890"; // Replace with your WhatsApp number
-    const message = encodeURIComponent("Hello! I would like to chat.");
+    const phoneNumber = " +91 99155 60606"; // Replace with your WhatsApp number
+    const message = encodeURIComponent(
+      "Hello! I Would Like To Know More About JSBS."
+    );
     const url = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(url, "_blank");
   };
