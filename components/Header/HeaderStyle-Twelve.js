@@ -59,12 +59,39 @@ const HeaderStyleTwelve = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Enhanced active section checking with better logic
   const isActiveSection = (section) => {
-    if (pathname === section.id) return true;
-    if (section.children) {
-      return section.children.some((child) => pathname === child.id);
+    // Exact match for the main section
+    if (pathname === section.id) {
+      console.log(`Exact match found for: ${section.id}`);
+      return true;
     }
+
+    // Check if current path starts with section path (for nested routes)
+    if (pathname.startsWith(section.id + "/")) {
+      console.log(`Path starts with section: ${section.id}`);
+      return true;
+    }
+
+    // Check children if they exist
+    if (section.children) {
+      const hasActiveChild = section.children.some((child) => {
+        const isActive =
+          pathname === child.id || pathname.startsWith(child.id + "/");
+        if (isActive) {
+          console.log(`Active child found: ${child.id}`);
+        }
+        return isActive;
+      });
+      return hasActiveChild;
+    }
+
     return false;
+  };
+
+  // Helper function to check if a specific child is active
+  const isActiveChild = (childPath) => {
+    return pathname === childPath || pathname.startsWith(childPath + "/");
   };
 
   return (
@@ -91,37 +118,42 @@ const HeaderStyleTwelve = () => {
               <div className="rbt-main-navigation d-none d-xxl-block">
                 <nav className="mainmenu-nav onepagenav">
                   <ul className="mainmenu">
-                    {sections.map((sec, i) => (
-                      <li
-                        key={i}
-                        className={`menu-item ${
-                          isActiveSection(sec) ? "active-parent" : ""
-                        } ${sec.children ? "has-dropdown " : ""}`}
-                      >
-                        <Link href={sec.id}>
-                          {" "}
-                          {sec.label}
-                          {sec.children && (
-                            <i className="feather-chevron-down ms-1"></i>
-                          )}{" "}
-                        </Link>
+                    {sections.map((sec, i) => {
+                      const isActive = isActiveSection(sec);
 
-                        {sec.children && (
-                          <ul className="submenu">
-                            {sec.children.map((child, j) => (
-                              <li
-                                key={j}
-                                className={
-                                  pathname === child.id ? "active-child" : ""
-                                }
-                              >
-                                <Link href={child.id}>{child.label}</Link>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </li>
-                    ))}
+                      return (
+                        <li
+                          key={i}
+                          className={`menu-item ${
+                            isActive ? "active-parent" : ""
+                          } ${sec.children ? "has-dropdown" : ""}`}
+                        >
+                          <Link href={sec.id}>
+                            {sec.label}
+                            {sec.children && (
+                              <i className="feather-chevron-down ms-1"></i>
+                            )}
+                          </Link>
+
+                          {sec.children && (
+                            <ul className="submenu">
+                              {sec.children.map((child, j) => (
+                                <li
+                                  key={j}
+                                  className={
+                                    isActiveChild(child.id)
+                                      ? "active-child"
+                                      : ""
+                                  }
+                                >
+                                  <Link href={child.id}>{child.label}</Link>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </li>
+                      );
+                    })}
                   </ul>
                 </nav>
               </div>
