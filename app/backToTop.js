@@ -1,12 +1,21 @@
 "use client";
 
 import Whatsapp from "@/components/site-components/Whatapp/whatsapp";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const BackToTop = () => {
   const progressRef = useRef(null);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    // This effect runs only once after the component mounts on the client
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    // This effect now only runs if the component is mounted (client-side)
+    if (!isMounted) return;
+
     const progressPath = progressRef.current?.querySelector("path");
     if (!progressPath) return;
 
@@ -46,7 +55,12 @@ const BackToTop = () => {
     return () => {
       window.removeEventListener("scroll", updateProgress);
     };
-  }, []);
+  }, [isMounted]); // Now depends on `isMounted`
+
+  // Render null on the server to prevent hydration issues
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <>
