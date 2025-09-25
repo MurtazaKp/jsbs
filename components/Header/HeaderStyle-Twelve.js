@@ -45,7 +45,7 @@ const HeaderStyleTwelve = () => {
       ],
     },
     {
-      id: "/gallary/year-2025-26/",
+      id: "/gallery/year-2025-26",
       label: "Gallery",
       children: [{ id: "/gallery/year-2025-26", label: "Year 2025-26" }],
     },
