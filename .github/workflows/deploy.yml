@@ -19,10 +19,6 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      # This is the crucial new steps
-      - name: Clean Build Cache
-        run: rm -rf ./out ./.next
-
       - name: Build Next.js Static Site
         run: npm run build
 
