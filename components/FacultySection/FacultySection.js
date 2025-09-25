@@ -5,7 +5,7 @@ const facultyData = [
     name: "Prof. (Dr). Nardeep. K. Maheshwary",
     title: "Director Academics, JSBS",
     description:
-      "More than 29 years’ experience as an academician, researcher, administrator and dean. Presented &amp; published more than 30 research papers articles in various national international journals. Published 6 books on subjects of management. Taught subjects of Management at NAAC Accredited Universities of repute in India.",
+      "More than 29 years’ experience as an academician, researcher, administrator and dean. Presented & published more than 30 research papers articles in various national international journals. Published 6 books on subjects of management. Taught subjects of Management at NAAC Accredited Universities of repute in India.",
     qualification: "B. Com, MBA, Ph.D.",
     specialization:
       "Corporate Finance, SAPM, Marketing Management & other Management subjects.",
