@@ -27,7 +27,7 @@ const DegreeCoursePage = ({ getBlog }) => {
             </div>
           </div>
           <div className="container  rbt-section-gap">
-            <div className="row">
+            <div className="row px-3 px-sm-0">
               <div className="col-lg-12">
                 <div className="modern-course-features-box bg-dark-blue grid-content-reverse h-100">
                   <div className="inner">

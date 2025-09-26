@@ -22,7 +22,10 @@ const CertificatePage = ({ getBlog }) => {
               </div>
 
               <div className="rbt-splite-style text-center">
-                <img className="col-4" src={"/images/certification.jpg"} />
+                <img
+                  className="col-12 col-sm-6 col-lg-5"
+                  src={"/images/certification.jpg"}
+                />
               </div>
             </div>
           </div>

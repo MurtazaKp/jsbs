@@ -2323,10 +2323,10 @@
 .banner-image-container {
     position: relative;
     overflow: hidden;
-    border-radius: 20px;
+    
     
     img {
-        border-radius: 20px;
+        
         width: 100%;
         height: auto;
         display: block;
@@ -2343,7 +2343,7 @@
     display: flex;
     align-items: flex-end;
     padding: 40px 40px 40px 40px;
-    border-radius: 20px;
+    
     opacity: 1;
     transition: all 0.4s ease-in-out;
     z-index: 1;
@@ -5483,7 +5483,7 @@
 
     @media (max-width: 767px) {
         .bg_image img{
-        height: 250px !important;
+        height: 350px !important;
     }
 
 

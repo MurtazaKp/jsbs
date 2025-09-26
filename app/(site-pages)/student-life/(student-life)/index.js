@@ -145,7 +145,7 @@ const StudentLifePage = ({ getBlog }) => {
         </div>
 
         <h3 className="mb-5 text-center">Our Graduates’ Profile</h3>
-        <div className="row g-4">
+        <div className="row g-4 px-3 ">
           {graduateData.map((item, index) => (
             <div key={index} className="col-md-6">
               <div className="rbt-card variation-01 rbt-hover h-100">

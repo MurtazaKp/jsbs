@@ -11,9 +11,9 @@ const ModernUniversityProps = ({
 }) => {
   return (
     <>
-      <div className={`bg_image rounded-1 banner-image-container`}>
+      <div className={`bg_image  banner-image-container`}>
         <Image
-          className="rounded-1"
+          className=""
           width={1820}
           height={820}
           alt="Banner Image"

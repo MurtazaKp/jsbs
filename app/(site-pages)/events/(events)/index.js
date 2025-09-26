@@ -129,7 +129,7 @@ const EventsLayout = ({ getBlog }) => {
         </div>
 
         {/* Concept Notes */}
-        <div className="container rbt-section-gap">
+        <div className="container rbt-section-gap px-3 px-sm-0">
           <div className="row">
             <div className="col-lg-12">
               <div className="modern-course-features-box bg-dark-blue grid-content-reverse h-100">
@@ -213,7 +213,7 @@ const EventsLayout = ({ getBlog }) => {
           </div>
         </div>
 
-        <div className="container  rbt-section-gap">
+        <div className="container  rbt-section-gap px-3 px-sm-0">
           <div className="">
             <h3 className="text-center mb-4">
               Research Methodology Workshop Gallery
