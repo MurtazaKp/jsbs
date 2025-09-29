@@ -74,12 +74,12 @@ const ConferenceLayout = ({ getBlog }) => {
 
       {
         number: "Subtheme 3",
-        title: "Measurement & Sampling Practice",
+        title: "Sustainable & Responsible Business Practices",
         points: [
-          "Digital transformation and AI in business",
-          "Remote work and the future workplace",
-          "Cybersecurity and risk in the digital age",
-          "Metaverse and business opportunities",
+          "ESG (Environmental, Social and Governance) frameworks & Entrepreneurialism",
+          "Business Ethics in Emerging Markets",
+          "Family Businesses and Wealth Management",
+          "Tradition & Value Based Entrepreneurship",
         ],
       },
       {
