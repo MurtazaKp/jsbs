@@ -47,7 +47,11 @@ const SideNav = () => {
     {
       id: "/gallary/year-2025-26",
       label: "Gallery",
-      children: [{ id: "/gallery/year-2025-26", label: "Year 2025-26" }],
+      children: [
+        { id: "/gallery/year-2023-24", label: "Year 2023-24" },
+        { id: "/gallery/year-2024-25", label: "Year 2024-25" },
+        { id: "/gallery/year-2025-26", label: "Year 2025-26" },
+      ],
     },
   ];
 
