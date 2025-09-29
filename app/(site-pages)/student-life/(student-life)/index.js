@@ -55,12 +55,12 @@ const StudentLifePage = ({ getBlog }) => {
 
   const activityData2025 = [
     {
-      date: "15 September 2025",
+      date: "15 September 2024",
       name: "Maraz Ilmi",
       details: "Std 8 – 11 students",
     },
     {
-      date: "15 October 2025",
+      date: "15 October 2024",
       name: "Alumni Program",
       details: "Alumni of JSBS Batch 1 & 2",
     },
