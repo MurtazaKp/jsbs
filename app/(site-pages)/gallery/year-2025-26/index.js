@@ -43,10 +43,9 @@ const ImageGalleryPage = () => {
     },
     {
       id: "researchWorkshop",
-      title:
-        "Prof (Dr). Anil Sutar taking Session 1 - Fundamentals of Research on 9th August 2025",
-      images: ["/images/eventThree.jpg"],
-      gridClasses: "col-12",
+      title: "Research Methodology Session | 9th August 2025",
+      images: ["/images/eventThree.jpg", "/images/eventFive.jpg"],
+      gridClasses: "col-12 col-sm-6",
       show: false,
     },
   ];

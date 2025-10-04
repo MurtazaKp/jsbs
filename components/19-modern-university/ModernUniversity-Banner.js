@@ -37,6 +37,13 @@ const ModernUniversityBanner = () => {
             >
               <SwiperSlide className="swiper-slide  ">
                 <ModernUniversityProps
+                  bannerImg={"/images/home/carousel/aljamea.jpg"}
+                  title="Aljamea-tus-Saifiyah: A Vision of Tradition and Learning"
+                  description="Image of His Holiness Syedna AaliQadr Mufaddal Saifuddin (TUS)"
+                />
+              </SwiperSlide>
+              <SwiperSlide className="swiper-slide  ">
+                <ModernUniversityProps
                   bannerImg={"/images/home/carousel/infrastructure.jpg"}
                   title="Modern Infrastructure"
                   description="State-of-the-art facilities designed for excellence in education and research."
