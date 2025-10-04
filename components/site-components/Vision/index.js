@@ -3,7 +3,25 @@ import React from "react";
 const Vision = () => {
   return (
     <section className="container ">
-      <div className="quote-highlight-wrapper ">
+      <div className="section-title text-center mb-4">
+        <span className="subtitle bg-coral-opacity ">About</span>
+        <h3 className="mb-3 text-center ">About Us</h3>
+        <p className="description">
+          Aljamea-tus-Saifiyah Business School: A vision of Tradition and
+          Learning
+        </p>
+        <img
+          src="/images/home/carousel/aljamea.jpg"
+          className=" w-full rounded-4"
+          alt="His Holiness Syedna AaliQadr Mufaddal Saifuddin (TUS)"
+        />
+        <div className="image-caption pt-2">
+          <p className=" text-orange mb-0 text-center">
+            His Holiness Syedna AaliQadr Mufaddal Saifuddin (TUS)
+          </p>
+        </div>
+      </div>
+      <div className="quote-highlight-wrapper pt--50 ">
         <div className="blockquote-wrapper col-12 col-sm-10 mx-auto">
           <div className="blockquote">
             <div className="col-10 col-sm-9 col-lg-10 mx-auto">

@@ -34,7 +34,7 @@ const About = () => {
   return (
     <div className="container">
       <div className="row g-5 align-items-center">
-        <div className="col-lg-12 mt-5 pt-5 pt-sm-0 mt-sm-0">
+        <div className="col-lg-12  pt-sm-0 mt-sm-0">
           <div className="inner pt--50 pl_sm--0 pl_md--0 pt-5 pt-sm-0">
             <div className="section-title text-start">
               <h3 className="title">{aboutContent.sectionTitle}</h3>
